@@ -1,0 +1,113 @@
+<section class="section-instagram lazyload" data-section-id="{{ section.id }}" data-section-type="instafeed">
+  <div class="page-width instasection">
+    <div class="section-heading-insta">
+    {% if section.settings.heading != blank %}
+      {% comment %}
+      <h2 class="text-center text-pink">
+        <a href="{{ settings.social_instagram_link }}" target="_blank">{{ section.settings.heading }}</a>
+      </h2>
+      {% endcomment %}
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class="Follow-Us">
+  Follow Us
+</span>
+   
+      <span class="Read-the-blog">
+  @paintbucketnails
+</span>
+  
+    {% endif %}
+    </div>
+
+    <div id="insta-feed" class="">
+      <img src="{{ 'paintbucket-loading.gif' | asset_url }}" alt="Loading..." class="loading-gif">
+    </div>
+  </div>
+
+  <style>
+    .Follow-Us {
+  width: 270px;
+  height: 57px;
+  flex-grow: 0;
+/*   margin: 80px 115px 18px 0; */
+/*   font-family: BrandonGrotesque; */
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 6px;
+  text-align: center;
+  color: #231f20;
+      text-transform:uppercase;
+}
+    .Read-the-blog {
+  width: 177px;
+  height: 20px;
+  flex-grow: 0;
+  margin: 0 0 8px;
+/*   font-family: BrandonGrotesque; */
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #231f20;
+  text-transform:uppercase;
+  padding-bottom:10px;
+  border-bottom:2px solid black;
+}
+    #insta-feed img, .instafeed-shopify img{
+      border-radius:18px;
+    }
+    #shopify-section-{{ section.id }} .section-instagram.lazyloaded {
+      background-image: url({{ section.settings.bg_image | img_url: '2000x' }});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .instafeed-lightbox {
+      width: 100vw;
+      height: 100vh;
+    }
+  .instasection{
+        display:flex;
+        max-width:1400px;
+        text-align:center;
+  }
+  .section-heading-insta{
+        width:30%;
+  }
+  </style>
+  
+</section>
+
+{% schema %}
+  {
+    "name": "Instagram",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "@PAINTBUCKETNAILS"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram Feed",
+        "category": "Social Media"
+      }
+    ]
+  }
+{% endschema %}

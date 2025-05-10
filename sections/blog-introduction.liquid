@@ -1,0 +1,33 @@
+{%- assign blog_title = blog.title -%}
+
+{% if current_tags %}
+  {% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+{% endif %}
+
+
+<section class="page-introduction" data-aos="fade">
+  <div class="page-width text-center">
+    <div class="max-w-lg text-wrap">
+      <h1>{{ blog_title }}</h1>
+
+      {% if section.settings.intro_text != blank %}
+        {{ section.settings.intro_text }}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Blog Introduction",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "intro_text",
+        "label": "Introduction Text",
+        "default": "<p>A hub for the latest nail trends, DIY beauty hacks, self-care advice and lifestyle tips. Curated thoughtfully by our team so that you'll never miss a beat.</p>"
+      }
+    ]
+  }
+{% endschema %}

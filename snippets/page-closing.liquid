@@ -1,0 +1,23 @@
+<section class="page-closing">
+  <div class="page-width text-center max-w-lg">
+    {% if section.settings.closing_image != blank %}
+      <img src="{{ section.settings.closing_image | img_url: '800x', scale: 2 }}" alt="{{ section.settings.closing_image.alt }}">
+    {% endif %}
+
+    <h2>
+      {% if section.settings.closing_title != blank %}
+        {{ section.settings.closing_title }}
+      {% endif %}
+    </h2>
+
+    {% if section.settings.closing_text != blank %}
+      {{ section.settings.closing_text }}
+    {% endif %}
+
+    {% if section.settings.closing_button_text != blank and section.settings.closing_button_link != blank %}
+      <div class="button-wrap">
+        <a class="btn btn-outline" href="{{ section.settings.closing_button_link }}" title="{{ section.settings.closing_button_text }}" target="_blank">{{ section.settings.closing_button_text }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,189 @@
+<section id="shopify-section-{{ section.id }}" class="subs-options bg-white" data-aos="fade">
+  <div class="page-width">
+    <div class="heading-wrap text-center">
+      <h2>{{ section.settings.title }}</h2>
+
+      <h3>{{ section.settings.subtitle }}</h3>
+    </div>
+
+    <div class="flex--flexbox flex--wrap">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_option' %}
+          {% assign block_prod = all_products[block.settings.product] %}
+          {% assign sub_variant_id = block_prod.first_available_variant.metafields.subscriptions.discount_variant_id %}
+          {% assign shipping_interval_frequency = '1' %}
+          {% assign shipping_interval_unit_type = 'Months' %}
+
+          <div class="flex-item flex-item--one-quarter">
+            <div class="option-wrap">
+              <div class="text-wrap text-center bg-lt-pink">
+                <h4>
+                  <div class="option-title">
+                    {{ block.settings.title }}
+                  </div>
+
+                  <div class="option-freq">
+                    {{ block.settings.freq }}
+                  </div>
+
+                  <div class="option-price">
+                    {{ block.settings.price }}
+                  </div>
+                </h4>
+
+                <p class="option-savings text-center">
+                  {{ block.settings.savings }}
+                </p>
+
+                <button 
+                  data-subscription-add-to-cart
+                  class="btn btn-outline" 
+                  data-variant-id="{{ sub_variant_id }}" 
+                  data-frequency="{{ shipping_interval_frequency }}" 
+                  data-unit_type="{{ shipping_interval_unit_type }}">
+                  {{ block.settings.button_text }}
+                </button>
+
+                <p class="option-note text-center">
+                  <em>{{ block.settings.note }}</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="flex--flexbox flex--wrap">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_feature' %}
+          {% assign block_prod = all_products[block.settings.product] %}
+          <div class="flex-item flex-item--one-half option-feature">
+            <div class="image-wrap text-center">
+              <img 
+                data-src="{{ block.settings.image | img_url: '75x' }}" 
+                data-srcset="{{ block.settings.image | img_url: '75x' }} 1x, 
+                  {{ block.settings.image | img_url: '150x' }} 2x"
+                alt="{{ block.settings.image.src }}" 
+                class="lazyload"
+              >
+            </div>
+
+            <div class="text-wrap text-center">
+              <h4>{{ block.settings.text }}</h4>
+
+              <a href="{{ block_prod.url }}" class="btn standalone-link">{{ block.settings.button_text }}</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if section.settings.custom_styles != blank %}
+    <style>
+      {{ section.settings.custom_styles }}
+    </style>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Subscription Options",
+    "max_blocks": 8,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Get Started Header"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Something about selecting your subscription"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Product Option",
+        "type": "product_option",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Option Title",
+            "default": "Title for option"
+          },
+          {
+            "type": "text",
+            "id": "freq",
+            "label": "Frequency",
+            "default": "1-Month"
+          },
+          {
+            "type": "text",
+            "id": "price",
+            "label": "Price",
+            "default": "$34.50"
+          },
+          {
+            "type": "text",
+            "id": "savings",
+            "label": "Savings",
+            "default": "You save 23%"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Join Now"
+          },
+          {
+            "type": "text",
+            "id": "note",
+            "label": "Billing Note",
+            "default": "Billed every month"
+          }
+        ]
+      },
+      {
+        "name": "Product Feature",
+        "type": "product_feature",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

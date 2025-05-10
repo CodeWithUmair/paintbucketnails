@@ -1,0 +1,321 @@
+<section class="page-introduction{% if section.settings.intro_nav != blank %} has-navigation{% endif %}" data-aos="fade" data-section-id="{{ section.id }}" data-section-type="page-bridal">
+  <div class="page-width">
+    <div class="max-w-xl">
+      <div class="intro-title-wrap flex--flexbox flex--wrap">
+        <div class="flex-item flex-item--one-half image-wrap">
+          {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url: '1000x', scale: 2 }}" alt="{{ section.settings.image.src }}">
+          {% endif %}
+        </div>
+
+        <div class="flex-item flex-item--one-half text-wrap">
+          <h1>
+            {% if section.settings.intro_title != blank %}
+              {{ section.settings.intro_title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </h1>
+          {% if section.settings.intro_subtitle != blank %}
+            {{ section.settings.intro_subtitle }}
+          {% endif %}
+
+          {% if section.settings.intro_text != blank %}
+            <div class="intro-text-wrap">
+              {{ section.settings.intro_text }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.intro_button_text != blank and section.settings.intro_button_link != blank %}
+            <div class="button-wrap">
+              <a class="btn btn-outline" href="{{ section.settings.intro_button_link }}">{{ section.settings.intro_button_text }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% for block in section.blocks %}
+  {% if block.type == 'full_width_text' %}
+    {% include 'section-full-width-text', type: 'block' %}
+  {% elsif block.type == 'text_three_cols' %}
+    {% include 'section-full-width-text-three-cols', type: 'block' %}
+  {% elsif block.type == 'image_section' %}
+    {% include 'section-image-section', type: 'block' %}
+  {% elsif block.type == 'bridal_form' %}
+    {% include 'contact-form-bridal' %}
+  {% endif %}
+{% endfor %}
+
+
+
+{% schema %}
+  {
+    "name": "Page - Bridal",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "The Wedding Collective"
+      },
+      {
+        "type": "richtext",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<p>You’ve got the dream dress--now get the dream mani. Work with our nail artists to create three custom designs for you and your bridal party. Because wedding couture isn’t just for dresses anymore.</p>"
+      },
+      {
+        "type": "text",
+        "id": "intro_button_text",
+        "label": "Button Text",
+        "default": "Get Started"
+      },
+      {
+        "type": "url",
+        "id": "intro_button_link",
+        "label": "Button Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "full_width_text",
+        "name": "Full Width Text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "textarea",
+            "id": "body",
+            "label": "Body Text",
+            "default": "Body text"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link Url"
+          },
+          {
+            "type": "radio",
+            "id": "link_type",
+            "label": "Link Type",
+            "options": [
+              { "value": "link", "label": "Link" },
+              { "value": "button", "label": "Button" }
+            ],
+            "default": "link"
+          },
+          {
+            "type": "textarea",
+            "id": "custom_styles",
+            "label": "Custom Styles"
+          }
+        ]
+      },
+      {
+        "type": "text_three_cols",
+        "name": "Text – Three Columns",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "image_picker",
+            "id": "col_one_icon",
+            "label": "Column One – Icon"
+          },
+          {
+            "type": "text",
+            "id": "col_one_heading",
+            "label": "Column One – Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "col_one_subtitle",
+            "label": "Column One – Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "image_picker",
+            "id": "col_two_icon",
+            "label": "Column Two – Icon"
+          },
+          {
+            "type": "text",
+            "id": "col_two_heading",
+            "label": "Column Two – Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "col_two_subtitle",
+            "label": "Column Two – Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "image_picker",
+            "id": "col_three_icon",
+            "label": "Column Three – Icon"
+          },
+          {
+            "type": "text",
+            "id": "col_three_heading",
+            "label": "Column Three – Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "col_three_subtitle",
+            "label": "Column Three – Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link Url"
+          },
+          {
+            "type": "textarea",
+            "id": "custom_styles",
+            "label": "Custom Styles"
+          }
+        ]
+      },
+      {
+        "type": "image_section",
+        "name": "Image Section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image - One"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image - Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_three",
+            "label": "Image - Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_four",
+            "label": "Image - Four"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link Url"
+          },
+          {
+            "type": "textarea",
+            "id": "custom_styles",
+            "label": "Custom Styles"
+          }
+        ]
+      },
+      {
+        "type": "bridal_form",
+        "name": "Bridal Form",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle text."
+          },
+          {
+            "type": "paragraph",
+            "content": "To update the content of this form, refer to file \"snippets/contact-form-bridal\"."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,171 @@
+<div id="mf-product" class="mf-featured-products-section">
+    <div class="mf-featured-products-header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>
+        <em>{{ section.settings.subheading }}</em>
+      </p>
+    </div>
+  
+    <div class="mf-featured-products-grid">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="mf-featured-product-item">
+            {% if product.tags contains 'almost-gone' %}
+              <div class="mf-badge">Almost gone!</div>
+            {% elsif product.compare_at_price > product.price %}
+              <div class="mf-badge">Save {{ product.compare_at_price | minus: product.price | money }}</div>
+            {% endif %}
+            <div class="mf-featured-product-image">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+              </a>
+            </div>
+            <h3>{{ product.title }}</h3>
+            <p class="mf-product-description">{{ product.description | strip_html | truncatewords: 12 }}</p>
+            <p class="mf-product-price">
+              {% if product.compare_at_price > product.price %}
+                <del>{{ product.compare_at_price | money }}</del>
+                <span class="sale-price">{{ product.price | money }}</span>
+              {% else %}
+                {{ product.price | money }}
+              {% endif %}
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  
+  <style>
+    .mf-featured-products-section {
+      padding: 80px 20px;
+      background-color: #fff5f5;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+    }
+  
+    .mf-featured-products-header h2 {
+      font-size: 36px;
+      color: #5c2e2e;
+      margin-bottom: 10px;
+    }
+  
+    .mf-featured-products-header p {
+      font-size: 24px;
+      color: #5c2e2e;
+      margin-bottom: 50px;
+    }
+  
+    .mf-featured-products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .mf-featured-product-item {
+      background: #fff0f0;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+  
+    .mf-featured-product-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+  
+    .mf-featured-product-item h3 {
+      font-size: 20px;
+      color: #5c2e2e;
+      margin-bottom: 10px;
+    }
+  
+    .mf-product-description {
+      font-size: 16px;
+      color: #5c2e2e;
+      margin-bottom: 10px;
+    }
+  
+    .mf-product-price {
+      font-size: 18px;
+      color: #5c2e2e;
+    }
+  
+    .sale-price {
+      color: #e63946;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+  
+    .mf-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #5c2e2e;
+      color: white;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+  
+    @media (max-width: 991px) {
+      .mf-featured-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    @media (max-width: 600px) {
+      .mf-featured-products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Featured Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Main Heading",
+        "default": "Get salon-quality nails at home."
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "No appointment necessary."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Product"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 3,
+    "presets": [
+      {
+        "name": "Featured Products1",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  

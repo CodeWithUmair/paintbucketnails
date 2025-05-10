@@ -1,0 +1,55 @@
+{% comment %}
+  When a comment is submitted, the browser is redirected to a page that includes 
+  the new comment id in its URL.
+  #comments is a required ID and is used as an anchor link by Shopify.
+{% endcomment %}
+
+{%- assign number_of_comments = article.comments_count -%}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article role="article" itemscope itemtype="http://schema.org/Article">
+  
+  <section class="page-introduction" data-aos="fade">
+    <header role="banner" class="page-width text-center">
+      <div class="max-w-lg text-wrap">
+        <h1>{{ article.title }}</h1>
+      </div>
+    </header>
+  </section>
+
+  <section class="article-body" data-aos="fade">
+    <div class="page-width max-w-md">
+      <div class="rte" itemprop="articleBody">
+        {{ article.content }}
+      </div>
+
+      {% if article.tags.size > 0 %}
+        <ul class="article-tags">
+          {% for tag in article.tags %}
+            <li>
+              <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}
+
+      {% if blog.comments_enabled? %}
+        <p class="text-center"><em>Your theme is not built for comments!</em></p>
+        {% comment %}
+        {% include 'comment-list' %}
+        {% endcomment %}
+      {% endif %}
+    </div>
+
+  </section>
+</article>

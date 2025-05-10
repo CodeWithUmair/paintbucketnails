@@ -1,0 +1,13 @@
+{% for tag in product.tags %}
+  {% if tag contains 'presale_' %}
+    {% assign presale_date = tag | remove: 'presale_'%}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if presale_date %}
+  <p class="presale-note text-center h5">
+    {% include 'icon-presale-sparkle' %}
+    {{ 'products.product.presale_tag_note' | t: date: presale_date }}
+  </p>
+{% endif %}

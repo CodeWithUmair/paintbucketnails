@@ -1,0 +1,66 @@
+{% if type == 'block' %}
+  {%- assign id = block.id -%}
+  {%- assign heading = block.settings.heading -%}
+  {%- assign subtitle = block.settings.subtitle -%}
+  {%- assign body = block.settings.body -%}
+  {%- assign link_text = block.settings.link_text -%}
+  {%- assign link_url = block.settings.link_url -%}
+  {%- assign link_type = block.settings.link_type -%}
+  {%- assign bg_image = block.settings.bg_image -%}
+  {%- assign custom_styles = block.settings.custom_styles -%}
+{% else %}
+  {%- assign id = section.id -%}
+  {%- assign heading = section.settings.heading -%}
+  {%- assign subtitle = section.settings.subtitle -%}
+  {%- assign body = section.settings.body -%}
+  {%- assign link_text = section.settings.link_text -%}
+  {%- assign link_url = section.settings.link_url -%}
+  {%- assign link_type = section.settings.link_type -%}
+  {%- assign bg_image = section.settings.bg_image -%}
+  {%- assign custom_styles = section.settings.custom_styles -%}
+{% endif %}
+
+<section id="shopify-section-{{ id }}" class="section-full-width-text lazyload" data-aos="fade"data-section-id="{{ id }}" data-section-type="full-width-text" {% if type =='block' %}{{ block.shopify_attributes }}{% endif %}>
+  <div class="page-width">
+    <div class="text-wrap">
+      {% if heading != blank %}
+        <h2 class="heading">
+          {{ heading }}
+        </h2>
+      {% endif %}
+
+      {% if subtitle != blank %}
+        <h3 class="subtitle">
+          {{ subtitle }}
+        </h3>
+      {% endif %}
+
+      {% if body != blank %}
+        <div class="body-text">
+          {{ body }}
+        </div>
+      {% endif %}
+
+      {% if link_text != blank and link_url != blank %}
+        <div class="button-wrap">
+          <a class="{% if link_type == 'button' %}btn btn-outline{% else %}standalone-link{% endif %}" href="{{ link_url }}" title="" target="_blank">{{ link_text }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <style>
+    {% if bg_image != blank %}
+      #shopify-section-{{ id }}.lazyloaded {
+        background-image: url({{ bg_image | img_url: '2000x' }});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    {% endif %}
+
+    {% if custom_styles != blank %}
+      {{ custom_styles }}
+    {% endif %}
+  </style>
+</section>

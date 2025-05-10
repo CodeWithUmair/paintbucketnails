@@ -1,0 +1,65 @@
+<section class="collection-introduction bg-white" data-section-id="{{ section.id }}" data-section-type="collection-list">
+  <div class="page-width">
+    <h1 class="text-center" data-aos="fade">
+      {% if collection.handle == 'all' %}
+        {{ 'collections.general.shop_all' | t }}
+      {% elsif template.name == 'list-collections' %}
+        {{ section.settings.title | escape }}
+      {% else %}
+        {{ collection.title }}
+      {% endif %}
+    </h1>
+    
+    <div class="flex--flexbox flex--wrap flex--justify-center max-w-md">
+      {% for link in linklists.collections-menu.links %}
+        {% if link.type == 'collection_link' %}
+          {% assign coll = link.object %}
+          {% unless coll.handle == 'frontpage' %}
+            <div class="flex-item collection-item text-center">
+              <a href="{{ coll.url }}" class="{% if coll.url == request.path %}current-collection{% endif %}" title="{{ 'collections.general.link_title' | t: title: coll.title }}" {% if link.current %}aria-current="page"{% endif %}>
+                <div class="image-wrap">
+                  {% if coll.image != blank %}
+                    <img 
+                      data-src="{{ coll.image | img_url: '480x480' }}" 
+                      alt="{{ coll.title }}"
+                      class="lazyload"
+                    >
+                  {% elsif coll.products.first != blank %}
+                    <img 
+                      data-src="{{ coll.products.first | img_url: '480x480' }}" 
+                      alt="{{ coll.products.first }}"
+                      class="lazyload"
+                    >
+                  {% else %}
+                    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                    {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+                  {% endif %}
+                </div>
+
+                <div class="text-wrap">
+                  <h6>
+                    {{ link.title }}
+                  </h6>
+                </div>
+              </a>
+            </div>
+          {% endunless %}
+        {% elsif link.type == 'catalog_link' %}
+          <div class="flex-item collection-item text-center">
+            <a href="{{ link.url }}" title="{{ 'collections.general.shop_all' | t }}" class="{% if link.url == request.path %}current-collection{% endif %}" {% if link.current %}aria-current="page"{% endif %}>
+              <div class="image-wrap">
+                {{ 'icon-shop-all.png' | asset_img_url: '480x480' | img_tag: link.title }}
+              </div>
+
+              <h6>
+                {{ 'collections.general.shop_all' | t }}
+              </h6>
+            </a>
+          </div>
+        {% else %}
+          {% continue %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

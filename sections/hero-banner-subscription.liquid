@@ -1,0 +1,285 @@
+<section class="section-hero-banner hero-banner-subscription {{ section.settings.custom_class }} lazyload" data-aos="fade" data-section-id="{{ section.id }}" data-section-type="hero-banner">
+  <div class="page-width">
+    <div class="flex--flexbox flex--wrap  image-pos-{{ section.settings.image_loc }}">
+      <div class="flex-item flex-item--two-fifths image-wrap image-pos-{{ section.settings.image_loc }}" style="padding:0px">
+        {% if section.settings.image != blank %}
+          <img 
+            data-src="{{ section.settings.image  | img_url: '500x' }}" 
+            data-srcset="
+              {{ section.settings.image  | img_url: '500x' }} 1x, 
+              {{ section.settings.image  | img_url: '500x', scale: 2 }} 2x
+            " 
+            alt="{{ section.settings.image.alt }}"
+            class="lazyload"
+          style="width:100%;">
+        {% endif %}
+      </div>
+
+      <div class="flex-item flex-item--two-fifths" style="margin:auto;">
+        <div class="text-wrap text-{{ section.settings.text_align }}">
+          {% if section.settings.pre_heading != blank or section.settings.heading != blank %}
+            <h2>
+              {% if section.settings.pre_heading != blank %}
+                <div class="pre-heading">
+                  {{ section.settings.pre_heading }}
+                </div>
+              {% endif %}
+
+              {% if section.settings.heading != blank %}
+                <div class="heading">
+                  {{ section.settings.heading }}
+                </div>
+              {% endif %}
+            </h2>
+          {% endif %}
+
+          {% if section.settings.subtitle != blank %}
+            <div class="subtitle">
+             {{ section.settings.subtitle }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+            <div class="button-wrap">
+              <a class="btn btn-outline" href="{{ section.settings.button_link }}" style="width:{{ section.settings.button_width }}px">{{ section.settings.button_text }}</a>
+            </div>
+          {% endif %}
+
+          {% if section.settings.sublink_1 != blank or section.settings.sublink_2 != blank %}
+            <div class="link-wrap">
+              {% if section.settings.sublink_1 != blank %}
+                <a href="{{ section.settings.sublink_1 }}">{{ section.settings.sublink_1_text }}</a>
+              {% endif %}
+
+              {% if section.settings.sublink_2 != blank %}
+                <a href="{{ section.settings.sublink_2 }}">{{ section.settings.sublink_2_text }}</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if section.blocks.size > 0 %}
+      {% if section.settings.press_logo_title != blank %}
+        <div class="press-logo__title--mobile">
+          <h4>{{section.settings.press_logo_title}}</h4>
+        </div>
+      {% endif %}
+      <div class="press-logo__wrapper">
+        <div class="press-logo">
+          {% if section.settings.press_logo_title != blank %}
+            <div class="press-logo__item press-logo__item--desktop">
+              <h4>{{section.settings.press_logo_title}}</h4>
+            </div>
+          {% endif %}
+          
+          {% for item in section.blocks %}
+            <div class="press-logo__item">
+              <img src="{{item.settings.logo | img_url: '250x'}}" alt="{{item.settings.logo.alt}}">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  <style>
+    {% if section.settings.bg_image != blank %}
+      #shopify-section-{{ section.id }} .section-hero-banner.lazyloaded {
+        background-image: url({{ section.settings.bg_image | img_url: '2000x' }});
+        background-repeat: no-repeat;
+        {% if section.settings.bg_style_two %}
+          background-position: right top;
+          background-size: contain;
+        {% else %}
+          background-position: center;
+          background-size: cover;
+        {% endif %}
+        
+      }
+      {% if section.settings.bg_image_mobile != blank %}
+        @media only screen and (max-width: 769px) {
+          #shopify-section-{{ section.id }} .section-hero-banner.lazyloaded {
+            background-image: url({{ section.settings.bg_image_mobile | img_url: '1440x' }});
+          }
+        }
+      {% endif %}
+    {% endif %}
+      #shopify-section-{{ section.id }} {
+      background-color:{{ section.settings.sec_bg }};
+  }
+
+  </style>
+</section>
+
+{% schema %}
+  {
+    "name": "Hero Banner Subscription",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bg_style_two",
+        "label": "Background Style-2"
+      },
+      {
+        "type": "color",
+        "id": "sec_bg",
+        "label": "Section Bg"
+      },
+      {
+        "type": "header",
+        "content": "Background"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image_mobile",
+        "label": "Background Image - Mobile"
+      },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text Alignment",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "center", "label": "Center"},
+          { "value": "right", "label": "Right"}
+        ],
+        "default": "center"
+      },
+      {
+        "type": "text",
+        "id": "pre_heading",
+        "label": "Pre-heading",
+        "default": "Nail Privilege"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "It’s a thing now"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "At Paintbucket, caring for your nails is fun and indulgent — never a chore."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "range",
+        "id": "button_width",
+        "label": "Button Width",
+        "min": 200,
+        "max": 400,
+        "step": 25,
+        "unit": "px",
+        "default": 200
+      },
+      {
+        "type": "header",
+        "content": "Sub-button Links"
+      },
+      {
+        "type": "text",
+        "id": "sublink_1_text",
+        "label": "Link Text 1"
+      },
+      {
+        "type": "url",
+        "id": "sublink_1",
+        "label": "Link 1"
+      },
+      {
+        "type": "text",
+        "id": "sublink_2_text",
+        "label": "Link Text 2"
+      },
+      {
+        "type": "url",
+        "id": "sublink_2",
+        "label": "Link 2"
+      },
+      {
+        "type": "header",
+        "content": "Content Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Content Image"
+      },
+      {
+        "type": "select",
+        "id": "image_loc",
+        "label": "Image Placement",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "right", "label": "Right"}
+        ],
+        "default": "left"
+      },
+      {
+        "id": "custom_class",
+        "label": "Custom Class",
+        "type": "text"
+      },
+      {
+        "type": "header",
+        "content": "Press Logo"
+      },
+      {
+        "type": "text",
+        "id": "press_logo_title",
+        "label": "Press Logo Title",
+        "default": "As seen on"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "press_logo",
+        "name": "Press Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner - Subscription",
+        "category": "Hero"
+      }
+    ]
+  }
+{% endschema %}
+<style type="text/css">
+  section.section-hero-banner .flex--flexbox.image-pos-left{
+    background-color:white;
+  }
+  
+  #shopify-section-1605724799d25ebf8d .section-hero-banner .heading{
+    font-size:30px;
+  }
+</style>

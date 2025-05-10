@@ -1,0 +1,122 @@
+<section class="page-introduction{% if section.settings.intro_bg_image != blank %} has-background{% endif %}{% if section.settings.intro_nav != blank %} has-navigation{% endif %} lazyload" data-aos="fade">
+  <div class="page-width text-center">
+    {% if section.settings.intro_image != blank %}
+      <div class="flex--flexbox flex--wrap">
+        <div class="flex-item flex-item--two-fifths">
+          <img src="{{ section.settings.intro_image  | img_url: '800x' }}" alt="{{ section.settings.intro_image.alt }}">
+        </div>
+
+        <div class="flex-item flex-item--three-fifths">
+          <div class="text-wrap text-center">
+            <h1>
+              {% if section.settings.intro_title != blank %}
+                {{ section.settings.intro_title }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </h1>
+
+            {% if section.settings.intro_text != blank %}
+              {{ section.settings.intro_text }}
+            {% endif %}
+
+            {% if section.settings.intro_button_text != blank and section.settings.intro_button_link != blank %}
+              <div class="button-wrap">
+                <a class="btn btn-outline" href="{{ section.settings.intro_button_link }}" title="" target="_blank">{{ section.settings.intro_button_text }}</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="max-w-lg text-wrap">
+
+        {% if template.suffix == 'how-to-apply-pressons' %}
+          <div class='page-intro-image'>
+            {{ 'press-ons.png' | asset_url | img_tag: 'Press Ons' }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.intro_text != blank %}
+          {{ section.settings.intro_text }}
+        {% endif %}
+
+        {% if section.settings.intro_button_text != blank and section.settings.intro_button_link != blank %}
+          <div class="button-wrap">
+            <a class="btn btn-outline" href="{{ section.settings.intro_button_link }}" title="" target="_blank">{{ section.settings.intro_button_text }}</a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if section.settings.intro_nav != blank %}
+  {% assign nav_title = section.settings.intro_nav %}
+  <section class="page-navigation">
+    <nav>
+      {% if template.suffix == 'how-to-apply-pressons' %}
+        <ul class="collection-introduction flex--flexbox flex--wrap flex--justify-center">
+          {% for link in linklists[section.settings.intro_nav].links %}
+            <li class="flex-item collection-item">
+              <a href="{{ link.url }}">
+                <div class="image-wrap">
+                  {% if link.url contains 'how-to-apply' %}
+                    {{ 'hta-nav-icon-nail-wraps.png' | asset_img_url: '480x480' | img_tag: link.title }}
+                  {% elsif link.url contains 'why-we-love' %}
+                    {{ 'hta-nav-icon-love.png' | asset_img_url: '480x480' | img_tag: link.title }}
+                  {% elsif link.url contains 'our-collections' %}
+                    {{ 'hta-nav-icon-skin-care.png' | asset_img_url: '480x480' | img_tag: link.title }}
+                  {% elsif link.url contains 'faq' %}
+                    {{ 'hta-nav-icon-faq.png' | asset_img_url: '480x480' | img_tag: link.title }}
+                  {% endif %}
+                </div>
+
+                <div class="text-wrap">
+                  {{ link.title | escape }}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <ul class="flex--flexbox flex--wrap flex--justify-center">
+          {% for link in linklists[section.settings.intro_nav].links %}
+            <li class="flex-item">
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </nav>
+  </section>
+{% endif %}
+
+{% if section.settings.intro_bg_image != blank %}
+  <style>
+    #MainContent {
+      padding-top: 0;
+    }
+
+    #shopify-section-{{ section.id }} .page-introduction.lazyloaded {
+      background-image: url({{ section.settings.intro_bg_image | img_url: '2000x' }});
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+{% endif %}
+
+{% if section.settings.custom_styles != blank %}
+  <style>
+    {{ section.settings.custom_styles }}
+  </style>
+{% endif %}
+
+{% if template.suffix == 'how-to-apply-pressons' %}
+    <style>
+    .page-intro-image {
+      margin-bottom: 34px
+    }
+  </style>
+{% endif %}

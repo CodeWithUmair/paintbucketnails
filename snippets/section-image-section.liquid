@@ -1,0 +1,96 @@
+{% if type == 'block' %}
+  {%- assign id = block.id -%}
+  {%- assign bg_image = block.settings.bg_image -%}
+  {%- assign heading = block.settings.heading -%}
+  {%- assign subtitle = block.settings.subtitle -%}
+  {%- assign image_one = block.settings.image_one -%}
+  {%- assign image_two = block.settings.image_two -%}
+  {%- assign image_three = block.settings.image_three -%}
+  {%- assign image_four = block.settings.image_four -%}
+  {%- assign link_text = block.settings.link_text -%}
+  {%- assign link_url = block.settings.link_url -%}
+  {%- assign custom_styles = block.settings.custom_styles -%}
+{% else %}
+  {%- assign id = section.id -%}
+  {%- assign bg_image = section.settings.bg_image -%}
+  {%- assign heading = section.settings.heading -%}
+  {%- assign subtitle = section.settings.subtitle -%}
+  {%- assign image_one = section.settings.image_one -%}
+  {%- assign image_two = section.settings.image_two -%}
+  {%- assign image_three = section.settings.image_three -%}
+  {%- assign image_four = section.settings.image_four -%}
+  {%- assign link_text = section.settings.link_text -%}
+  {%- assign link_url = section.settings.link_url -%}
+  {%- assign custom_styles = section.settings.custom_styles -%}
+{% endif %}
+
+<section id="shopify-section-{{ id }}" class="section-image-section section-full-width-text lazyloaded" data-section-id="{{ id }}" data-section-type="full-width-two-cols" {% if type =='block' %}{{ block.shopify_attributes }}{% endif %} data-aos="fade">
+  <div class="page-width max-w-xl">
+    <div class="text-wrap">
+      {% if heading != blank %}
+        <h2 class="heading">
+          {{ heading }}
+        </h2>
+      {% endif %}
+
+      {% if subtitle != blank %}
+        <h3 class="subtitle">
+          {{ subtitle }}
+        </h3>
+      {% endif %}
+
+      <div class="flex--flexbox flex--wrap">
+        <div class="flex-item flex-item--one-quarter">
+          {% if image_one != blank %}
+            <img src="{{ image_one  | img_url: '600x' }}" alt="{{ image_one.alt }}">
+          {% else %}
+            Please select an image for this section.
+          {% endif %}
+        </div>
+        <div class="flex-item flex-item--one-quarter">
+          {% if image_two != blank %}
+            <img src="{{ image_two  | img_url: '600x' }}" alt="{{ image_two.alt }}">
+          {% else %}
+            Please select an image for this section.
+          {% endif %}
+        </div>
+        <div class="flex-item flex-item--one-quarter">
+          {% if image_three != blank %}
+            <img src="{{ image_three  | img_url: '600x' }}" alt="{{ image_three.alt }}">
+          {% else %}
+            Please select an image for this section.
+          {% endif %}
+        </div>
+        <div class="flex-item flex-item--one-quarter">
+          {% if image_four != blank %}
+            <img src="{{ image_four  | img_url: '600x' }}" alt="{{ image_four.alt }}">
+          {% else %}
+            Please select an image for this section.
+          {% endif %}
+        </div>
+
+      </div>
+
+      {% if link_text != blank and link_url != blank %}
+        <div class="button-wrap">
+          <a class="btn btn-outline" href="{{ link_url }}" title="" target="_blank">{{ link_text }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <style>
+    {% if bg_image != blank %}
+      #shopify-section-{{ id }} .section-image-section.lazyloaded {
+        background-image: url({{ bg_image | img_url: '2000x' }});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    {% endif %}
+
+    {% if custom_styles != blank %}
+      {{ custom_styles }}
+    {% endif %}
+  </style>
+</section>

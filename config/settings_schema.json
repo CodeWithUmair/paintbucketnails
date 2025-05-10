@@ -1,0 +1,390 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Paintbucket Shopify",
+    "theme_version": "1.0",
+    "theme_author": "Shoppe Theory",
+    "theme_documentation_url": "https:\/\/shopify.github.io\/slate\/",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/slate"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header "
+      },
+      {
+        "type": "color",
+        "id": "header_color",
+        "label": "Text",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "header_color__hover",
+        "label": "Text - Hover",
+        "default": "#f7a87c"
+      },
+      {
+        "type": "color",
+        "id": "header_background_color__hover",
+        "label": "Background Color",
+        "default": "transparent"
+      },
+      {
+        "type": "header",
+        "content": "Header (On hover)"
+      },
+      {
+        "type": "color",
+        "id": "header_color_hover",
+        "label": "Text",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "header_color_hover__hover",
+        "label": "Text - Hover",
+        "default": "#f7a87c"
+      }
+    ]
+  },
+  {
+    "name": "Shop Info",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shop_address",
+        "label": "Address",
+        "default": "204 Wythe Ave. Brooklyn, NY"
+      },
+      {
+        "type": "text",
+        "id": "shop_email",
+        "label": "Email",
+        "default": "hello@paintbucketnails.com"
+      },
+      {
+        "type": "url",
+        "id": "shop_booking_link",
+        "label": "Booking Link"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social sharing options"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_blog",
+        "label": "Enable sharing for blog articles",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": "Share on Facebook",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": "Tweet on Twitter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_pinterest",
+        "label": "Pin on Pinterest",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Sharing links"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook link"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest link"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram link"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "Snapchat link"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr link"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "Youtube link"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo link"
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "select",
+        "id": "product_form_style",
+        "label": "Product Form Style",
+        "options": [
+          {
+            "value": "swatches",
+            "label": "Swatches"
+          },
+          {
+            "value": "dropdown",
+            "label": "Dropdown"
+          }
+        ],
+        "default": "swatches"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Enable cart notes",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon image",
+        "info": "Will be scaled down to 32 x 32px"
+      }
+    ]
+  },
+  {
+    "name": "Ajax Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_enabled",
+        "label": "Enable Ajax Cart",
+        "info": "Enable the Ajax cart."
+      },
+      {
+        "type": "header",
+        "content": "Ajax Cart Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_cartlink",
+        "label": "Link to cart page on cart icon.",
+        "info": "Allows the customer to click on the cart icon in the expanded Ajax cart to go to the cart page."
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "paragraph",
+        "content": "The Ajax Cart will try to use as many styles in your theme as possible. Some colours and styles might need to be adjusted. Here are some settings for you to customise the style of the cart."
+      },
+      {
+        "type": "header",
+        "content": "Cart Statement"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_display_subtotal",
+        "label": "Display Subtotal",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_display_vat",
+        "label": "Display VAT",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "ajaxcart_vat_rate",
+        "label": "VAT Rate (Percent)",
+        "default": 20
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_display_savings",
+        "label": "Display Savings",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_display_shipping",
+        "label": "Display Shipping",
+        "default": true
+      },
+      {
+        "id": "ajaxcart_shipping_price",
+        "type": "number",
+        "label": "Shipping Price",
+        "default": 5
+      },
+      {
+        "id": "ajaxcart_freeshipping_threshold",
+        "type": "text",
+        "label": "Free Shipping Threshold",
+        "info": "If cart total exceeds the Free Shipping Threshold, display the shipping as \"Free\". Set to \"0\" to turn off."
+      },
+      {
+        "id": "ajaxcart_shipping_label",
+        "type": "text",
+        "label": "Shipping Price Label",
+        "info": "Replace the shipping price with a generic text label, e.g. \"Calculated at Checkout.\". (This also turns off the free shipping threshold and doesn't add any shipping to the total.)"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_display_total",
+        "label": "Display Total",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shipping Banner"
+      },
+      {
+        "id": "ajaxcart_freeshipping_enable",
+        "type": "checkbox",
+        "label": "Enable Free Shipping Banner",
+        "info": "Displays a banner at the top of the cart, which says \"Spend X more to get Free Shipping!\".",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Cart Contents"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_item_display_variant",
+        "label": "Display Item Variant",
+        "default": true,
+        "info": "Show the selected variant names for variant products. (e.g. \"Small\" if an item with size \"Small\" is in the cart.)"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_item_display_option_names",
+        "label": "Display Item Option Names",
+        "default": false,
+        "info": "Show the option names for variant products. (e.g. \"Size\" or \"Color\" before the variant name.)"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_item_properties",
+        "label": "Display Item Properties",
+        "default": true,
+        "info": "Show the cart item properties. (extra details added by apps, or theme customizations.)"
+      },
+      {
+        "type": "header",
+        "content": "Cart Message"
+      },
+      {
+        "type": "richtext",
+        "id": "ajaxcart_message",
+        "label": "Cart message"
+      },
+      {
+        "type": "header",
+        "content": "Cart Notes and Terms of Service"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_notes_enable",
+        "label": "Display Cart Notes \/ Gift Message Field",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_tos_enable",
+        "label": "Display Terms of Service Checkbox",
+        "default": false
+      },
+      {
+        "type": "page",
+        "id": "ajaxcart_tos_page",
+        "label": "Terms of Service Page"
+      },
+      {
+        "type": "header",
+        "content": "Payment Methods"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_paymentmethods",
+        "label": "Show Payment Methods"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajaxcart_additionalpaymentmethods",
+        "label": "Show Additional Payment Buttons",
+        "info": "e.g. Paypal, Apple Pay, GPay"
+      },
+      {
+        "type": "header",
+        "content": "Checkout"
+      },
+      {
+        "type": "select",
+        "id": "ajaxcart_checkout_action",
+        "label": "Checkout Button Behaviour",
+        "info": "Changes what the checkout button does.",
+        "options": [
+          {
+            "value": "cart",
+            "label": "Go to Cart"
+          },
+          {
+            "value": "checkout",
+            "label": "Go to Checkout"
+          }
+        ],
+        "default": "checkout"
+      },
+      {
+        "type": "richtext",
+        "id": "ajaxcart_checkout_message",
+        "label": "Checkout Message",
+        "info": "A small paragraph displayed below the checkout button."
+      }
+    ]
+  }
+]

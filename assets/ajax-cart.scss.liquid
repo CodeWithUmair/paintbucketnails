@@ -1,0 +1,1448 @@
+/*
+
+==============================
+UXForge
+AJAX CART
+0.9.0
+==============================
+Quintin Schnehage - quintin@uxforge.io
+==============================
+
+1. Variables
+2. Mixins
+3. Basic Styles
+	3.1. Overlay
+	3.2. Cart
+		3.2.1 States
+		3.2.2 Header
+		3.2.3 Banner
+		3.2.4 Cart Contents
+		3.2.5 Cart Totals
+		3.2.6 Upsell
+		3.2.7 Payment Methods
+4. Style Overrides
+5. Animations
+==============================
+
+*/
+
+/*  ==============================
+		1. Variables
+		============================== */
+
+		/* ----- Colors ----- */
+
+		$color-primary: #f7a87c; // Header, Buttons
+		$color-secondary: #222F3E;
+		$color-tertiary: #4f4f4f; // Misc. Text
+
+		$color-danger: #ff0000;
+
+		$color-background-1: #fff; // White
+		$color-background-2: #f7f7f7; // Off White
+		$color-background-3: #F8F7F2; // Off-White Cream
+
+		$color-text: #231f20;
+		$color-text--hover: #666;
+		$color-text--reversed: #666;
+
+		$color-border: #231f20; // Links
+		$color-links: $color-primary; // Links
+
+		$overlay-background-color: rgba(0, 0, 0, 0.1);
+
+		$header-icon-color: #000;
+		$header-icon-color--hover: $color-primary;
+
+		$upsell-color: $color-primary;
+		$upsell-price-color: #fff;
+		$upsell-plus-color: #fff;
+
+		$cartitem-background-color: #ffffff;
+
+		$navigation-background-color: #ffffff;
+
+		$statement-line-color: #333;
+		$statement-line-color--total: #000;
+		$statement-line-color--shipping-label: $color-danger;
+		$statement-line-freeshipping-color: #D54D4D;
+
+		$quantity-selector-button-background-color: transparent;
+		$quantity-selector-button-background-color--hover: transparent;
+		$quantity-selector-button-border-color: $color-border;
+
+		$banner-background: #fdf3f1;
+		$banner-background--success: #fdddd3;
+		$banner-text: #000;
+		$banner-text--success: #000;
+
+		$cart-note-font-size: 0.9em;
+
+		/* ----- Layout ----- */
+
+		$mobile-small: 375px;
+		$mobile: 425px;
+		$small: 480px;
+		$medium: 798px;
+		$large: 799px;
+		$larger: 960px;
+		$xlarge: 1400px;
+
+		$cart-spacing-x: 30px;
+		$cart-spacing-y: 20px;
+
+/*  ==============================
+		2. Mixins
+		============================== */
+
+		@mixin respond-to($breakpoint) {
+
+			@if $breakpoint == "mobile" {
+				@media (max-width: $mobile) {
+					@content;
+				}
+			}
+
+			@if $breakpoint == "small" {
+				@media (max-width: $small) {
+					@content;
+				}
+			}
+
+			@else if $breakpoint == "medium" {
+				@media (max-width: $medium) {
+					@content;
+				}
+			}
+
+			@else if $breakpoint == "large" {
+				@media (min-width: $large) {
+					@content;
+				}
+			}
+
+			@else if $breakpoint == "larger" {
+				@media (min-width: $larger) {
+					@content;
+				}
+			}
+
+			@else if $breakpoint == "xlarge" {
+				@media (min-width: $xlarge) {
+					@content;
+				}
+			}
+
+			@else {
+				@media ($breakpoint) {
+					@content;
+				}
+			}
+
+		}
+
+		/*
+			Prefix mixin for generating vendor prefixes.
+			Based on https://github.com/thoughtbot/bourbon/blob/v4-stable/app/assets/stylesheets/addons/_prefixer.scss
+
+		*/
+		@mixin prefix($property, $value, $prefixes) {
+			@each $prefix in $prefixes {
+				@if $prefix == webkit {
+					-webkit-#{$property}: $value;
+				} @else if $prefix == moz {
+					-moz-#{$property}: $value;
+				} @else if $prefix == ms {
+					-ms-#{$property}: $value;
+				} @else if $prefix == o {
+					-o-#{$property}: $value;
+				} @else if $prefix == spec {
+					#{$property}: $value;
+				} @else  {
+					@warn 'Unrecognized prefix: #{$prefix}';
+				}
+			}
+		}
+
+
+		@mixin animation($animation) {
+			@include prefix(animation, #{$animation}, moz o webkit spec);
+		}
+
+		@mixin keyframes($name) {
+
+			@-webkit-keyframes #{$name} {
+				@content;
+			}
+			@-moz-keyframes #{$name} {
+				@content;
+			}
+			@-ms-keyframes #{$name} {
+				@content;
+			}
+			@keyframes #{$name} {
+				@content;
+			}
+
+		}
+
+/*  ==============================
+		3. Basic Styles
+		============================== */
+
+		// Resets
+
+
+/*  ------------------------------
+		3.1. Overlay
+		------------------------------ */
+
+		.ajax-cart-overlay {
+
+			position: fixed;
+			display: block;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1500;
+
+			background: $overlay-background-color;
+
+			&.ajax-cart-overlay--hidden {
+				display: none;
+			}
+
+		}
+
+/*  ------------------------------
+		3.2. Cart
+		------------------------------ */
+
+		body {
+			&.ajax-cart--lock-scroll {
+
+				overflow-y: hidden !important;
+
+				@include respond-to("small"){
+					height: 100%;
+					overflow: hidden;
+					width: 100%;
+					position: fixed;
+				}
+
+			}
+
+			.ajax-cart {
+				overflow-y: scroll;
+				overflow-x: hidden;
+				-webkit-overflow-scrolling: touch;
+			}
+
+		}
+
+		html, body, .ajax-cart {
+			height: 100%; // Necessary for Flexbox sizing on cart
+		}
+
+		.ajax-cart {
+
+			position: fixed;
+			z-index: 2000;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			top: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			max-width: 460px;
+			min-width: 460px;
+
+			line-height: 1.4;
+			font-size: 16px;
+
+			background: $color-background-1;
+			box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+
+			transition: transform 0.25s ease;
+			transform: translateX(0%);
+			will-change: translateX;
+
+			-webkit-overflow-scrolling: touch !important;
+
+			a {
+				font-weight: 700;
+				transition: color 0.25s;
+				&:hover {
+					color: $color-primary;
+				}
+			}
+
+			svg {
+				fill: currentColor;
+				* {
+					fill: currentColor;
+				}
+			}
+
+			strong {
+				font-weight: 500;
+			}
+
+			label {
+				margin-top: 0;
+			}
+
+			.btn {
+				&[disabled] {
+					opacity: 0.5;
+				}
+			}
+
+			a.btn {
+			  color: #fff !important;
+			  text-align: center;
+			  transition: 0.25s background, 0.25s color;
+			  &:hover {
+			    color: $color-secondary !important;
+			  }
+			}
+
+			@include respond-to("small"){
+
+				display: block;
+				height: auto;
+				width: 100%;
+				max-width: 100%;
+				min-width: 0;
+
+				top: 0;
+				bottom:0;
+
+			}
+
+			// 3.2.1 States
+
+			&.ajax-cart--closed {
+				transform: translateX(100%);
+			}
+
+			&.ajax-cart--open {
+				transform: translateX(0%);
+			}
+
+			&.ajax-cart--closing {
+				@include animation(ajax-cart-closing 1s);
+			}
+
+			&.ajax-cart--opening {
+				@include animation(ajax-cart-opening 1s);
+			}
+
+			// 3.2.2 Header
+
+			.ajax-cart__header {
+
+				flex-shrink: 0;
+
+				@include respond-to("small"){
+					flex-shrink: none;
+
+					/*
+					// Removing while fixing ajax cart scrolling.
+					position: fixed;
+					z-index: 1000;
+					*/
+
+				}
+
+			}
+
+			.ajax-cart__navigation {
+
+				display: flex;
+
+				width: 100%;
+				height: 60px;
+				padding: 5px $cart-spacing-x;
+
+				background: $navigation-background-color;
+				box-shadow: 0 0 10px rgba(0,0,0, .1);
+
+				button {
+
+					padding: 0;
+					min-height: 0;
+					width: auto;
+
+					background: transparent;
+					box-shadow: none;
+					border: none;
+
+					&:focus {
+						outline: none;
+						box-shadow: none;
+					}
+
+				}
+
+			}
+
+			.ajax-cart-header-icon {
+
+				color: $header-icon-color;
+				transition: color 0.25s;
+
+				svg {
+					transition: transform 0.25s ease-in-out;
+					* {
+						transition: fill 0.25s;
+						fill: $header-icon-color;
+					}
+				}
+
+				&.ajax-cart-header-icon--active {
+					&:hover {
+						color: $header-icon-color--hover;
+						svg {
+							* {
+								fill: $header-icon-color--hover;
+							}
+						}
+					}
+				}
+
+			}
+
+			.ajax-cart-header__close {
+
+				position: relative;
+
+				transition:
+					transform 0.25s ease-in-out,
+					color 0.25s ease-in-out;
+
+				svg {
+					position: relative;
+					top: 3px;
+				}
+
+				&:hover {
+					svg {
+						transform: rotate(90deg);
+					}
+				}
+
+			}
+
+			.ajax-cart-header__icon {
+				display: inline-block;
+				margin-right: 0;
+				svg {
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			.ajax-cart-header__count {
+
+				font-weight: 400;
+				font-size: 1.4em;
+				text-transform: none;
+
+			}
+
+			.ajax-cart-empty-message {
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				margin-top: 50px;
+				padding: 25px;
+				min-height: 30vh;
+
+				text-align: center;
+				background: $color-background-1;
+
+				.ajax-cart-empty-message__icon {
+
+					display: block;
+					margin: 0 auto;
+					width: 100px;
+					height: 100px;
+
+					background-size: contain;
+					background: url("{{ 'icon-cart-empty.svg' | asset_url }}");
+				}
+
+				.ajax-cart-empty-message__title {
+
+					display: block;
+					color: $color-secondary;
+					margin-top: 0.5em;
+					margin-bottom: 0;
+
+				}
+
+				.ajax-cart-empty-message__subtitle {
+
+					display: block;
+					color: $color-secondary;
+					margin-top: 0.5em;
+					margin-bottom: 0;
+
+				}
+
+				.ajax-cart-empty-message__cta {
+
+					align-self: center;
+					margin-top: 1em;
+
+				}
+
+			}
+
+			.ajax-cart-header-title {
+
+				display: flex;
+
+				margin-right: auto;
+				margin-left: 0;
+				align-items: center;
+
+				font-size: 21px;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				line-height: 1;
+
+				text-align: center;
+
+				cursor: default;
+				color: $header-icon-color;
+
+				user-select: none;
+
+			}
+
+			.ajax-cart-header__cart-icon  {
+				color: $header-icon-color;
+				cursor: default;
+				* {
+					fill: currentColor;
+				}
+			}
+
+			.ajax-cart--trigger-gotocart {
+				cursor: pointer;
+			}
+
+			// 3.2.3 Banner
+
+			.ajax-cart-banner {
+
+				display: block;
+				padding: 0.8em 0.5em;
+
+				font-size: 0.8em;
+				text-align: center;
+
+				background: $banner-background;
+				color: $banner-text;
+
+				user-select: none;
+				cursor: default;
+				will-change: color, background;
+
+				transition:
+					0.25s background,
+					0.25s color;
+
+				svg {
+					transition: 0.25s fill;
+					* {
+						fill: $banner-text;
+					}
+				}
+
+				&.ajax-cart-banner--success {
+					background: $banner-background--success;
+					color: $banner-text--success;
+					svg * {
+						fill: $banner-text--success;
+					}
+				}
+
+				.ajax-cart-banner__text {
+					font-size: 16px;
+					font-weight: 400;
+					letter-spacing: 1;
+					strong {
+						font-weight: 600;
+					}
+					span.money {
+						font-weight: bold;
+					}
+					@include respond-to("mobile"){
+						font-size: 1em;
+					}
+				}
+
+				.ajax-cart-banner__icon {
+					svg {
+						transform: translateY(5px);
+					}
+				}
+
+			}
+
+			// 3.2.4 Cart Contents
+
+			.ajax-cart__contents {
+				background: $cartitem-background-color;
+				form {
+					margin: 0;
+				}
+			}
+
+			.ajax-cart__body {
+
+				position: relative;
+
+				display: block;
+				margin-bottom: auto;
+				height: 100%;
+				overflow: scroll;
+
+				color: $color-text;
+
+				@include respond-to("small"){
+					/*
+					// Removing while fixing ajax cart scrolling.
+					padding-top: 80px;
+					*/
+					height: auto;
+					overflow: auto;
+				}
+
+				@include respond-to("small"){
+					max-width: 100vw;
+				}
+
+				&::-webkit-scrollbar {
+					-webkit-appearance: none;
+					width: 4px;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-radius: 0;
+					background-color: rgba(0,0,0,.5);
+					-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+				}
+
+			}
+
+			.ajax-cart__items-container {
+
+				display: flex;
+				padding: 0 $cart-spacing-x;
+				width: 100%;
+				position: relative;
+
+			}
+
+			.ajax-cart-contents-overlay {
+
+
+				position: fixed;
+				z-index: 1;
+				left: 50%;
+				top: 50%;
+				width: 100%;
+				height: 100%;
+				transform: translate(-50%, -50%);
+
+				background: rgba(255,255,255,0.85);
+
+			}
+
+			.ajax-cart-contents-overlay__icon {
+				max-width: 200px;
+				margin: auto;
+				img {
+					width: 100%;
+				}
+				svg {
+					* {
+						fill: var(---ajax-cart-loading);
+					}
+				}
+			}
+
+			.ajax-cart-contents-overlay__content {
+
+				position: absolute;
+				left: 0;
+				right:0;
+				top:50%;
+				text-align: center;
+				transform: translateY(-50%);
+
+			}
+
+			.ajax-cart-contents-overlay__text {
+
+				font-size: 1.1em;
+				font-weight: bold;
+
+			}
+
+			.ajax-cart-item {
+
+				display: flex;
+
+				position: relative;
+				margin-bottom: 0;
+				margin-top: 0;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				border-bottom: 1px solid $color-border;
+
+				background: $cartitem-background-color;
+
+				.ajax-cart-item__image {
+
+					flex-basis: 80px;
+					min-width: 100px;
+					margin-right: 15px;
+
+					a {
+						opacity: 1;
+						&:hover {
+							opacity: 0.8;
+						}
+					}
+
+					img {
+						width: 100%;
+						object-fit: cover;
+					}
+
+					@include respond-to("mobile"){
+						min-width: 0;
+				    max-width: none;
+					}
+
+				}
+
+				.ajax-cart-item__details {
+					width: 100%;
+				}
+
+				.ajax-cart-item__link {
+					display: block;
+					max-width: 180px;
+					&:hover {
+						.ajax-cart-item__title {
+							color: $color-primary;
+						}
+					}
+				}
+
+				.ajax-cart-item__properties {
+					margin-top: 0.5em;
+					font-size: 0.8em;
+					color: $color-text--hover;
+				}
+
+				.ajax-cart-item-property {
+					display: block;
+				}
+
+				.ajax-cart-item-property__name {
+					font-weight: bold;
+				}
+
+				.ajax-cart-item__title {
+					font-weight: bold;
+					font-size: 1.05em;
+					margin-bottom: 0.5em;
+					padding-right: 60px;
+					letter-spacing: -0.5px;
+					@include respond-to("mobile"){
+						display: block;
+				    width: 100%;
+				    padding-right: 0;
+					}
+				}
+
+				.ajax-cart-item__variants {
+					font-size: 0.8em;
+					margin-top: 0.5em;
+				}
+
+				.ajax-cart-item-variant {
+
+				}
+
+				.ajax-cart-item-variant__name {
+					font-weight: bold;
+				}
+
+				.ajax-cart-item-variant__value {
+
+				}
+
+				.ajax-cart-item__remove {
+
+					position: absolute;
+					top: 15px;
+					right: 0;
+					bottom: unset;
+
+					font-size: 0.9em;
+
+					color: $color-links;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+
+				}
+
+				.ajax-cart-quantity-selector {
+
+					display: inline-flex;
+					margin-top: 0.5em;
+					border: 1px solid #000000;
+
+					@include respond-to("small"){
+						max-width: 120px;
+					}
+
+					.ajax-cart-quantity-selector__quantity {
+
+						flex: 1 0 40px;
+
+						margin: 0;
+						padding: 0;
+					  -webkit-appearance: none;
+					  -moz-appearance: textfield; /* Firefox */
+
+						height: 40px;
+						line-height: 34px;
+						margin: 0;
+						min-height: 0;
+						max-width: 40px;
+
+						text-align: center;
+
+						border: 0;
+
+						border-radius: 0;
+						background: $cartitem-background-color;
+
+						@include respond-to("small"){
+							height: 40px;
+						}
+
+						&::-webkit-outer-spin-button,
+						&::-webkit-inner-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+
+						/* Firefox */
+						&[type=number] {
+							-moz-appearance: textfield;
+						}
+
+					}
+
+					.ajax-cart-quantity-selector__quantity,
+					.ajax-cart-quantity-selector__button {
+						height: 40px;
+					}
+
+					.ajax-cart-quantity-selector__button {
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						width: 34px;
+						height: 40px;
+						max-width: 34px;
+						min-width: 34px;
+
+						flex: 1 0 0;
+						line-height: 30px;
+
+						background: $quantity-selector-button-background-color;
+
+						text-align: center;
+						font-weight: bold;
+
+						cursor: pointer;
+						user-select: none;
+						color: $color-text;
+
+						&.ajax-cart-quantity-selector__decrement {
+							border-right: 0;
+						}
+
+						&.ajax-cart-quantity-selector__increment {
+							border-left: 0;
+						}
+
+						&:active,
+						&:hover {
+							background: $quantity-selector-button-background-color--hover;
+							color: $color-text--hover;
+						}
+
+						@include respond-to("small"){
+							width: 32px;
+							height: 32px;
+							max-width: 32px;
+							min-width: 32px;
+							line-height: 28px;
+						}
+
+					}
+
+				}
+
+				.ajax-cart-price-controls {
+					display: flex;
+					justify-content: space-between;
+				}
+
+				.ajax-cart-item__price {
+
+					display: flex;
+					flex-direction: column;
+					font-size: 1.2rem;
+
+					.was_price {
+						text-decoration: line-through;
+						color: #999;
+					}
+
+					@include respond-to("mobile") {
+						display: block;
+						position: static;
+						.was_price {
+							order: 1;
+						}
+					}
+				}
+
+			}
+
+			.ajax-cart__items {
+
+				padding: 0;
+				padding-top: 30px;
+				margin: 0;
+				width: 100%;
+
+				@include respond-to("small"){
+					max-height: none;
+					overflow: auto;
+				}
+
+				&::-webkit-scrollbar {
+					-webkit-appearance: none;
+					width: 4px;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-radius: 0;
+					background-color: rgba(0,0,0,.25);
+					-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+				}
+
+			}
+
+			// 3.2.5 Cart Totals
+
+			.ajax-cart__totals {
+				background: $color-background-1;
+			}
+
+			.ajax-cart__total-statement {
+
+				min-width: 130px;
+				padding: 0 10px;
+				padding-left: $cart-spacing-x;
+		    padding-right: $cart-spacing-x;
+				margin-top: $cart-spacing-y;
+				margin-bottom: $cart-spacing-y;
+
+				border: 0;
+
+				font-size: 0.9em;
+
+				background: $color-background-1;
+
+			}
+
+			.ajax-cart-statement-line {
+
+				display: flex;
+				justify-content: space-between;
+				overflow: hidden;
+				color: $statement-line-color;
+				font-weight: 600;
+				line-height: 1.8;
+
+				&.ajax-cart-statement-line--total {
+					color: $statement-line-color--total;
+					font-size: 1.2em;
+					margin-bottom: 0;
+				}
+
+			}
+
+			.ajax-cart-statement-line__label {
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+			}
+
+			.ajax-cart-statement-line__value {
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+			}
+
+			.ajax-cart-statement-line__shipping-label {
+				color: $statement-line-color--shipping-label;
+				font-style: italic;
+			}
+
+			.ajax-cart-statement-line__free_shipping {
+				color: $statement-line-freeshipping-color;
+				font-weight: bold;
+			}
+
+			.ajax-cart__upsell {
+
+				padding-left: $cart-spacing-x;
+		    padding-right: $cart-spacing-x;
+
+				margin: $cart-spacing-y auto;
+				margin-bottom: 0;
+				border: 0;
+
+				// border-top: 1px solid $color-border;
+				// border-bottom: 1px solid $color-border;
+
+				background: $color-background-1;
+
+			}
+
+			// 3.2.6 Upsell
+
+			.ajax-cart-upsell {
+
+				display: flex;
+				align-items: center;
+
+				overflow: hidden;
+				position: relative;
+
+				margin: 20px 0;
+				width: 100%;
+				padding: 0;
+				padding-right: 45px;
+
+				cursor: pointer;
+				border-radius: 8px;
+				box-shadow: 0 3px 15px rgba(0,0,0,.1);
+
+				&:hover {
+					opacity: 0.75;
+				}
+
+				@include respond-to("small"){
+					align-items: stretch;
+				}
+
+				.ajax-cart-upsell__image {
+
+					flex: 1 0 70px;
+
+					max-width: 100px;
+					min-width: 100px;
+					padding: 15px;
+					margin-right: 10px;
+
+					img {
+						width: 100%;
+					}
+
+					@include respond-to("mobile") {
+
+						min-width: 80px;
+
+						img {
+							object-fit: cover;
+							margin: auto;
+							align-self: stretch;
+							height: 100%;
+							display: block;
+						}
+
+					}
+
+				}
+
+				.ajax-cart-upsell__text {
+
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding: 15px 0;
+					padding-left: 15px;
+
+					font-size: 1em;
+					text-align: left;
+
+					margin-top: 0;
+
+					@include respond-to("mobile"){
+						margin-left: 0.5em;
+						.price {
+							margin-right: 0.5em;
+						}
+					}
+
+				}
+
+				.ajax-cart-upsell__image {
+					display: flex;
+					min-width: 110px;
+					padding: 0;
+					margin-right: 0;
+				}
+
+				.ajax-cart-upsell__plus {
+
+					position: absolute;
+					width: $cart-spacing-x;
+					height: 100%;
+					top:0;
+					right:0;
+
+					background: $upsell-color;
+
+					svg {
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						margin: auto;
+						* {
+							fill: $upsell-plus-color !important;
+						}
+					}
+
+				}
+
+			}
+
+			.ajax-cart-upsell__title {
+				display: flex;
+				font-size: 1em;
+				font-weight: bold;
+				color: $color-tertiary;
+			}
+
+			.ajax-cart-upsell__title-text {
+			    line-height: 1.2;
+			    margin-bottom: 0.5em;
+			}
+
+			.ajax-cart-upsell__title-price {
+				margin-left: auto;
+				color: $upsell-price-color;
+				@include respond-to("mobile") {
+					display: none;
+				}
+			}
+
+			.ajax-cart-upsell__description {
+				font-size: 0.85em;
+				color: $color-tertiary;
+				p {
+					line-height: 1.2;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				em {
+					text-decoration: line-through;
+				}
+				strong {
+		      font-style: $color-primary;
+		      color: $color-primary;
+		    }
+			}
+
+			// Cart Note
+
+			.ajax-cart__message {
+
+				padding: 15px;
+				margin-bottom: 10px;
+				border-top: 1px solid $color-border;
+				border-bottom: 1px solid $color-border;
+
+				font-size: 0.8em;
+				text-align: left;
+				font-style: italic;
+
+				background: $color-background-1;
+
+				p {
+
+					margin-bottom: 0.5em;
+					padding-left: $cart-spacing-x;
+					padding-bottom: 0.5em;
+					margin-bottom: 0;
+					line-height: 1.2;
+					background-image: url({{ 'ajax-cart-icon-tick.svg' | asset_url }});
+					background-repeat: no-repeat;
+					background-position: top 2px left;
+
+				}
+
+			}
+
+			.ajax-cart__notes {
+
+				padding: 0 $cart-spacing-x;
+				margin-top: $cart-spacing-y;
+		    margin-bottom: $cart-spacing-y;
+
+				background: $color-background-1;
+
+				textarea {
+					font-size: $cart-note-font-size;
+					width: 100%;
+				}
+
+			}
+
+			// Terms of Service
+
+			.ajax-cart-tos {
+
+			}
+
+			.ajax-cart-tos__container {
+				margin-top: 1em;
+				display: flex;
+				justify-content: space-between;;
+			}
+
+			.ajax-cart-tos__checkbox {
+				margin-right: 1em;
+				margin-top: 3px;
+			}
+
+			.ajax-cart-tos__label {
+				margin-right: auto;
+			}
+
+			// 3.2.7 Payment Methods
+
+			.ajax-cart__footer {
+
+				flex-shrink: 0;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 30px;
+					right: 30px;
+					top: -15px;
+					height: 1px;
+					display: block;
+					background: #979797;
+				}
+
+				@include respond-to("small"){
+					flex-shrink: none;
+				}
+			}
+
+			.ajax-cart__checkout {
+
+				margin: $cart-spacing-y auto;
+
+				.ajax-cart-checkout__additional {
+					padding: 0 $cart-spacing-x;
+				}
+
+				.ajax-cart-checkout__submit {
+
+					margin-bottom: 10px;
+					margin-top: 0;
+					padding: 0;
+					padding-left: $cart-spacing-x;
+			    padding-right: $cart-spacing-x;
+
+					.btn {
+						display: block;
+						width: 100%;
+						font-size: 1em;
+						margin: 0;
+					}
+
+				}
+
+				.ajax-cart-checkout__methods {
+
+					display: flex;
+					justify-content: center;
+
+					margin-top: 10px;
+					margin-bottom: 10px;
+
+					padding: 0 $cart-spacing-x;
+
+					text-align: center;
+
+					img {
+						padding: 0;
+						margin: 0 0.25em;
+					}
+
+				}
+
+				.ajax-cart-checkout__message {
+
+					padding: 0 $cart-spacing-x;
+
+					p {
+						color: $color-text;
+						font-size: 14px;
+						text-align: center;
+					}
+
+				}
+
+				.additional-checkout-button {
+					width: 100%;
+				}
+
+				.additional-checkout-button--google-pay {
+					width: 100% !important;
+				}
+			}
+
+			.visually-hidden {
+
+				position: absolute !important;
+				overflow: hidden;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				width: 1px;
+				margin: -1px;
+				padding: 0;
+				border: 0;
+
+			}
+
+		}
+
+/*  ==============================
+		4. Style Overrides
+		============================== */
+
+		// Add any style overrides to make the cart match the theme here.
+
+		.ajax-cart {
+
+			.ajax-cart-item {
+
+				border-bottom: 0;
+
+				.ajax-cart-item__title {
+					text-transform: uppercase;
+					font-weight: 700;
+					font-size: 14px;
+					letter-spacing: 0.1em;
+				}
+
+				.ajax-cart-item__price {
+					margin-top: 0.5em;
+					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 500;
+					letter-spacing: 0.1em;
+				}
+
+			}
+
+			.ajax-cart-empty-message__title {
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 0.05em;
+			}
+
+			.ajax-cart-empty-message__title {
+				margin-top: 1em;
+			}
+
+			.ajax-cart-empty-message__cta {
+				background: transparent;
+				padding: 0;
+				margin-top: 0.5em;
+				border: 0;
+				color: #000;
+				text-transform: unset;
+				letter-spacing: unset;
+				font-weight: 400;
+				font-size: 1em;
+				text-decoration: underline;
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+
+		}
+
+
+
+/*  ==============================
+		5. Animations
+		============================== */
+
+		@include keyframes(pulse){
+
+			0% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0;
+			}
+
+		}
+
+		.animation--pulse {
+
+			@include animation(pulse 1s alternate infinite);
+
+		}

@@ -1,0 +1,70 @@
+<section class="products-tabs lazyload aos-init" data-aos="fade">
+  <div class="container">
+    <div class="tabs-sec-heading">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="tabs-wrapper">
+      <div class="tabs-liks">
+        <ul>
+          {% for block in section.blocks %}
+            <li data-id="#{{ block.settings.title | handleize }}" {% if forloop.first %} class="active" {% endif %}>{{ block.settings.title }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="tabs-content-wrapper">
+        {% for block in section.blocks %}
+          <div id="{{ block.settings.title | handleize }}" class="tabs-content {% if forloop.first %} active {% endif %}" >
+            {% assign products = block.settings.product_list %}
+            <div class="tabs-products">
+              {% for product in products %}
+                  {%- include 'product-thumbnail-new' -%}
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Feaured Products Tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name" : "Tab",
+        "type" : "tab",
+        "settings": [
+          {
+            "type": "text",
+            "id" : "title",
+            "label": "Name"
+          },
+          {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Products",
+            "limit": 4
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Feaured Products Tabs"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

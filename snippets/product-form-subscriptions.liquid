@@ -1,0 +1,64 @@
+{% assign shipping_interval_frequency = '1' %}
+{% assign shipping_interval_unit_type = 'Months' %}
+
+<form id="subscription-add-to-cart" action="/cart/add" method="post" enctype="multipart/form-data">
+  {% assign metafield_arr = product.metafields.pb_meta.subscription_products | split: ' | ' %}
+
+  <div class="swatch clearfix">
+    <div class="swatch-selects flex--flexbox flex--wrap">
+      {% for item in metafield_arr %}
+        {% assign option_index = forloop.index0 %}
+        {% assign item_arr = item | split: ', ' %}
+        {% assign sub_title = item_arr | first %}
+        {% assign sub_product_handle = item_arr | last %}
+        {% assign sub_product = all_products[sub_product_handle] %}
+        {% assign sub_variant_id = sub_product.first_available_variant.metafields.subscriptions.discount_variant_id %}
+
+        {% unless sub_product == blank %}
+          <div class="swatch-element flex-item flex-item--one-quarter">
+            <input id="{{ sub_product_handle }}" type="radio" name="subscription-variant" value="{{ sub_variant_id }}"{% if forloop.first %} checked{% endif %} data-frequency="{{ shipping_interval_frequency }}" data-unit_type="{{ shipping_interval_unit_type }}" data-price="{{ sub_product.price | money }}" />
+
+            <div class="swatch-inner">
+              <label for="{{ sub_product_handle }}">
+                {{ sub_title }}
+              </label>
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <input type="hidden" class="quantity" name="quantity" id="Quantity" value="1" />
+
+  <select name="id" class="no-js" data-product-select data-productid="{{product.id}}">
+    {% for item in metafield_arr %}
+      {% assign item_arr = item | split: ', ' %}
+      {% assign sub_title = item_arr | first %}
+      {% assign sub_product_handle = item_arr | last %}
+      {% assign sub_product = all_products[sub_product_handle] %}
+      {% assign sub_variant_id = sub_product.first_available_variant.metafields.subscriptions.discount_variant_id %}
+      <option
+        {% if forloop.first %}selected="selected"{% endif %}
+        value="{{ sub_variant_id }}">
+          {{ sub_title }}
+      </option>
+    {% endfor %}
+  </select>
+
+  <button
+    type="submit"
+    name="add"
+    id="add-to-cart"
+    class="btn btn-full"
+    data-add-to-cart
+    {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text>
+        {% if current_variant.available %}
+          {{ 'products.product.add_to_cart' | t }}
+        {% else %}
+          {{ 'products.product.sold_out' | t }}
+        {% endif %}
+      </span>
+  </button>
+</form>

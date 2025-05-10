@@ -1,0 +1,209 @@
+{% assign prod_desc = product.description | split: '<!-- details -->' | first %}
+{% if product.description contains '<!-- details -->' %}
+  {% assign prod_details = product.description | split: '<!-- details -->' | last %}
+  {% assign prod_details = prod_details | split: '<!-- shipping -->' | first | split: '<!-- how-to-apply -->' | first %}
+{% endif %}
+{% if product.description contains '<!-- shipping -->' %}
+  {% assign shipping_notes = product.description | split: '<!-- shipping -->' | last %}
+  {% assign shipping_notes = shipping_notes | split: '<!-- details -->' | first | split: '<!-- how-to-apply -->' | first %}
+{% endif %}
+{% if product.description contains '<!-- how-to-apply -->' %}
+  {% assign how_to_apply = product.description | split: '<!-- how-to-apply -->' | last %}
+  {% assign how_to_apply = how_to_apply | split: '<!-- details -->' | first | split: '<!-- shipping -->' | first %}
+{% endif %}
+
+<section class="product bg-white">
+  <div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
+    <div class="page-width">
+      {% include 'breadcrumbs' %}
+
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+      <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
+      <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+      <meta itemprop="brand" content="{{ product.vendor }}">
+      <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+      <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+
+      <div class="flex--flexbox flex--wrap">
+        <div class="flex-item flex-item--three-fifths">
+          {% include 'product-slideshow' %}
+
+          <div data-rebuy-id="31983" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+        </div>
+
+        <div class="flex-item flex-item--two-fifths">
+          <div class="product-information">
+            <div class="text-center">
+              <h1>{{ product.title }}</h1>
+
+              <div data-price-wrapper class="price">
+                <span data-product-price>
+                  {{ current_variant.price | money }}
+                </span>
+
+                {% if product.compare_at_price_max > product.price %}
+                  <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+                  <s data-compare-price>
+                    {% if current_variant.compare_at_price > current_variant.price %}
+                      {{ current_variant.compare_at_price | money }}
+                    {% endif %}
+                  </s>
+                {% endif %}
+              </div>
+
+              {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+
+              <div class="product-description rte">
+                {{ prod_desc }}
+              </div>
+
+              {% include 'presale-tag-note' %}
+            </div>
+
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+              <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+              <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+              
+              {% if template contains 'prepaid-subscription' %}
+                {% include 'product-form-subscriptions' %}
+              {% else %}
+                {% include 'product-form' %}
+              {% endif %}
+            </div>
+            
+            {% include 'shipping-tag-note' %}
+
+            {% if section.blocks != nil %}
+              <div class="product-detail-icons flex--flexbox flex--wrap">
+                {% for block in section.blocks %}
+                  {% if product.tags contains block.settings.title and block.type == 'tag_detail' %}
+                    <div class="detail-icon flex-item flex-item--one-quarter">
+                      <div class="image-wrap">
+                        <img 
+                          data-src="{{ block.settings.image.src | img_url: '30x30', crop: 'center' }}"
+                          data-srcset="
+                            {{ block.settings.image.src | img_url: '60x60', crop: 'center' }} 1x,
+                            {{ block.settings.image.src | img_url: '60x60', crop: 'center', scale: 2 }} 2x"
+                          alt="{{ block.settings.image.alt | escape }}"
+                          class="lazyload"
+                        >
+                      </div>
+                      <div class="text-wrap text-center">
+                        <p>{{ block.settings.text }}</p>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div><!-- .product-detail-icons -->
+            {% endif %}
+
+            {% if prod_details %}
+              <div class="product-details product-drawer">
+                <h3 class="drawer-title">
+                  Product Details
+                  {% include 'icon-chevron-down' %}
+                </h3>
+                <div class="drawer-wrap">
+                  {{ prod_details }}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if shipping_notes %}
+              <div class="shipping-notes product-drawer">
+                <h3 class="drawer-title">
+                  Shipping & Returns
+                  {% include 'icon-chevron-down' %}
+                </h3>
+                <div class="drawer-wrap">
+                  {{ shipping_notes }}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if how_to_apply %}
+              <div class="shipping-notes product-drawer">
+                <h3 class="drawer-title">
+                  How to Apply
+                  {% include 'icon-chevron-down' %}
+                </h3>
+                <div class="drawer-wrap">
+                  {{ how_to_apply }}
+                </div>
+              </div>
+            {% endif %}
+
+            {% unless product == empty %}
+              <script type="application/json" data-product-json>
+                {{ product | json }}
+              </script>
+            {% endunless %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product pages",
+    "max_blocks": 50,
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": true
+      }      
+    ],
+    "blocks": [
+      {
+        "type": "tag_detail",
+        "name": "Tag Detail",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Tag Name"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Detail - Icon"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Detail - Text",
+            "default": "This is a tag description"
+          }
+        ]
+      },
+      {
+        "type": "tag_popup",
+        "name": "Tag Popup",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Tag Name"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Popup - Link Title"
+          },
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Popup - Page"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

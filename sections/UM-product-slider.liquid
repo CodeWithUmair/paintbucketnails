@@ -1,0 +1,239 @@
+<div class="three-column-slider-section">
+  {% if section.settings.heading != blank %}
+    <h2 class="section-heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  <div class="slider-container">
+    {% for block in section.blocks %}
+      <div class="slide" {{ block.shopify_attributes }}>
+        <div class="slide-content">
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | img_url: '500x500', crop: 'center' }}"
+              alt="{{ block.settings.title | escape }}"
+              class="slide-image"
+              loading="lazy"
+              width="500"
+              height="500"
+            >
+          {% else %}
+            <div class="slide-image placeholder-image">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+
+          <h3 class="slide-title">{{ block.settings.title | default: 'Product Title' }}</h3>
+          <p class="slide-subtitle">{{ block.settings.subtitle | default: 'Product description' }}</p>
+          <a href="{{ block.settings.button_link | default: '#' }}" class="slide-button">SHOP NOW</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .three-column-slider-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: block;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+
+  .slider-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide {
+    flex: 0 0 calc(33.333% - 14px);
+    scroll-snap-align: start;
+    min-width: 300px;
+  }
+
+  .slide-content {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide-image, .placeholder-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #f5f5f5;
+  }
+
+  .placeholder-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .slide-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+
+  .slide-button {
+    display: inline-block;
+    background: #000;
+    color: white;
+    padding: 10px 25px;
+    margin-top: auto;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .slide-button:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slide {
+      flex: 0 0 100%;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider-container');
+    if (slider) {
+      slider.style.cursor = 'grab';
+
+      slider.addEventListener('mousedown', (e) => {
+        slider.style.cursor = 'grabbing';
+        let startX = e.pageX - slider.offsetLeft;
+        let scrollLeft = slider.scrollLeft;
+
+        function moveHandler(e) {
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2;
+          slider.scrollLeft = scrollLeft - walk;
+        }
+
+        function upHandler() {
+          slider.style.cursor = 'grab';
+          slider.removeEventListener('mousemove', moveHandler);
+          slider.removeEventListener('mouseup', upHandler);
+        }
+
+        slider.addEventListener('mousemove', moveHandler);
+        slider.addEventListener('mouseup', upHandler);
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "3 Column Product Slider",
+  "tag": "section",
+  "class": "three-column-slider-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "My Must Haves"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Product Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "default": "Product Name"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Product Subtitle",
+          "default": "Product description"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Slider",
+      "category": "Custom",
+      "settings": {
+        "heading": "My Must Haves"
+      },
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "The pool cover-up",
+            "subtitle": "Glitzy, Comfy, 100%"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Cocktail stirrers",
+            "subtitle": "Elegant, Fun, Essential"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Summer essentials",
+            "subtitle": "Chic, Practical, Must-have"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

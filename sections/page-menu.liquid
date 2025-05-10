@@ -1,0 +1,154 @@
+{% include 'page-introduction' %}
+
+<section class="menu-content" data-aos="fade">
+    {% for block in section.blocks %}
+      {% if block.type == 'menu_section_page' %}
+        <div class="menu-section-wrap">
+          <div class="bg-white max-w-xl">
+            <div class="menu-section max-w-md text-center">
+              {% assign menu_section = pages[block.settings.page] %}
+              {{ menu_section.content }}
+
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <div class="button-wrap">
+                  <a class="btn btn-outline" href="{{ block.settings.button_link }}" title="{{ block.settings.button_text }}" target="_blank">{{ block.settings.button_text }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% elsif block.type == 'menu_section_two_col' %}
+        <div class="menu-section-wrap">
+          <div class="bg-white max-w-xl">
+            <div class="menu-section max-w-lg text-center">
+              <div class="text-wrap">
+                <h2 id="{{ block.settings.title | handleize }}"><span>{{ block.settings.title }}</span></h2>
+
+                <div class="flex--flexbox">
+                  <div class="flex-item flex-item--one-half">
+                    {{ block.settings.text_column_one }}
+                  </div>
+                  <div class="flex-item flex-item--one-half">
+                    {{ block.settings.text_column_two }}
+                  </div>
+                </div>
+              </div>
+
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <div class="button-wrap">
+                  <a class="btn btn-outline" href="{{ block.settings.button_link }}" title="{{ block.settings.button_text }}" target="_blank">{{ block.settings.button_text }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif%}
+    {% endfor %}
+  </div>
+</section>
+
+{% include 'page-closing' %}
+
+{% schema %}
+  {
+    "name": "Page - Menu",
+    "settings": [
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "intro_nav",
+        "label": "Intro Navigation"
+      },
+      {
+        "type": "image_picker",
+        "id": "closing_image",
+        "label": "Closing Image"
+      },
+      {
+        "type": "text",
+        "id": "closing_title",
+        "label": "Closing Title",
+        "default": "Wanna party with us?"
+      },
+      {
+        "type": "richtext",
+        "id": "closing_text",
+        "label": "Closing Text",
+        "default": "<p>Paintbucket is the perfect place to celebrate, for anyone from birthday girls to brides-to-be. Snacks can be arranged (and are highly encouraged).</p><p>To plan your Paintbucket party, send us an e-mail at: hello@paintbucketnails.com</p>"
+      },
+      {
+        "type": "text",
+        "id": "closing_button_text",
+        "label": "Closing Button Text",
+        "default": "Book an Appointment"
+      },
+      {
+        "type": "url",
+        "id": "closing_button_link",
+        "label": "Closing Button Url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "menu_section_page",
+        "name": "Menu Section - Page",
+        "settings": [
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Page",
+            "info": "Select a page for a menu section. Title page with \"Menu Subpage\" to keep page hidden for SEO purposes."
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Book an Appointment"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Url"
+          }
+        ]
+      },
+      {
+        "type": "menu_section_two_col",
+        "name": "Menu Section - 2 Column",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text_column_one",
+            "label": "Column One Text"
+          },
+          {
+            "type": "richtext",
+            "id": "text_column_two",
+            "label": "Column Two Text"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Book an Appointment"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Url"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

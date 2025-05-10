@@ -1,0 +1,13 @@
+<div itemscope itemtype="http://schema.org/Product">
+  {% section 'product' %}
+
+  {% section 'product-reviews' %}
+</div>
+{% comment %}
+{% section 'product-recommendations' %}
+{% endcomment %}
+<div data-rebuy-id="41685" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, auto_install: true, product: product %}
+
+
+<div data-rebuy-id="41687" data-rebuy-shopify-product-ids="{{ product.id }}"></div>

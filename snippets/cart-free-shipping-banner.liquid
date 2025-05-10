@@ -1,0 +1,21 @@
+{% assign free_shipping_threshold = settings.ajaxcart_freeshipping_threshold | times: 100 %}
+
+{%- if cart.total_price >= free_shipping_threshold -%}
+  {% assign free_shipping = true %}
+{%- else -%}
+  {% assign free_shipping = false %}
+  {% assign shipping_threshold_difference = free_shipping_threshold | minus: cart.total_price %}
+{%- endif -%}
+
+{% assign display_shipping_threshold_difference = shipping_threshold_difference | times: 1 | money %}
+
+<div class="free-shipping-banner {% if free_shipping == true %}free-shipping-banner--free-shipping{% endif %}">
+  <span class="free-shipping-banner__text">
+    {%- if free_shipping == true -%}
+      {{ 'ajax-cart.shipping_banner.text_free_html' | t | replace: "SHIPPING_PRICE" , display_shipping_threshold_difference }}
+    {%- else -%}
+      {{ 'ajax-cart.shipping_banner.text_required_html' | t | replace: "SHIPPING_PRICE" , display_shipping_threshold_difference }}
+    {%- endif -%}
+  </span>
+  <span class="free-shipping-banner__icon">{% render 'ajax-cart-icon-freeshipping' %}</span>
+</div>

@@ -1,0 +1,143 @@
+{% if type == 'block' %}
+  {%- assign id = block.id -%}
+  {%- assign bg_image = block.settings.bg_image -%}
+  {%- assign heading = block.settings.heading -%}
+  {%- assign subtitle = block.settings.subtitle -%}
+  {%- assign col_one_icon = block.settings.col_one_icon -%}
+  {%- assign col_one_heading = block.settings.col_one_heading -%}
+  {%- assign col_one_subtitle = block.settings.col_one_subtitle -%}
+  {%- assign col_two_icon = block.settings.col_two_icon -%}
+  {%- assign col_two_heading = block.settings.col_two_heading -%}
+  {%- assign col_two_subtitle = block.settings.col_two_subtitle -%}
+  {%- assign col_three_icon = block.settings.col_three_icon -%}
+  {%- assign col_three_heading = block.settings.col_three_heading -%}
+  {%- assign col_three_subtitle = block.settings.col_three_subtitle -%}
+  {%- assign link_text = block.settings.link_text -%}
+  {%- assign link_url = block.settings.link_url -%}
+  {%- assign custom_styles = block.settings.custom_styles -%}
+{% else %}
+  {%- assign id = section.id -%}
+  {%- assign bg_image = section.settings.bg_image -%}
+  {%- assign heading = section.settings.heading -%}
+  {%- assign subtitle = section.settings.subtitle -%}
+  {%- assign col_one_icon = section.settings.col_one_icon -%}
+  {%- assign col_one_heading = section.settings.col_one_heading -%}
+  {%- assign col_one_subtitle = section.settings.col_one_subtitle -%}
+  {%- assign col_two_icon = section.settings.col_two_icon -%}
+  {%- assign col_two_heading = section.settings.col_two_heading -%}
+  {%- assign col_two_subtitle = section.settings.col_two_subtitle -%}
+  {%- assign col_three_icon = section.settings.col_three_icon -%}
+  {%- assign col_three_heading = section.settings.col_three_heading -%}
+  {%- assign col_three_subtitle = section.settings.col_three_subtitle -%}
+  {%- assign link_text = section.settings.link_text -%}
+  {%- assign link_url = section.settings.link_url -%}
+  {%- assign custom_styles = section.settings.custom_styles -%}
+{% endif %}
+
+<section id="shopify-section-{{ id }}" class="section-full-width-text-three-cols" {% if type =='block' %}{{ block.shopify_attributes }}{% endif %} data-aos="fade">
+  <div class="page-width max-w-xl">
+    <div class="heading-wrap text-center">
+      {% if heading != blank %}
+        <h2 class="heading">
+          {{ heading }}
+        </h2>
+      {% endif %}
+
+      {% if subtitle != blank %}
+        <h3 class="subtitle">
+          {{ subtitle }}
+        </h3>
+      {% endif %}
+    </div>
+    <div class="flex--flexbox flex--wrap flex--items-stretch">
+      <div class="flex-item flex-item--one-third">
+        <div class="text-wrap text-center">
+          {% if col_one_icon != blank %}
+            <div class="image-wrap">
+              <img src="{{ col_one_icon | img_url: '100x' }}" alt="{{ col_one_icon.src }}">
+            </div>
+          {% endif %}
+
+          {% if col_one_heading != blank %}
+            <h5 class="heading">
+              {{ col_one_heading }}
+            </h5>
+          {% endif %}
+
+          {% if col_one_subtitle != blank %}
+            <p class="subtitle">
+              {{ col_one_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="flex-item flex-item--one-third">
+        <div class="text-wrap text-center">
+          {% if col_two_icon != blank %}
+            <div class="image-wrap">
+              <img src="{{ col_two_icon | img_url: '100x' }}" alt="{{ col_two_icon.src }}">
+            </div>
+          {% endif %}
+
+          {% if col_two_heading != blank %}
+            <h5 class="heading">
+              {{ col_two_heading }}
+            </h5>
+          {% endif %}
+
+          {% if col_two_subtitle != blank %}
+            <p class="subtitle">
+              {{ col_two_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="flex-item flex-item--one-third">
+        <div class="text-wrap text-center">
+          {% if col_three_icon != blank %}
+            <div class="image-wrap">
+              <img src="{{ col_three_icon | img_url: '100x' }}" alt="{{ col_three_icon.src }}">
+            </div>
+          {% endif %}
+
+          {% if col_three_heading != blank %}
+            <h5 class="heading">
+              {{ col_three_heading }}
+            </h5>
+          {% endif %}
+
+          {% if col_three_subtitle != blank %}
+            <p class="subtitle">
+              {{ col_three_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if link_text != blank and link_url != blank %}
+      <div class="button-wrap text-center">
+        <a class="btn btn-outline" href="{{ link_url }}" title="" target="_blank">{{ link_text }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <style>
+    #shopify-section-{{ id }} .column-one.lazyloaded {
+      background-image: url({{ bg_image_one | img_url: '2000x' }});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #shopify-section-{{ section.id }} .column-two.lazyloaded {
+      background-image: url({{ bg_image_two | img_url: '2000x' }});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    {% if custom_styles != blank %}
+      {{ custom_styles  }}
+    {% endif %}
+  </style>
+</section>

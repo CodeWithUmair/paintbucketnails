@@ -1,0 +1,32 @@
+<article class="article-thumbnail flex--flexbox flex--wrap"
+  data-aos="fade"
+  data-aos-offset="100"
+>
+  {% if article.image %}
+    <a href="{{ article.url }}" class="article-image flex-item flex-item--one-half">
+      {{ article | img_url: '1024x1024' | img_tag: article.title }}
+    </a>
+  {% endif %}
+
+  <div class="bg-white flex-item flex-item--one-half">
+    <div class="text-wrap text-center">
+      {% if article.tags[0] != blank %}
+        <p class="tag h6">{{ article.tags[0] }}</p>
+      {% endif %}
+
+      <h2>
+        <a href="{{ article.url }}">{{ article.title }}</a>
+      </h2>
+
+      <div class="rte">
+        {% if article.excerpt.size > 0 %}
+          {{ article.excerpt | truncatewords: 30 }}
+        {% else %}
+          <p>
+            {{ article.content | strip_html | truncatewords: 30 }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,128 @@
+{% assign dropdown_names = ''%}
+{% for block in section.blocks %}
+  {% unless forloop.first %}
+    {% assign dropdown_names = dropdown_names | append: ', ' %}
+  {% endunless %}
+
+  {% assign dropdown_names = dropdown_names | append: block.settings.top_link_text %}
+{% endfor %}
+
+{% assign dropdown_names = dropdown_names | split: ', ' %}
+
+{% assign main_menu = linklists[section.settings.main_linklist] %}
+{% assign has_block_dropdown = false %}
+
+<nav role="navigation" id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+  <div class="menu-paintbucket-navigation-container {% if section.settings.search_enable == true %}search-enabled{% endif %}">
+
+    {%- if section.settings.search_enable == true -%}
+      <div class="mobile-search nav-break-up--hide">
+        {% render 'search-form' %}
+      </div>
+    {%- endif -%}
+
+    <ul>
+
+      {% for link in main_menu.links %}
+        {% if dropdown_names contains link.title %}
+          {% assign has_block_dropdown = true %}
+        {% elsif linklists[link.handle] != empty %}
+          {% assign has_default_dropdown = true %}
+        {% endif %}
+
+        {% if has_block_dropdown %}
+          <li class="has-children has-featured-dropdown">
+            <button class="dropdown-trigger top-link" aria-expanded="false" aria-controls="{{ link.title | escape | downcase | handlize }}-dropdown">
+              {{ link.title | escape }}
+            </button>
+
+            {% for block in section.blocks %}
+              {% if block.settings.top_link_text == link.title %}
+                {% assign block_menu = linklists[block.settings.dropdown_linklist] %}
+                <div id="{{ block.settings.top_link_text | downcase | handlize }}-dropdown" class="dropdown special-dropdown">
+                  <ul class="flex--flexbox">
+                    <div class="flex-item flex-item--one-fifth">
+                      {% for childlink in block_menu.links %}
+                        <li class="childlink">
+                          <a href="{{ childlink.url }}" class="{% if childlink.active %}active {% endif %}">
+                            {{ childlink.title | escape }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </div>
+
+                    <li class="featured-childlink flex-item flex-item--three-quarters flex--flexbox nav-break--hide">
+                      {% if block.settings.featured_image != blank %}
+                        <a href="{{ block.settings.featured_link }}" class="flex-item flex-item--one-third" title="{{ block.settings.featured_title }}">
+                          <div class="image-wrap">
+                            {% if block.settings.featured_image %}
+                              <img
+                                sizes="100vw"
+                                data-src="{{ block.settings.featured_image | img_url: '280x' }}"
+                                data-srcset="{{ block.settings.featured_image | img_url: '280x' }} 1x,
+                                  {{ block.settings.featured_image | img_url: '560x' }} 2x"
+                                class="lazyload lazyload--fade-in"
+                                alt="{{ block.settings.featured_title | escape }}"
+                              />
+
+                              <noscript>
+                                <img src="{{ block.settings.featured_image | img_url: '280x' }}" alt="{{ block.settings.featured_title }}">
+                              </noscript>
+                            {% endif %}
+                          </div>
+                        </a>
+                      {% endif %}
+
+                      <div class="featured-childlink-text-wrap flex-item flex-item--two-thirds">
+                        <p class="h5">{{ block.settings.featured_title }}</p>
+
+                        <div class="featured-text">
+                          {{ block.settings.featured_text }}
+                        </div>
+
+                        <a href="{{ block.settings.featured_link }}" class="standalone-link">{{ block.settings.featured_button_text }}</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                {% break %}
+              {% else %}
+                {% continue %}
+              {% endif %}
+            {% endfor %}
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ link.url }}" class="{% if link.active or link.child_active %}active {% endif %}top-link">{{ link.title | escape }}</a>
+          </li>
+        {% endif %}
+
+        {% assign has_block_dropdown = false %}
+      {% endfor %}
+
+      {%- if section.settings.search_enable == true -%}
+
+        <li class="customer-links nav-break--hide">
+          <a href="/search" class="top-link search--trigger">
+            {% render 'icon-search' %}
+            <span class="nav-break-up--hide">Search</span>
+          </a>
+        </li>
+
+      {%- endif -%}
+
+      <li class="customer-links">
+        <a href="/account" class="top-link">
+          {% render 'icon-account' %}
+          <span class="nav-break-up--hide">Account</span>
+        </a>
+      </li>
+      <li class="customer-links">
+        <a href="/cart" class="top-link ajax-cart--trigger-open">
+          {% render 'icon-bag' %}
+          <span class="nav-break-up--hide">Cart</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

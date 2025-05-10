@@ -1,0 +1,338 @@
+<section class="page-introduction{% if section.settings.intro_nav != blank %} has-navigation{% endif %}" data-section-id="{{ section.id }}" data-section-type="page-about" data-aos="fade">
+  <div class="page-width">
+    <div class="max-w-xl">
+      <div class="intro-title-wrap flex--flexbox flex--wrap flex--items-center">
+        <div class="flex-item flex-item--two-thirds image-wrap">
+          {% if section.settings.image != blank %}
+            <img data-src="{{ section.settings.image | img_url: '1000x', scale: 2 }}" alt="{{ section.settings.image.src }}" class="lazyload">
+          {% endif %}
+        </div>
+
+        <div class="flex-item flex-item--one-third text-wrap">
+          <h1>
+            {% if section.settings.intro_title != blank %}
+              {{ section.settings.intro_title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </h1>
+          {% if section.settings.intro_subtitle != blank %}
+            {{ section.settings.intro_subtitle }}
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.intro_text != blank %}
+        <div class="intro-text-wrap text-center paragraph-xl">
+          {{ section.settings.intro_text }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% for block in section.blocks %}
+  {% if block.type == 'full_width_w_images' %}
+    <section class="section-full-width-w-images bg-white circle-text-container" data-aos="fade">
+      {% if block.settings.circle_text != blank %}
+        <div class="circle-text circle-rotated text-center">
+          <div class="text-wrap">
+            {{ block.settings.circle_text }}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="section-wrap">
+        <div class="text-wrap text-center max-w-lg">
+          <h2>
+            {% if block.settings.title != blank %}
+              {{ block.settings.title }}
+            {% endif %}
+          </h2>
+
+          {% if block.settings.text != blank %}
+            <div class="paragraph-lg">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="flex--flexbox max-w-xl">
+          <div class="flex-item--one-third">
+            {% if block.settings.image_one != blank %}
+              <img data-src="{{ block.settings.image_one | img_url: '800x', scale: 2 }}" alt="{{ block.settings.image_one.src }}" class="lazyload">
+            {% endif %}
+          </div>
+          <div class="flex-item--one-third">
+            {% if block.settings.image_two != blank %}
+              <img data-src="{{ block.settings.image_two | img_url: '800x', scale: 2 }}" alt="{{ block.settings.image_two.src }}" class="lazyload">
+            {% endif %}
+          </div>
+          <div class="flex-item--one-third">
+            {% if block.settings.image_three != blank %}
+              <img data-src="{{ block.settings.image_three | img_url: '800x', scale: 2 }}" alt="{{ block.settings.image_three.src }}" class="lazyload">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% elsif block.type == 'full_width_two_cols' %}
+    {% include 'section-full-width-two-columns', type: 'block' %}
+  {% elsif block.type == 'full_width_text' %}
+    {% include 'section-full-width-text', type: 'block' %}
+  {% elsif block.type == 'meet_kristen' %}
+    <section class="meet-kristen bg-white" data-aos="fade">
+      <div class="page-width">
+        <div class="max-w-xl">
+          <div class="intro-title-wrap flex--flexbox flex--items-center flex--wrap">
+            <div class="flex-item flex-item--one-half image-wrap">
+              {% if block.settings.image != blank %}
+                <img data-src="{{ block.settings.image | img_url: '1000x', scale: 2 }}" alt="{{ block.settings.image.src }}" class="lazyload">
+              {% endif %}
+            </div>
+
+            <div class="flex-item flex-item--one-half text-wrap">
+              <h2>
+                {% if block.settings.title != blank %}
+                  {{ block.settings.title }}
+                {% else %}
+                  {{ page.title }}
+                {% endif %}
+              </h2>
+
+              {% if block.settings.text != blank %}
+                {{ block.settings.text }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Page - About",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "Hey, babe."
+      },
+      {
+        "type": "richtext",
+        "id": "intro_subtitle",
+        "label": "Intro Subtitle Text",
+        "default": "<p>Don’t you think it’s time your nail salon got a makeover? That’s where we come in. We’re Paintbucket, a modern nail shop in Williamsburg, Brooklyn.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<p>But we’re more than just manicures. We’re in the business of recognizing our clients’ achievements and rewarding them with the simple act of feeling good.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "full_width_w_images",
+        "name": "Full Width w/Images",
+        "settings": [
+          {
+            "type": "text",
+            "id": "circle_text",
+            "label": "Circle Text",
+            "default": "We believe"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Your salon should be as cool as you are"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Picture this: A comfortable-yet-curated space. A #girlcrushworthy staff.</p><p>Free. Prosecco. 🥂 And tons of polish & nail art options because we were never really into the whole</p><p>“less is more” thing.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_three",
+            "label": "Image"
+          }
+        ]
+
+      },
+      {
+        "type": "full_width_two_cols",
+        "name": "Full Width – Two Columns",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Column One"
+          },
+          {
+            "type": "image_picker",
+            "id": "bg_image_one",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading_one",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle_one",
+            "label": "Subtitle"
+          },
+          {
+            "type": "text",
+            "id": "link_text_one",
+            "label": "Link Text"
+          },
+          {
+            "type": "url",
+            "id": "link_url_one",
+            "label": "Link Url"
+          },
+          {
+            "type": "select",
+            "id": "text_color_one",
+            "label": "Text Color",
+            "options": [
+              {
+                "value": "black",
+                "label": "Dark"
+              },
+              {
+                "value": "white",
+                "label": "Light"
+              }
+            ],
+            "default": "black"
+          },
+          {
+            "type": "header",
+            "content": "Column Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "bg_image_two",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading_two",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle_two",
+            "label": "Subtitle"
+          },
+          {
+            "type": "text",
+            "id": "link_text_two",
+            "label": "Link Text"
+          },
+          {
+            "type": "url",
+            "id": "link_url_two",
+            "label": "Link Url"
+          },
+          {
+            "type": "select",
+            "id": "text_color_two",
+            "label": "Text Color",
+            "options": [
+              {
+                "value": "black",
+                "label": "Dark"
+              },
+              {
+                "value": "white",
+                "label": "Light"
+              }
+            ],
+            "default": "black"
+          }
+        ]
+      },
+      {
+        "type": "full_width_text",
+        "name": "Full Width Text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "EVERY GIRL NEEDS HER GANG"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "And we want to meet yours. Bring your girlfriends to Paintbucket, or meet some new ones while you’re here. Think of us as a social club for the 21st century, but with less corsets. Unless you’re not in the mood to socialize. We get it. Quiet time is important too."
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link Url"
+          }
+        ]
+      },
+      {
+        "type": "meet_kristen",
+        "name": "Meet Kristen",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "MEET KRISTIN"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>She’s always believed that the best accessory is a perfectly polished pair of hands (and toes, naturally). But the salon experience in NYC was never quite what she needed. After working long hours at her desk everyday, Kristin’s idea of indulging wasn’t sitting under harsh lights while breathing in harsher fumes. And she didn’t want to blow her hard-earned paycheck at one of those fancy places either.</p><p>So she left her career in advertising for something a little bigger and a lot more personal: a self-owned and operated nail shop that caters to clients just like her. Enter Paintbucket, a place for working women who spend their 9-5 girl-bossing their way through a man’s world.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,20 @@
+.template-page-how-to-landing-page .page-introduction .page-block-container .page-block {
+  margin: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1011px) {
+  .template-page-how-to-landing-page .page-introduction .page-block-container .page-block {
+    margin: 25px 25px;
+  }
+  .template-page-how-to-landing-page .page-introduction .page-block-container .page-block .btn.btn-wide {
+    padding: 15px;
+    min-width: unset;
+    width: 100% !important;
+  }
+}
+
+.template-page-how-to-apply-pressons #our-collections-pressons .button-wrap a.btn {
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+{%- style -%}
+
+:root {
+
+  ---color-black: #202020;
+  ---color-white: #fff;
+
+  ---color-brand--pink: #f7a87c;
+  ---color-brand--light-pink: #fcdcd3;
+  ---color-brand--bright-pink: #ffb0ba;
+
+  ---header--color: {{ settings.header_color }};
+  ---header--color--hover: {{ settings.header_color__hover }};
+  ---header--background-color: {{ settings.header_background_color }};
+
+  ---header--hover-color: {{ settings.header_color_hover }};
+  ---header--hover-color--hover: {{ settings.header_color_hover__hover }};
+  ---header--hover-background-color: {{ settings.header_background_color__hover }};
+
+  ---color-border: ##212121;
+
+  ---icon--plus-small: url({{ 'icon-plus-small.svg' | asset_url }});
+  ---icon--minus-small: url({{ 'icon-minus-small.svg' | asset_url }});
+
+}
+
+{%- endstyle -%}

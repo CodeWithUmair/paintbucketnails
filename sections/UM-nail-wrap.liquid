@@ -1,0 +1,233 @@
+<div class="nail-wrap-b2b">
+    <div class="nail-wrap-grid">
+      <div class="left-image">
+        <img src="{{ section.settings.left_image | img_url: '800x' }}" alt="Left Image">
+      </div>
+      <div class="right-slider">
+        <div class="slider-wrapper">
+          {% for block in section.blocks %}
+            <div class="slide {% if forloop.index == 1 %}active{% endif %}">
+              <p class="small-text">{{ block.settings.small_text }}</p>
+              <img src="{{ block.settings.slide_image | img_url: '400x' }}" alt="Slide Image" class="slide-img">
+              <h2 class="title">{{ block.settings.title }}</h2>
+              <p class="description">{{ block.settings.description }}</p>
+              {% if block.settings.button_link %}
+                <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }}</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="slider-controls">
+          <button class="prev">&#8592;</button>
+          <button class="next">&#8594;</button>
+        </div>
+        <div class="dots">
+          {% for block in section.blocks %}
+            <span class="dot {% if forloop.index == 1 %}active{% endif %}" data-slide="{{ forloop.index0 }}"></span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .nail-wrap-b2b {
+      padding: 50px 20px;
+      background: #f6f8fb;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+  
+    .nail-wrap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .left-image img {
+  
+      border-radius: 12px;
+    }
+  
+    .right-slider {
+      position: relative;
+      text-align: center;
+    }
+  
+    .small-text {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+  
+    .slide-img {
+      width: 120px;
+      margin: 0 auto 20px;
+    }
+  
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 10px 0;
+      color: #222;
+    }
+  
+    .description {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+  
+    .button {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 1px solid #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      color: #000;
+      transition: 0.3s;
+    }
+  
+    .button:hover {
+      background: #000;
+      color: #fff;
+    }
+  
+    .slide {
+      display: none;
+    }
+  
+    .slide.active {
+      display: block;
+    }
+  
+    .slider-controls {
+      margin-top: 20px;
+    }
+  
+    .slider-controls button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #888;
+      margin: 0 10px;
+    }
+  
+    .dots {
+      margin-top: 15px;
+    }
+  
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+  
+    .dot.active {
+      background-color: #000;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+          dots[i].classList.toggle('active', i === index);
+        });
+      }
+  
+      document.querySelector('.next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+  
+      document.querySelector('.prev').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+  
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          currentIndex = parseInt(this.dataset.slide);
+          showSlide(currentIndex);
+        });
+      });
+  
+      showSlide(currentIndex);
+    });
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Nail Wrap B2B Slider",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Side Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "text",
+            "id": "small_text",
+            "label": "Small Top Text",
+            "default": "Our Nail Care System"
+          },
+          {
+            "type": "image_picker",
+            "id": "slide_image",
+            "label": "Slide Small Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Nail Wrap Kits"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Applies in minutes. Last for weeks."
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Shop Nail Wraps"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 5,
+    "presets": [
+      {
+        "name": "Nail Wrap  Section"
+      }
+    ]
+  }
+  {% endschema %}
+  

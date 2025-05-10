@@ -1,0 +1,13 @@
+<style> /* #CartDrawer is element that contains the entire cart drawer */ 
+  .smart-cart--enabled #ajax-cart, .ajax-cart-overlay .ajax-cart-overlay--hidden { 
+    display: none !important; 
+  } 
+  .smart-cart--enabled .ajax-cart-overlay.ajax-cart-overlay--hidden { 
+    display: none !important; 
+    background: none;
+  } 
+  /* making sure that scrolling is still enabled after closing the smart cart */ 
+  body.smart-cart--enabled { 
+    overflow: scroll !important; 
+  } 
+</style>

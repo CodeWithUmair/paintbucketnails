@@ -1,0 +1,2980 @@
+{
+  "current": {
+    "header_color": "#000000",
+    "header_color__hover": "#ffffff",
+    "header_background_color__hover": "rgba(0,0,0,0)",
+    "header_color_hover": "#000000",
+    "header_color_hover__hover": "#c44d27",
+    "shop_address": "",
+    "shop_email": "hello@paintbucketnails.com",
+    "shop_booking_link": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories",
+    "social_sharing_blog": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/paintbucketnails",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/paintbucketnyc\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/paintbucketnails\/",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "product_form_style": "swatches",
+    "cart_notes_enable": true,
+    "favicon": "shopify:\/\/shop_images\/Paint-Bucket-icon.png",
+    "ajaxcart_enabled": true,
+    "ajaxcart_display_subtotal": true,
+    "ajaxcart_display_vat": false,
+    "ajaxcart_vat_rate": 0,
+    "ajaxcart_display_savings": false,
+    "ajaxcart_display_shipping": false,
+    "ajaxcart_shipping_price": 0,
+    "ajaxcart_freeshipping_threshold": "45",
+    "ajaxcart_display_total": false,
+    "ajaxcart_freeshipping_enable": true,
+    "ajaxcart_notes_enable": false,
+    "ajaxcart_tos_enable": false,
+    "ajaxcart_tos_page": "privacy-policy",
+    "ajaxcart_checkout_action": "checkout",
+    "ajaxcart_checkout_message": "<p><em>Shipping, taxes and discounts calculated at checkout<\/em><\/p>",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Paint-Bucket-logo-horizontal.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fdeeeb",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fdeeeb",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#f7a87c",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#e32c2b",
+    "color_header": "#000000",
+    "color_primary": "#202020",
+    "color_body_text": "#202020",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "da74acdc-6372-42d0-b6f8-873104d784e9": {
+            "type": "featured_dropdown",
+            "settings": {
+              "top_link_text": "Shop",
+              "dropdown_linklist": "submenu-shop",
+              "featured_link": "shopify:\/\/collections\/nail-wraps",
+              "featured_image": "shopify:\/\/shop_images\/feature-image-shop_3x_12e3b7e0-9de1-4c2b-8471-54d5f9fb8586.jpg",
+              "featured_title": "PB Nail Wrap Kits",
+              "featured_text": "<p>Zero paint. Zero dry time. Zero disappointments. Get stunning nail art in minutes with our vegan, non-toxic nail wraps.<\/p>",
+              "featured_button_text": "Shop Now"
+            }
+          },
+          "31059d13-5593-4719-b179-05047347764d": {
+            "type": "featured_dropdown",
+            "settings": {
+              "top_link_text": "Subscription",
+              "dropdown_linklist": "submenu-subscription",
+              "featured_link": "shopify:\/\/pages\/nail-wrap-subscription",
+              "featured_image": "shopify:\/\/shop_images\/feature-image-subscription_3x_85f6245e-3388-477e-9005-6ec51cf57156.jpg",
+              "featured_title": "The Monthly Mani Club",
+              "featured_text": "<p>Did you know that the average babe gets a mani 2x a month? Now you can have 3 manis delivered right to your door every month.<\/p>",
+              "featured_button_text": "Explore Now"
+            }
+          },
+          "featured_dropdown_ATVwTk": {
+            "type": "featured_dropdown",
+            "settings": {
+              "top_link_text": "",
+              "dropdown_linklist": "",
+              "featured_link": "",
+              "featured_title": "",
+              "featured_text": "",
+              "featured_button_text": ""
+            }
+          },
+          "ce24960a-6b2f-487d-b1ff-1f2929550eee": {
+            "type": "featured_dropdown",
+            "settings": {
+              "top_link_text": "Nail Salon",
+              "dropdown_linklist": "submenu-nail-salon",
+              "featured_link": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories\/",
+              "featured_image": "shopify:\/\/shop_images\/feature-image-salon_3x_88cf9402-a594-454e-8d34-a023ff474eb0.jpg",
+              "featured_title": "At Paintbucket, we know what it takes to live in New York",
+              "featured_text": "<p>So we give our best to the women who do. With high-quality services in an obsessively clean environment, we’re a place where you can bring a friend, or make some more. Where you can buff away the past week, and face the next one feeling shiny and new. And we’re exactly where you want to be.<\/p>",
+              "featured_button_text": "Visit us"
+            }
+          },
+          "f20478f9-9a9e-43eb-a40a-1d51d8fa6d14": {
+            "type": "featured_dropdown",
+            "settings": {
+              "top_link_text": "About",
+              "dropdown_linklist": "submenu-about",
+              "featured_link": "shopify:\/\/blogs\/blog",
+              "featured_image": "shopify:\/\/shop_images\/feature-image-about_3x_d3d1f761-af7c-4f91-8d45-8b76e099fd2a.jpg",
+              "featured_title": "Inside The Bucket",
+              "featured_text": "<p>Explore the people and local neighborhood treasures that inspire us on the daily. With a mix of NYC round ups, artist interviews and product reviews, there’s always something new to discover.<\/p>",
+              "featured_button_text": "Read the blog"
+            }
+          }
+        },
+        "block_order": [
+          "da74acdc-6372-42d0-b6f8-873104d784e9",
+          "31059d13-5593-4719-b179-05047347764d",
+          "featured_dropdown_ATVwTk",
+          "ce24960a-6b2f-487d-b1ff-1f2929550eee",
+          "f20478f9-9a9e-43eb-a40a-1d51d8fa6d14"
+        ],
+        "settings": {
+          "announcement_text": "<p><a href=\"https:\/\/paintbucketnails.com\/collections\/press-ons\" target=\"_blank\" title=\"https:\/\/paintbucketnails.com\/collections\/press-ons\">SHOP<\/a> OUR AWARD WINNING PRESS ONS <a href=\"https:\/\/go.booker.com\/location\/Paintbucket\/service-menu\" target=\"_blank\" title=\"https:\/\/go.booker.com\/location\/Paintbucket\/service-menu\"><strong>HERE<\/strong><\/a><strong>.<\/strong><\/p>",
+          "show_announcement": false,
+          "main_linklist": "main-menu-feb-2021",
+          "show_extra_mobile_link": true,
+          "mobile_link_text": "Book",
+          "mobile_link": "https:\/\/paintbucketnails.com\/collections\/press-ons",
+          "search_enable": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_left_title": "Shop",
+          "footer_left_linklist": "footer-left-dec-2020",
+          "footer_right_title": "Company",
+          "footer_right_linklist": "footer-right-dec-2020",
+          "show_social_icons": true,
+          "copyright_text": "Paintbucket | Site by <a href=\"http:\/\/www.shoppetheory.com\/\" target=\"_blank\">Shoppe Theory<\/a> | <a href=\"\/pages\/privacy-policy\">Privacy Policy<\/a>"
+        }
+      },
+      "1592190844619": {
+        "type": "hero-banner",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/PB_FallNeutrals-2.gif",
+          "mobile_wide_gutters": true,
+          "large_foreground_image": false,
+          "title_image": "shopify:\/\/shop_images\/Neutral-banner-text-image-2.gif",
+          "title_width_restrict": true,
+          "title_width": 325,
+          "image_loc": "right",
+          "image_loc_mobile": "top",
+          "bg_image": "shopify:\/\/shop_images\/bg-scroll_3.png",
+          "bg_image_mobile": "shopify:\/\/shop_images\/bg-scroll_3.png",
+          "pre_heading": "",
+          "heading": "Restock & refresh",
+          "text": "<p>Fall is around the corner and we’re dreaming of sweet subtle neutrals inspired by falling leaves and cozy spiced drinks.<\/p>",
+          "terms_text": "",
+          "text_align": "center",
+          "button_text": "Shop Now",
+          "button_style": "btn-outline",
+          "button_size": "btn-large",
+          "button_link": "shopify:\/\/collections\/falling-for-neutrals",
+          "button_width": 250,
+          "banner_background_color": "#",
+          "text_color": "#000000",
+          "button_color": "#000000",
+          "button_color_hover": "#ffffff",
+          "decorations": false,
+          "custom_styles": ".section-hero-banner {\n    overflow: hidden;\n}\n\n.section-hero-banner .section-hero-banner__parallax-background {\n    width: 100%;\n    height: 100%;\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: -1;\nobject-fit: cover;\n}"
+        }
+      },
+      "1592261137389": {
+        "type": "full-width-text",
+        "disabled": true,
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/pb-homepage-membership-bg.png",
+          "heading": "Inside The Bucket",
+          "subtitle": "Explore the people and local neighborhood treasures that inspire us on the daily. <br> With a mix of NYC round ups, self-care tips and lifestyle hacks, there’s always something new to discover.",
+          "body": "",
+          "link_text": "Read The Blog",
+          "link_url": "shopify:\/\/blogs\/blog",
+          "link_type": "link",
+          "custom_styles": ""
+        }
+      },
+      "1592268017668": {
+        "type": "full-width-two-cols-text",
+        "disabled": true,
+        "settings": {
+          "bg_image_one": "shopify:\/\/shop_images\/hand-2-edited-for-lookbook-pink.jpg",
+          "heading_one": "The <br>Lookbook",
+          "subtitle_one": "",
+          "link_text_one": "Take a Peek",
+          "link_url_one": "shopify:\/\/pages\/lookbook",
+          "text_color_one": "white",
+          "bg_image_two": "shopify:\/\/shop_images\/pb-giftcard-update.jpg",
+          "heading_two": "Salon Gift Cards",
+          "subtitle_two": "",
+          "link_text_two": "shop now",
+          "link_url_two": "https:\/\/go.booker.com\/location\/Paintbucket\/buy\/gift-certificate",
+          "text_color_two": "black",
+          "custom_styles": "#shopify-section-1592268017668 .column-two h2.heading {\nmargin-top: -200px;\nmargin-bottom: -130px;\n}\n\n#shopify-section-1592268017668 .column-two .button-wrap {\n  margin-top: 130px;\n}\n\n@media only screen and (max-width: 749px) {\n\n#shopify-section-1592268017668 .column-two h2.heading {\nmargin-top: -160px;\nmargin-bottom: -80px;\n}\n#shopify-section-1592268017668 .column-two .button-wrap {\n  margin-top: 80px;\n}\n}"
+        }
+      },
+      "1592271661862": {
+        "type": "instagram",
+        "disabled": true,
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/pb-homepage-instagram-bg.jpg",
+          "heading": "@PAINTBUCKETNAILS"
+        }
+      },
+      "1592272801113": {
+        "type": "shop-info",
+        "disabled": true,
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/pb-homepage-store-bg.png",
+          "circle_text": "We're cuter IRL",
+          "text_one": "<h6>204 WYTHE AVENUE<br>WILLIAMSBURG<br>BROOKLYN, NEW YORK<br><a href=\"tel:3479874700\">347-987-4700<\/a>\n<\/h6>",
+          "image_two": "shopify:\/\/shop_images\/pb-homepage-storefront_copy.png",
+          "text_three": "<h6>OPEN MON 12PM – 8PM<br>TUES-SAT 10AM – 9PM<br>SUNDAY 11AM – 8PM<br>\n\n<a href=\"mailto:hello@paintbucketnails.com\">HELLO@PAINTBUCKETNAILS.COM<\/a>\n<\/h6>",
+          "custom_styles": ""
+        }
+      },
+      "page-lookbook": {
+        "type": "page-lookbook",
+        "blocks": {
+          "cb971fca-ce4a-40b8-a404-d7b7e66f51e2": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/amalfi-feature_2x_b1fdbfd9-4652-46ae-9f35-320f0caa0d89.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/summer-in-amalfi-header_2x_c8db9312-e2d4-421c-a5d6-94f67422a743.png",
+              "look_text": "<p>Summer is swooping in and we’re packing our bags faster than you can say <em>“arrivederci”<\/em>. This collection of sultry-hued manis is made for the babe jetsetting overseas to visit her favorite cliff-adorned beach clubs. From sleek white curves to art-deco accents, this collection will have you singing <em>amore<\/em>, all season long.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "aa61f1fe-08f9-4d63-bf2e-8c7cbb364447": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/positano-feature_2x_bb8edf9d-fbd2-4864-b08f-568173268ede.png",
+              "look_title_text": "The Positano",
+              "look_text": "<p>A mani made of the simplest pleasure in life, the perfect hue of blue. Inspired by the dazzling coastal town of Positano, this surreal design is made for the wanderlust traveler in all of us. From climbing floral-enchanted staircases to gliding your fingertips across the deep blue sea, this mani is inspired by all of the little moments we love to embrace while on holiday.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-positano-mani-nail-wrap-kit"
+            }
+          },
+          "1d7eb024-0dcf-4558-a905-2b62941c55e8": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/marina-grande-feature_2x_9d1170a3-2817-4112-a9a7-52501e4e7ec0.png",
+              "look_title_text": "The Marina Grande",
+              "look_text": "<p>This mani is what you vacation for. Inspired by the rocky pockets of gilded beaches + chic umbrellas along the southern Italian coast, this design harmoniously blends the gorgeous shades of Italian sand and stone that make up the picturesque beach days we yearn for. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-marina-grande-mani-nail-wrap-kit"
+            }
+          },
+          "27d51322-60e6-432d-ace5-9996995e07e0": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-garden-party-feature_2x_081c7c74-063c-4985-84b0-fa452b74c88b.png",
+              "look_title_text": "The Capri",
+              "look_text": "<p>For the effortlessly chic, this minimal mani is inspired by late-night dinners on Via Corce on the island of Capri. A simple, statement mani that shines as you sip a glass of bubbly while watching linen-drenched models make their way to and from the high-end boutique at the end of the cobblestone street.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-capri-mani-nail-wrap-kit"
+            }
+          },
+          "5628ced0-6560-4764-b178-1fe4a6c3ed79": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/spring-blooms-feature_2x_de7b9ef9-cb39-425f-a8a5-0315344d12ec.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/spring-blooms-header_2x_895d4a90-c9b1-4774-b525-c803af5f2ed2.png",
+              "look_text": "<p>When the sun starts to shine, you start to bloom. Our latest nail wrap collab with Anthropologie celebrates the beauty that surrounds us. Hand painted by the talented Juliet Meeks, this collection of vibrant florals and blush hues is everything you need to embrace Spring in full swing.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "649b0725-bcd8-49ed-8ac7-3593c15d6f70": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-garden-party-feature_2x_2baf496e-ff1b-47a7-8ff6-b6fbee8c2941.png",
+              "look_title_text": "The Garden Party",
+              "look_text": "<p><em>Soiree,<\/em> not sorry. Did someone call for a mani made for the party of their dreams? Don this pink-hued and floral-studded mani to any event and wait for the all the gushing and adoration to come. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-garden-party-nail-wrap-kit"
+            }
+          },
+          "ba1b3ea6-fe6c-4af7-a2f4-9774a30e9a36": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/poppy-dreams-feature_2x_48979f5d-fb47-4fdd-aa97-d2fb0c5825e4.png",
+              "look_title_text": "Poppy Dreams",
+              "look_text": "<p>Sweet dreams are made of <em>these. <\/em>We know you’ve been wishing for the perfect floral mani and this one puts all your worries at ease. The delicate pink poppies and subtle green stems are not only dainty but trendy, all at once. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/poppy-dreams-nail-wrap-kit"
+            }
+          },
+          "80721264-4263-4769-a24a-0062da767a9d": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bed-of-roses-feature_2x_15bf4fc5-c29a-46fa-952f-1e9f730463d9.png",
+              "look_title_text": "Bed of Roses",
+              "look_text": "<p>There is nothing quite as hopeful as lush florals in spring. When we see them bloom, we become anew. Get back into the sweeter side of the seasons with this rose stacked mani…so flirty and sweet it’s bound to make you <em>blush<\/em>.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/bed-of-roses-nail-wrap-kit"
+            }
+          },
+          "085a3dc2-1243-4625-b433-cd9e83fad0c6": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lovesick-feature_2x_af4838eb-5dd9-47ca-ba3d-4dc7c4684b83.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/lovesick-header_2x_890e4f30-99f6-4e87-a74b-3d55e3535eff.png",
+              "look_text": "<p>The most romantic time of year calls for the most swoon worthy manis, and we’ve got cupid’s arrow. Featuring dainty hearts and chic patterns, this collection is bound to make you fall in love.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "80509f07-09d8-433c-bb61-619ebb5edc51": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/headoverheels-feature_2x_13d270f4-fdfd-4399-ac2a-582602b56505.png",
+              "look_title_text": "The Head Over Heels",
+              "look_text": "<p>Get ready to fall for this mani, big time. A gorgeous baby blue base, contrasted with an on-trend tan that’s highlighted with white lines and perfectly placed hearts. Did someone say love at first sight? <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-head-over-heels-nail-wrap-kit"
+            }
+          },
+          "43433a3e-d89e-4954-9968-206585cfe531": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/heartthrob-feature_2x_071fb0dd-441f-4052-9b33-238f711d4e7d.png",
+              "look_title_text": "The Heartthrob",
+              "look_text": "<p>It doesn't get better than this crush worthy design. With latte swirls on a clean white backdrop, made even cuter with perfectly minimal heart accents, we wouldn't be shocked if this became a go-to way past February 14th. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-heartthrob-nail-wrap-kit"
+            }
+          },
+          "11bf491d-2024-4668-82b3-c6992be3450c": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/soulmate-feature_2x_57e5e8d0-63a2-44a3-93a5-b1e08f86efde.png",
+              "look_title_text": "The Soulmate",
+              "look_text": "<p>Check and (soul)mate. We’re not playing games when we say this is the ultimate mani for the most love filled day of the year. This rosey-hued glitter and white checkered pattern scattered with mini hearts will have you obsessed, all season long.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-soulmate-nail-wrap-kit"
+            }
+          },
+          "92724eab-1c97-446e-bdec-ecb3694a1c82": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/wild-wild_feature_2x_6c1c2ca6-521b-49f9-a31a-a8ae8873dfaf.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/wild-wild_header_2x_378668c0-f266-4699-8137-402b25cfb233.png",
+              "look_text": "<p>Think cowboy boots, saloons and sparkly spurs. With western inspired prints in luxe autumnal shades, this collection is bound to stirrup more than just that small town buzz. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "d3ad96b7-806a-42ef-8287-4fe87f7fd34d": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-bandit-feature_2x_3f37cd95-b432-454b-9815-e14b5a48e278.png",
+              "look_title_text": "The Bandit",
+              "look_text": "<p>Your “most wanted” mani for fall is here. Black, white, and maroon shades all come together to create the perfect paisley printed design. Because who said bandanas were only for covering up your face? <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "761cc9bc-a28d-42c5-8b41-bc18501f352a": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-outlaw-feature_2x_c79ae15e-5647-40ee-8404-def5ba54608c.png",
+              "look_title_text": "The Outlaw",
+              "look_text": "<p>Say howdy to your new favorite cow print mani. Featuring this seasons trendiest design in a deep maroon shade with a bright white base, this look is worth being on the run for.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": ""
+            }
+          },
+          "c3319680-8bfd-491d-a442-2bd6bb013441": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/harvest-moon_feature.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/harvest-moon_header.png",
+              "look_text": "<p>Bring the best of spooky season to your fingertips with entrancing celestial details and starry midnight swirls. Our latest collection of luminous nail wraps will have you head over heels all autumn long.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "7617903e-db41-447b-88ae-943d2c0a07cc": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-celestial-eclipse_feature.png",
+              "look_title_text": "The Celestial Eclipse",
+              "look_text": "<p>Light and eerie all at once, The Celestial Eclipse Mani has everything you need to get through the most mystical time of year. With its understated crescent moons, peachy hue and transparent base, people won't be able to take their eyes off of this otherworldly mani.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": ""
+            }
+          },
+          "23219905-1ed0-40b9-ac32-8e1adb5eb649": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-interstellar-glow_feature.png",
+              "look_title_text": "The Interstellar Glow",
+              "look_text": "<p>Think starry skies and cool autumn air. The Interstellar Glow Mani features delicate golden moons and stars on top of a midnight grey base with a transparent swirl. This minimalistic and perfectly spooky look will have you shining all season long.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": ""
+            }
+          },
+          "4cb82ed2-7e82-475c-b6fb-6eb0203e3cb3": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-new-moon_feature.png",
+              "look_title_text": "The New Moon",
+              "look_text": "<p>Chic, simple, and fresh, the New Moon mani is the perfect way to bring the best of spooky season right to your fingertips. With a two toned black and transparent base, featuring crescent moon detailing this mani will be a must for October and beyond.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": ""
+            }
+          },
+          "8107ffa2-8ee7-4b28-8466-85b4b5fd5070": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/desert-dreams-feature_2x_e78d6b66-dc78-4e24-a442-8dfc70ab8ccd.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/desert-dreams-header_2x_e82fea54-0f52-4fc9-a6ca-6975c8056ca4.png",
+              "look_text": "<p>Hot desert sun, rocky mountains, and burnt orange hues, the Desert Dreams collection is the ultimate way to channel some of nature's most fabulous creations.<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "2619b7ea-2703-44b6-b55d-80018fbf8465": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-canyon-cliff-feature_2x_490fee95-daab-49e1-a4b9-e8b36da7c4ff.png",
+              "look_title_text": "The Canyon Cliff",
+              "look_text": "<p>The combination of sunny orange and pale yellow mimics the beautiful sunsets between the rocky red mountains. These two shades together will add a golden glow to your nail bed that people won’t be able to take their eyes off of.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-canyon-cliff-nail-wrap-kit"
+            }
+          },
+          "6406f246-37ed-49e5-aa76-63ba09cd8c42": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-slickrock-feature_2x_68bd0efb-87ae-47c1-a48e-2f79cb3b03ba.png",
+              "look_title_text": "The Slickrock",
+              "look_text": "<p>Soothing streams and babbling brooks, the Slickrock mani channels the desert’s most refreshing spots. With its stunning shades of orange and teal, it’s sure to make a splash.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-slickrock-nail-wrap-kit"
+            }
+          },
+          "a7572130-ab4f-4668-8a20-a651b5df27cf": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-sunrise-point-feature_2x_1e9a61a2-580f-4a02-8f9c-a90c7328c20b.png",
+              "look_title_text": "The Sunrise Point",
+              "look_text": "<p>The Sunrise Point mani features two toned orange shades separated by a dreamy teal. Reminiscent of bold rock formations with calming rivers, this mani will leave you yearning for an adventure filled vaca.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-sunrise-point-nail-wrap-kit"
+            }
+          },
+          "7fa35655-2f20-46a4-afbb-55a561d5c814": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/groovy-baby-feature_2x_152846a6-2b4c-4fd9-b441-1be4675dce0f.png",
+              "look_title_text": "",
+              "look_title_image": "shopify:\/\/shop_images\/groovy-baby-header_2x_2a61e8a9-f43c-4bf5-8416-4c8c7cb3a62e.png",
+              "look_text": "<p>Beach sunsets, nature walks and sunny skies. Our summer nail wrap collection is the perfect way to bring your boho dreams to life. <\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "8a6d1d29-e669-455f-8ec2-d64517863a62": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-willow-feature_2x_2f2b0cce-8de6-47eb-89e1-36be012db033.png",
+              "look_title_text": "The Willow",
+              "look_text": "<p>Bring out your inner nature lover with The Willow Mani. Stunning green, blue and purple shades will bring the outdoors right to your finger tips, and it's tie dye pattern will give you that ultimate summer feeling.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-willow-nail-wrap-kit"
+            }
+          },
+          "6f3e3ac0-efb7-4c0c-b530-3a4254554861": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-celeste-feature_2x_09e0f80a-e86f-453c-9107-30ea08078618.png",
+              "look_title_text": "The Celeste",
+              "look_text": "<p>The Celeste Mani is bright, elegant and (just like it's name) heavenly. This mani is the ultimate way to bring the sunshine of summer right on to your nails.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-celeste-nail-wrap-kit"
+            }
+          },
+          "88170eee-1aec-43d0-9773-0c885418a7d3": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-sierra-feature_2x_1c4faead-97a2-43b7-9506-8700d3640076.png",
+              "look_title_text": "The Sierra",
+              "look_text": "<p>The down to earth Sierra Mani captures the feeling of being light, grounded and sunkissed. With bright pink and coral shades in a playful tie dye pattern this is the perfect mani to ring in summer.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-sierra-nail-wrap-kit"
+            }
+          },
+          "e25848e9-3a79-46d0-aae3-ac43ac829e6f": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fairelafete-feature_2x_d9bd3dcd-e471-41ca-b6e3-0a775ecf83eb.png",
+              "look_title_text": "Faire la Fete",
+              "look_title_image": "shopify:\/\/shop_images\/fairelafete-header_2x_b1ecca67-1a80-46ea-a4a9-095e295367a3.png",
+              "look_text": "<p>Spring into our new collection of nail wraps, inspired by dreamy sunsets, luxe picnics, and fields of fleur. Welcome to our louvre-ly secret garden party!<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "4157721d-aa8f-497a-862a-d8389ec76ab0": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-whoopsie-daisy-feature_2x_863b49a5-5ab8-4196-bac6-2a617a70c3ac.png",
+              "look_title_text": "The Whoopsie Daisy",
+              "look_text": "<p>No mistake about it, this wildflower mani is flawless. Inspired by billowy embroidered skirts, your fingertips will flourish with florets.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-whoopsie-daisy-nail-wrap-kit"
+            }
+          },
+          "ec512482-9ca6-429a-8fc3-41917da1aa58": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lavender-fields-forever-feature_2x_414d3e32-6a1a-40d6-8bb9-2594a277b471.png",
+              "look_title_text": "Lavender Fields Forever",
+              "look_text": "<p>A watercolor translation of a breezy vineyard. Oh, the places you’ll go with this super fine brush stroke mani. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/lavender-fields-forever-nail-wrap-kit"
+            }
+          },
+          "dc53973b-9be7-4c9a-a70d-1867502413c0": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pockets-du-ciel-feature_2x_20374ead-9f2d-45fd-8efb-68f4e456cf13.png",
+              "look_title_text": "Sorbet Skies",
+              "look_text": "<p>Warning, this sunrise nail wrap may cause wanderlust. Dreamy ombré vibes are exactly what you need to help you (cherry) blossom this season.  <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/sorbet-skies-nail-wrap-kit"
+            }
+          },
+          "cc0476f3-f670-4602-a30b-ae067dca9988": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-gingham-grove-feature_2x_d94c73bd-dc2d-4d2e-b963-738683bf91c4.png",
+              "look_title_text": "Gingham Grove",
+              "look_text": "<p>Seersucker stripes with a gold edge trim, oh my. This airy yet buttoned-up mani fits all, and brings structure to any off-the-cuff rendezvous. So fill up your finest charcuterie boards, and don’t forget to bring a bottle opener. ;)<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-gingham-grove-nail-wrap-kit"
+            }
+          },
+          "d565b37d-ea58-4946-b109-693260df8323": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bol-du-oranges-feature_2x_6ae8571a-f36a-477f-8ce2-4d880bbdba81.png",
+              "look_title_text": "Bol du Oranges",
+              "look_text": "<p>Now serving the sweetest of fruit manis. With no pulpy mess. This mani will kick start any tea party convo with hand-painted pinkies out. *clink*<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/bol-du-oranges-nail-wrap-kit"
+            }
+          },
+          "aa1d0f29-ed40-477e-8ecd-c5aae2c0aa87": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-heirloom-basket-feature_2x_3093c57d-279e-4844-8092-164eba4120f8.png",
+              "look_title_text": "The Heirloom Basket",
+              "look_text": "<p>Chambray lining: check. Golden wicker handle: check. As many cheeses you can possibly fit: check. This is our love letter to that very specific pique-nique vessel, you know the one!<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-heirloom-basket-nail-wrap-kit"
+            }
+          },
+          "38b17f00-f242-4c75-a674-12929a170f07": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/mod-feature_2x_051b51ed-3cbf-4037-8d9d-323f31dc45a6.png",
+              "look_title_text": "House of Mod",
+              "look_title_image": "shopify:\/\/shop_images\/houseofmod-header_2x_709d870c-0a4e-4176-b28e-fc0c9a09600a.png",
+              "look_text": "<p>Inspired by lady leaders from the 60s, this collection features strikingly bold colors and gorgeous patterns that will make you marvel at your own nails. <\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/house-of-mod-nail-wraps"
+            }
+          },
+          "3d67f0ff-4d17-4b9a-9eed-e6ebe28ca05c": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/not-so-hidden-figures-features_2x_50a29bd3-7ec1-4847-8d2c-80ef4ae86773.png",
+              "look_title_text": "Not So Hidden Figures",
+              "look_text": "<p>Genius has no race. Strength has no gender. Fabulous has no color. This solid, bright aqua is pushing its way to the top of our favorites and no one is mad about it. Similarly to how Katherine Goble Johnson, Dorothy Vaughan, and Mary Jackson made their way to the top at NASA during the Space Race. We stan.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/not-so-hidden-figures-nail-wrap-kit"
+            }
+          },
+          "808c6d10-b315-4437-a08a-e41760a6b732": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/odettas-feature_2x_37f7f1df-e233-483a-acab-a4d938a98f9c.png",
+              "look_title_text": "Odetta's Voice",
+              "look_text": "<p>The soft strokes of baby pink are smooth as butter, or better yet, smooth as Odetta Holmes’ songs. Odetta was the voice of the Civil Rights Movement and this nail wrap is the voice of your fingertips!<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/odettas-voice-nail-wrap-kit"
+            }
+          },
+          "6888e1db-3f35-42a0-9217-27e0e931cbe4": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bunny-feature_2x_bf2642d4-7227-4c28-a9b7-6cecc5d76ca7.png",
+              "look_title_text": "A Bunny's Tale",
+              "look_text": "<p>Be an undercover Playboy Bunny with this Gloria Steinman inspired wrap. With a touch of baby pink and a fiery finish, you can hit every note that is Femme Fatale. You don’t work for them, they work for YOU, baby!<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/a-bunnys-tail-nail-wrap-kit"
+            }
+          },
+          "459d835a-295c-444d-a754-21307490fb7c": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/feminine-feature_2x_f685c281-feef-40a3-a84f-8604f2d465c7.png",
+              "look_title_text": "The Feminine Mystique",
+              "look_text": "<p>Complex, chaotic, yet extremely easy on the eyes. This palette of deep, rich colors works harmoniously together. Betty Friedan was able to put millions of women’s feelings into words during the 60s feminist movement, and PaintBucket was able to put millions of splish splashes onto your nailbeds. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/feminine-mystique-nail-wrap-kit-1"
+            }
+          },
+          "0440fe12-58ec-4cb8-a4eb-29ec0c2b69a9": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/holloway-feature_2x_3491fe19-a7f1-4b56-95ec-8b53d453730f.png",
+              "look_title_text": "The Holloway",
+              "look_text": "<p>This Joan Holloway inspired wrap is for the taste makers. A dusted coral bed with a soft lemongrass scribble reminds you, every time you look down at your nails, that you don’t need perfect lines for absolute perfection. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-holloway-nail-wrap-kit"
+            }
+          },
+          "e8b0dfac-b4d1-48b5-bb74-0596cc077623": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cosmo-feature_2x_6e762810-37f1-4a54-bce0-567caa12e8a9.png",
+              "look_title_text": "Cosmo CEO",
+              "look_text": "<p>Be bold. Be badass. Be… Helen Gurley Brown. This Helen-inspired wrap was born to embody the self-made, supremely ambitious, and painstakingly fabulous person under the nail wrap. It’s subtle, yet chaotic. It’s sexy, yet messy. It’s… your new favorite accent pattern?<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/cosmo-ceo-nail-wrap-kit"
+            }
+          },
+          "e97e4fbe-7d30-4eaf-a917-1cd80ed34ea4": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/shootingstars-feature_2x_edc8d8dc-e3e6-4a56-b745-ea3b45738e05.png",
+              "look_title_text": "Only Shooting Stars",
+              "look_text": "<p>Channel your solar plexus with this bright, glittery, god-tier glamour. Radiate confidence and motivate yourself to be nothing short of great. It all starts with a nice manicure.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/only-shooting-stars-nail-wrap-kit"
+            }
+          },
+          "a7317e45-a177-4175-a4ce-561189854719": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/retrowave-feature_2x_9b308d4d-d9fa-43e1-b596-cb9b842ca1de.png",
+              "look_title_text": "Retrowave",
+              "look_title_image": "shopify:\/\/shop_images\/retrowave-header_2x_983508c1-902b-4ea6-8b83-6e6b873f8e64.png",
+              "look_text": "<p>With electric bubblegum energy, dreamy rosé lightning bolts and rock candy kisses, what&#x27;s not to L-O-V-E?<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/retrowave"
+            }
+          },
+          "c1522fa5-2934-4991-bd38-e39e51127fb5": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/electricrose-feature_2x_09ba0109-f107-46d5-8f7c-437d90f2ffac.png",
+              "look_title_text": "Electric Rosé",
+              "look_text": "<p>Ring ring! Get the perfect mani at home with the Electric Rosé nail wrap kit. Speed dial your self care routine with this rosy pattern carbonated with crisp lightning bolt details. So you can fill in your girl gang on the latest hot goss. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/electric-rose-nail-wrap-kit"
+            }
+          },
+          "f64f113b-dd66-44b1-80d8-060e25b11441": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/poproxx-feature_2x_ff180007-6279-4a63-8c6e-33f90b53c4ac.png",
+              "look_title_text": "Pop Roxx",
+              "look_text": "<p>Big! Pastel! Energy! Sugar rush into self care with this effortlessly luxe, confectionery number.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/pop-roxx-nail-wrap-kit"
+            }
+          },
+          "eaaa5854-821f-4367-9948-3e8a28bc3366": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/puckerpower-feature_2x_2a4318d4-8309-4b13-8fbb-0f2d45a6f0c2.png",
+              "look_title_text": "Pucker Power",
+              "look_text": "<p>Let your nails make a statement with this conversation-starter: these candy lips were made for talking, and that’s just what they’ll do. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/pucker-power-nail-wrap-kit"
+            }
+          },
+          "9cae4886-8356-4089-a972-4c3073afbe50": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/candynecklace-feature_2x_09d9a323-4dbc-4393-bb76-cc99cf88838f.png",
+              "look_title_text": "Candy Necklace",
+              "look_text": "<p>Inspired by the OG smiley emoji, the Candy Necklace nail wrap kit is our fav kind of happy go lucky throwback. With pastel polka dot happy faces, it’s easy to spread the posi vibes!<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/candy-necklace-nail-wrap-kit"
+            }
+          },
+          "e7c673a2-d834-4bbb-bd5a-210d82baae86": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fundip-feature_2x_0bb0196c-1c72-4323-ac10-7d2db3298c81.png",
+              "look_title_text": "Fun Dip",
+              "look_text": "<p>Zap into this white-hot nail wrap topped with electric technicolor sprinkles, ready for any adrenaline rush or a recharging night in.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/fun-dip-nail-wrap-kit"
+            }
+          },
+          "a7bad98f-8d20-493d-9461-82b982dd7aed": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gridwork-feature_2x_932dd022-1710-424f-bad8-54cf383ca0b2.png",
+              "look_title_text": "Gridwork",
+              "look_title_image": "shopify:\/\/shop_images\/gridwork-header_2x_f8649d34-f5d4-4f3b-8c1b-9517d82539d0.png",
+              "look_text": "<p>A collection of clear and sheer based nail wraps, meticulously accented with thoughtfully weighted white lines. <\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/gridwork-nail-wraps"
+            }
+          },
+          "cd0fa96f-96c7-45ee-a74c-a41718e2a8c0": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gridlock-feature_2x_474fa2ed-90f3-4bfc-93e3-2895c9cec7ed.png",
+              "look_title_text": "Gridlock",
+              "look_text": "<p>Traffic jams are messy but the lines on our mani shouldn’t be. The Gridlock mani is a minimalistic design with a clear base and delicate thin, white lines that might cause you to stop in your tracks.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-gridlock-nail-wrap-kit"
+            }
+          },
+          "44b3e50e-0b84-4606-bf1d-a290a3135ff4": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/themap-feature_2x_015fd559-cc92-4f28-a9a5-ef1dd2a0ea25.png",
+              "look_title_text": "The Map",
+              "look_text": "<p>Coordinates? How do you use those? A pre-Google Maps inspired mani that highlights the beauty of latitude and longitude, laid over a baby blue sea.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-map-nail-wrap-kit"
+            }
+          },
+          "c5dcfb85-49f4-45f2-beb6-c456bdaf8d9c": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/offthegrid-feature_2x_9627bd91-7335-49dd-9623-404d381a9e67.png",
+              "look_title_text": "Off The Grid",
+              "look_text": "<p>A mani designed with a gorgeous sheer blush base and lightly weighted white lines that will leave you feeling like you’ve just wandered off to a luscious escape. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/off-the-grid-nail-wrap-kit"
+            }
+          },
+          "f8d1b9d1-43c3-48c6-91e8-5c256a27b16b": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/powergrid-feature_2x_d340d8af-9b4f-49fe-937c-4de0c5728ac2.png",
+              "look_title_text": "Power Grid",
+              "look_text": "<p>A design that commands attention in a down to earth type of way. Created with gorgeous white lines, meticulously measured against a gorgeous deep green hue, this mani subtly exudes all things “supreme-being”.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/the-power-grid-nail-wrap-kit"
+            }
+          },
+          "1602169273641": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/once-in-a-pastel-moon-feature_2x_987f301d-2c25-4ef4-b7b6-5ae8e681bf92.png",
+              "look_title_text": "Once in a Pastel Moon",
+              "look_title_image": "shopify:\/\/shop_images\/once-in-a-pastel-moon-header_2x_665f3a65-efb4-4d59-9e2a-1cfa40e1a67f.png",
+              "look_text": "<p>This season, we&#x27;re thankful for the simple and elegant things – like moon swoops and creamy pastels.<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/once-in-a-pastel-moon-nail-wraps"
+            }
+          },
+          "1602169302496": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/crescent-blush-feature_2x_c3f51f40-7dca-4ba9-8f14-b62229bcdc01.png",
+              "look_title_text": "Crescent Blush",
+              "look_text": "<p>The only thing better than a sleek nude, is a sleek blush. With a hint of white at the base of the nail, this design is what a french manicure’s dreams are made of.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/crescent-blush-nail-wrap-kit"
+            }
+          },
+          "1602169330160": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lunar-glow-feature_2x_734d9bb2-7c91-4012-9450-f55d127034ad.png",
+              "look_title_text": "Lunar Glow",
+              "look_text": "<p>Featuring a buttery yellow hue, this 1920s inspired design naturally elongates the nail.  Cozy on up with a sidecar and let these half moons perfectly compliment your favorite chunky sweater. <\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/lunar-glow-nail-wrap-kit"
+            }
+          },
+          "1592275425710": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/love-has-many-faces-feature-2_2x_5a8ce09c-ef60-4f4d-9794-6a67084fc742.png",
+              "look_title_text": "Love Has Many Faces",
+              "look_title_image": "shopify:\/\/shop_images\/love-has-many-faces_2x_4a33220d-796e-44b5-99e8-a07cb961883d.png",
+              "look_text": "<p>Designed by <a href=\"\/blogs\/blog\/inside-the-bucket-an-interview-with-nail-artist-breana-johnson\" title=\"Inside the Bucket: An Interview with Nail Artist Breana Johnson\">Breana Johnson<\/a>, this collection celebrates the exquisite and diverse facial features of women from around the globe, while giving back to local communities in NYC. <br\/><br\/><a href=\"\/blogs\/blog\/introducing-the-love-has-many-faces-collection\" title=\"A Glimpse Into The Collection: Love Has Many Faces\">Learn more about the inspiration behind the collection here<\/a>.<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/love-has-many-faces-nail-wraps"
+            }
+          },
+          "1592275851054": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/vera-feature_2x_06da8da4-0c1e-4091-a3c3-127fc6499531.png",
+              "look_title_text": "The Vera",
+              "look_text": "<p>The simple black details on sleek neutrals elongates the nail and alludes to your appreciation for the softer things in life. Named after Breana’s late mother, Vera, this design puts an artistic twist on an always classic.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/vera-mani-nail-wrap-kit"
+            }
+          },
+          "1592275915622": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/breana-feature_2x_df40da4d-6994-433e-ad92-e186accf217b.png",
+              "look_title_text": "The Breana",
+              "look_text": "<p>Named after the artist behind this collection, The Breana mani makes a modern statement with black swirls and abstracted facial features. Warning: you may find yourself gazing at the intricate artistry of your nails throughout the day.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/breana-mani-nail-wrap-kit"
+            }
+          },
+          "1592276157965": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/garnett-feature_2x_9bf51634-752d-48cd-872e-74becb2b4c7e.png",
+              "look_title_text": "The Garnett",
+              "look_text": "<p>Garnett, blurs nature with feminine mystique. The Garnett is named after Garnett Phillip, a loyal Paintbucket babe since day 1. This glossy pale nude is already clocked as trending for summer into fall, and the delicate black and white details take it to another level.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/garnett-mani-nail-wrap-kit"
+            }
+          },
+          "1592276294500": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gaudi-feature_2x_a5afdf6f-eed7-4c80-a835-68b8ebcb96dc.png",
+              "look_title_text": "Oh my gaudi",
+              "look_title_image": "shopify:\/\/shop_images\/ohmygaudi-title_2x_689ef55d-dc31-4865-8153-e41b59ec240f.png",
+              "look_text": "<p>Say “bon dia” to designs inspired by Barcelona’s most iconic architecture.<\/p>",
+              "look_link_text": "Shop Nail Wraps",
+              "look_link_url": "shopify:\/\/collections\/oh-my-gaudi-nail-wraps"
+            }
+          },
+          "1592276399559": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/casa-mila-feature_2x_03f1b13e-30fa-4033-9044-52500f0fc5b1.png",
+              "look_title_text": "Casa Milà",
+              "look_text": "<p>Turn heads with this iconic look inspired by one of Antoni Gaudí&#x27;s most innovative pieces of work.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/casa-mila-nail-wrap-kit"
+            }
+          },
+          "1600951773850": {
+            "type": "lookbook_section",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/casa-batllo-feature_2x_305b776c-e303-46f4-b031-de84126359e7.png",
+              "look_title_text": "Casa Batlló",
+              "look_text": "<p>A mani inspired by a true masterpiece. The Casa Batlló will have you feeling like your strutting down the Passeig de Gràcia in the heart of Barcelona.<\/p>",
+              "look_link_text": "Shop Now",
+              "look_link_url": "shopify:\/\/products\/casa-batllo-nail-wrap-kit"
+            }
+          }
+        },
+        "block_order": [
+          "cb971fca-ce4a-40b8-a404-d7b7e66f51e2",
+          "aa61f1fe-08f9-4d63-bf2e-8c7cbb364447",
+          "1d7eb024-0dcf-4558-a905-2b62941c55e8",
+          "27d51322-60e6-432d-ace5-9996995e07e0",
+          "5628ced0-6560-4764-b178-1fe4a6c3ed79",
+          "649b0725-bcd8-49ed-8ac7-3593c15d6f70",
+          "ba1b3ea6-fe6c-4af7-a2f4-9774a30e9a36",
+          "80721264-4263-4769-a24a-0062da767a9d",
+          "085a3dc2-1243-4625-b433-cd9e83fad0c6",
+          "80509f07-09d8-433c-bb61-619ebb5edc51",
+          "43433a3e-d89e-4954-9968-206585cfe531",
+          "11bf491d-2024-4668-82b3-c6992be3450c",
+          "92724eab-1c97-446e-bdec-ecb3694a1c82",
+          "d3ad96b7-806a-42ef-8287-4fe87f7fd34d",
+          "761cc9bc-a28d-42c5-8b41-bc18501f352a",
+          "c3319680-8bfd-491d-a442-2bd6bb013441",
+          "7617903e-db41-447b-88ae-943d2c0a07cc",
+          "23219905-1ed0-40b9-ac32-8e1adb5eb649",
+          "4cb82ed2-7e82-475c-b6fb-6eb0203e3cb3",
+          "8107ffa2-8ee7-4b28-8466-85b4b5fd5070",
+          "2619b7ea-2703-44b6-b55d-80018fbf8465",
+          "6406f246-37ed-49e5-aa76-63ba09cd8c42",
+          "a7572130-ab4f-4668-8a20-a651b5df27cf",
+          "7fa35655-2f20-46a4-afbb-55a561d5c814",
+          "8a6d1d29-e669-455f-8ec2-d64517863a62",
+          "6f3e3ac0-efb7-4c0c-b530-3a4254554861",
+          "88170eee-1aec-43d0-9773-0c885418a7d3",
+          "e25848e9-3a79-46d0-aae3-ac43ac829e6f",
+          "4157721d-aa8f-497a-862a-d8389ec76ab0",
+          "ec512482-9ca6-429a-8fc3-41917da1aa58",
+          "dc53973b-9be7-4c9a-a70d-1867502413c0",
+          "cc0476f3-f670-4602-a30b-ae067dca9988",
+          "d565b37d-ea58-4946-b109-693260df8323",
+          "aa1d0f29-ed40-477e-8ecd-c5aae2c0aa87",
+          "38b17f00-f242-4c75-a674-12929a170f07",
+          "3d67f0ff-4d17-4b9a-9eed-e6ebe28ca05c",
+          "808c6d10-b315-4437-a08a-e41760a6b732",
+          "6888e1db-3f35-42a0-9217-27e0e931cbe4",
+          "459d835a-295c-444d-a754-21307490fb7c",
+          "0440fe12-58ec-4cb8-a4eb-29ec0c2b69a9",
+          "e8b0dfac-b4d1-48b5-bb74-0596cc077623",
+          "e97e4fbe-7d30-4eaf-a917-1cd80ed34ea4",
+          "a7317e45-a177-4175-a4ce-561189854719",
+          "c1522fa5-2934-4991-bd38-e39e51127fb5",
+          "f64f113b-dd66-44b1-80d8-060e25b11441",
+          "eaaa5854-821f-4367-9948-3e8a28bc3366",
+          "9cae4886-8356-4089-a972-4c3073afbe50",
+          "e7c673a2-d834-4bbb-bd5a-210d82baae86",
+          "a7bad98f-8d20-493d-9461-82b982dd7aed",
+          "cd0fa96f-96c7-45ee-a74c-a41718e2a8c0",
+          "44b3e50e-0b84-4606-bf1d-a290a3135ff4",
+          "c5dcfb85-49f4-45f2-beb6-c456bdaf8d9c",
+          "f8d1b9d1-43c3-48c6-91e8-5c256a27b16b",
+          "1602169273641",
+          "1602169302496",
+          "1602169330160",
+          "1592275425710",
+          "1592275851054",
+          "1592275915622",
+          "1592276157965",
+          "1592276294500",
+          "1592276399559",
+          "1600951773850"
+        ],
+        "settings": {
+          "intro_title": "The Lookbook",
+          "intro_text": "<p>Forget the Met, we like our art right where we can see it. Get our seasonal nail art looks <a href=\"https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories\/\" title=\"https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories\/\">painted at our shop<\/a> or have them delivered right to your door with our <a href=\"\/collections\/nail-wraps\" title=\"Nail Wraps\">easy application nail wraps<\/a>.<\/p>",
+          "closing_title": "",
+          "closing_text": "<p>Get these looks at home in just minutes.<\/p>",
+          "closing_button_text": "Shop Nail Wraps",
+          "closing_button_link": "shopify:\/\/collections\/nail-wraps"
+        }
+      },
+      "page-menu": {
+        "type": "page-menu",
+        "blocks": {
+          "1592337175612": {
+            "type": "menu_section_page",
+            "settings": {
+              "page": "menu-subpage-basics",
+              "button_text": "Book an Appointment",
+              "button_link": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories"
+            }
+          },
+          "1592337657957": {
+            "type": "menu_section_page",
+            "settings": {
+              "page": "menu-subpage-luxe-pedis",
+              "button_text": "Book an Appointment",
+              "button_link": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories"
+            }
+          },
+          "1592338316846": {
+            "type": "menu_section_two_col",
+            "settings": {
+              "title": "Add-Ons",
+              "text_column_one": "<p>Gel Polish &ndash; $25<\/p>\n<p>Luxe Polish &ndash; $5<\/p>\n<p>PB Nail Art &ndash; $40+<\/p>\n<p>Custom Nail Art &ndash; $55+<\/p>",
+              "text_column_two": "<p>10 Min Massage &ndash; $15<\/p>\n<p>Callus Treatment &ndash; $20<\/p>\n<p>Gel Polish Removal &ndash; $15<\/p>\n<p>Hard Gel Removal &ndash; $30<\/p>",
+              "button_text": "Book an Appointment",
+              "button_link": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories"
+            }
+          }
+        },
+        "block_order": [
+          "1592337175612",
+          "1592337657957",
+          "1592338316846"
+        ],
+        "settings": {
+          "intro_title": "Menu",
+          "intro_nav": "menu-page",
+          "closing_image": "shopify:\/\/shop_images\/pb-homepage-storefront.png",
+          "closing_title": "Wanna party with us?",
+          "closing_text": "<p>Paintbucket is the perfect place to celebrate, for anyone from birthday girls to brides-to-be. Snacks can be arranged (and are highly encouraged).<\/p>\n<p>To plan your Paintbucket party, send us an e-mail at: <a href=\"mailto:hello@paintbucketnails.com\" title=\"mailto:hello@paintbucketnails.com\"><strong>hello@paintbucketnails.com<\/strong><\/a><\/p>",
+          "closing_button_text": "",
+          "closing_button_link": ""
+        }
+      },
+      "shop-info": {
+        "type": "shop-info",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/pb-homepage-store-bg.png",
+          "circle_text": "We're cuter IRL",
+          "text_one": "<h6>204 WYTHE AVENUE<br>WILLIAMSBURG<br>BROOKLYN, NEW YORK<br><a href=\"tel:347-987-4700\">347-987-4700<\/a>\n<\/h6>",
+          "image_two": "shopify:\/\/shop_images\/pb-homepage-storefront.png",
+          "text_three": "<h6>OPEN MON 12PM – 8PM<br>TUES-SAT 10AM – 9PM<br>SUNDAY 11AM – 8PM<br><a href=\"mailto:HELLO@PAINTBUCKETNAILS.COM\">HELLO@PAINTBUCKETNAILS.COM<\/a>\n<\/h6>"
+        }
+      },
+      "page-faq": {
+        "type": "page-faq",
+        "blocks": {
+          "1592431780683": {
+            "type": "faq",
+            "settings": {
+              "title": "Tell me a bit more about the services at Paintbucket.",
+              "answer": "<p>We offer a wide variety of treatments performed by some of the most talented technicians and nail artists in the industry. We provide everything from organic and all-natural treatments to gel services and nail extensions. If you’re interested in nail art, check out our curated Lookbook or bring us a custom design.<\/p>"
+            }
+          },
+          "1592431847767": {
+            "type": "faq",
+            "settings": {
+              "title": "What kinds of products does Paintbucket use?",
+              "answer": "<p>We’re committed to using the most ethical, effective and when possible, natural products on the market. We offer a range of lacquers from basic (Essie, OPI, Flossgloss) to luxury if you’re feeling fancy (Deborah Lippman, Smith &amp; Cult, Chanel and Givenchy). And since we’re big fans of Mother Earth, we do our best to only use 5, 7 and 9 free lacquers, and our creams and oils are natural or organic when possible.<\/p>"
+            }
+          },
+          "1592431862128": {
+            "type": "faq",
+            "settings": {
+              "title": "I’m a germaphobe.",
+              "answer": "<p>That wasn’t really a question, but we get it. We thoroughly disinfect, clean and sterilize every tool and piece of equipment in a medical grade autoclave. We use tankless pedicure bowls with state-of-the-art purification systems that are engaged after every use.<\/p><p>That being said, if you’d prefer not to share manicure tools, we offer personal toolkits for purchase. Each kit includes a personal cuticle nipper, nail clipper and cuticle pusher. We’ll even hold onto it for you at the shop. And since your cuticles are the only things keeping the outside outside of your nailbeds, we nip minimally while making sure every finger gets the attention it needs.<\/p>"
+            }
+          },
+          "1592431882401": {
+            "type": "faq",
+            "settings": {
+              "title": "I’ve been reading a lot about unfair labor practices in nail salons. Is Paintbucket different?",
+              "answer": "<p>At Paintbucket, we strive to lead the nail industry by example. Our licensed technicians are essential members of the Paintbucket team and work six-eight hour shifts with higher than average payment structures based on their industry day rate. And since we’re a small business, we select product and design partners from other small, local businesses whenever possible. Love thy neighbor, you know? If you have any questions about how we do things, send us an e-mail at <a href=\"mailto:hello@paintbucketnails.com\" title=\"mailto:hello@paintbucketnails.com\"><strong>hello@paintbucketnails.com<\/strong><\/a>.<\/p>"
+            }
+          },
+          "1592431918002": {
+            "type": "faq",
+            "settings": {
+              "title": "What’s the deal with cancellations?",
+              "answer": "<p>We do our best to stay on schedule at Paintbucket because we know all of you babes want to enjoy your service at the time you booked it for. In an effort to keep things on track, we have a strict cancellation policy, which protects both your time and ours.<\/p><p><em>Individual Cancellations\/No Shows:<\/em> If you need to cancel your appointment, please contact us by 9 PM the night before your appointment. If you do not cancel within that time frame, you will be charged 50 percent of your scheduled service cost. If you do not cancel and do not show up to your appointment, you will be charged the full cost of your service.<\/p><p><em>Group Cancellations\/No Shows:<\/em> For parties of three or more, please let us know if you need to cancel or reschedule your appointments at least 48 hours in advance. Groups of three or more that do not show up without cancelling in advance will be charged the full price of all services originally scheduled.<\/p>"
+            }
+          },
+          "1592431953251": {
+            "type": "faq",
+            "settings": {
+              "title": "What is your return policy?",
+              "answer": "<p>All gift card purchases are final sale. All merchandise bought in store can be exchanged for store credit only and must be unopened and unused. Returns must be made within 15 days of purchase.<\/p><p>We do not offer refunds on any services.<\/p>"
+            }
+          },
+          "1592431972005": {
+            "type": "faq",
+            "settings": {
+              "title": "What if my nails chip?",
+              "answer": "<p>If for some reason, your gel mani chips within 7 days of your service, we are happy to provide a complimentary gel fix to the nails that have chipped. The gel color must be the same as the color you received during your original service and we can only fix the nails that have chipped. We kindly request that you email us a picture of your chipped mani at hello@paintbucketnails.com or come into the shop to show us.<\/p><p>**Chipping complaints 7+ days after any service will not be acknowledged.**<\/p>"
+            }
+          },
+          "1592431989317": {
+            "type": "faq",
+            "settings": {
+              "title": "Have a question we didn’t answer?",
+              "answer": "<p>Don’t hesitate to email us at <a href=\"mailto:hello@paintbucketnails.com\" title=\"mailto:hello@paintbucketnails.com\"><strong>hello@paintbucketnails.com<\/strong><\/a>.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1592431780683",
+          "1592431847767",
+          "1592431862128",
+          "1592431882401",
+          "1592431918002",
+          "1592431953251",
+          "1592431972005",
+          "1592431989317"
+        ],
+        "settings": {}
+      },
+      "page-about": {
+        "type": "page-about",
+        "blocks": {
+          "1592435119450": {
+            "type": "full_width_w_images",
+            "settings": {
+              "circle_text": "We believe",
+              "title": "Your salon should be as cool as you are",
+              "text": "<p>Picture this: A comfortable-yet-curated space. A #girlcrushworthy staff.<\/p><p>Free. Prosecco. 🥂 And tons of polish & nail art options because we were never really into the whole<\/p><p>“less is more” thing.<\/p>",
+              "image_one": "shopify:\/\/shop_images\/pb-paintbucket-hand-influencer.jpg",
+              "image_two": "shopify:\/\/shop_images\/pb-paintbucket-interior-b.jpg",
+              "image_three": "shopify:\/\/shop_images\/pb-paintbucket-interior-logo-cool.jpg"
+            }
+          },
+          "1592436417691": {
+            "type": "full_width_two_cols",
+            "settings": {
+              "bg_image_one": "shopify:\/\/shop_images\/pb-about-background-pink.jpg",
+              "heading_one": "YOU LIVE ON YOUR PHONE",
+              "subtitle_one": "Same. So we made it easy to book appointments and choose your nail technician from anywhere with service.",
+              "link_text_one": "Book Now",
+              "link_url_one": "https:\/\/go.booker.com\/#\/location\/Paintbucket\/service-categories",
+              "text_color_one": "black",
+              "bg_image_two": "shopify:\/\/shop_images\/pb-about-background-blue.jpg",
+              "heading_two": "HIGH STANDARDS ≠ HIGH MAINTENANCE",
+              "subtitle_two": "We’re dedicated to providing an obsessively clean and safe environment. If you share our obsession, we have personal toolkits available for purchase. Sometimes it’s nice not having to share.",
+              "link_text_two": "",
+              "link_url_two": "",
+              "text_color_two": "white"
+            }
+          },
+          "1594932920849": {
+            "type": "full_width_text",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/pb-about-background-gal.jpg",
+              "heading": "EVERY GIRL NEEDS HER GANG",
+              "subtitle": "And we want to meet yours. Bring your girlfriends to Paintbucket, or meet some new ones while you’re here. Think of us as a social club for the 21st century, but with less corsets. Unless you’re not in the mood to socialize. We get it. Quiet time is important too.",
+              "link_text": "Learn More",
+              "link_url": ""
+            }
+          },
+          "1594933234837": {
+            "type": "meet_kristen",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pb-kristin-pulaski-1.png",
+              "title": "MEET KRISTIN",
+              "text": "<p>She’s always believed that the best accessory is a perfectly polished pair of hands (and toes, naturally). But the salon experience in NYC was never quite what she needed. After working long hours at her desk everyday, Kristin’s idea of indulging wasn’t sitting under harsh lights while breathing in harsher fumes. And she didn’t want to blow her hard-earned paycheck at one of those fancy places either.<\/p><p>So she left her career in advertising for something a little bigger and a lot more personal: a self-owned and operated nail shop that caters to clients just like her. Enter Paintbucket, a place for working women who spend their 9-5 girl-bossing their way through a man’s world.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1592435119450",
+          "1592436417691",
+          "1594932920849",
+          "1594933234837"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/pb-paintbucket-interior-color-wall.jpg",
+          "intro_title": "Hey, babe.",
+          "intro_subtitle": "<p>Don’t you think it’s time your nail salon got a makeover? That’s where we come in. We’re Paintbucket, a modern nail shop in Williamsburg, Brooklyn.<\/p>",
+          "intro_text": "<p>But we’re more than just manicures. We’re in the business of recognizing our clients’ achievements and rewarding them with the simple act of feeling good.<\/p>"
+        }
+      },
+      "page-membership": {
+        "type": "page-membership",
+        "blocks": {
+          "1595010425357": {
+            "type": "membership_perks",
+            "settings": {
+              "title_icon": "shopify:\/\/shop_images\/membership-icon-nyc_3x_65575f42-3b64-4ce0-8bfc-841ec41eac73.png",
+              "title_icon_width": 50,
+              "text": "We know what it takes to live in this city.<br>So we’re giving our best to the women who do.",
+              "title": "Membership Perks Include",
+              "perk_image_one": "shopify:\/\/shop_images\/membership-icon-manicure_3x_258f7d8f-1f3b-41ee-a3ea-d7158ce3f867.png",
+              "perk_text_one": "Discounted manicures\n& pedicures",
+              "perk_image_two": "shopify:\/\/shop_images\/membership-icon-birthday_3x_8e1b645c-b023-4e03-9294-df25f79787c7.png",
+              "perk_text_two": "Free nail art during your birthday month",
+              "perk_image_three": "shopify:\/\/shop_images\/membership-icon-appointments_3x_07340795-cb46-4abd-9d6e-aa14b11530a6.png",
+              "perk_text_three": "Access to appointments\nup to 3 weeks in advance",
+              "perk_image_four": "shopify:\/\/shop_images\/membership-icon-champagne-bottles_3x_830ac805-81e6-46d2-b45e-60a7410f67ea.png",
+              "perk_text_four": "VIP admission to \nPaintbucket events",
+              "perk_image_five": "shopify:\/\/shop_images\/membership-icon-toolkit_3x_4262cb2e-b046-4820-beb7-374079b23e0c.png",
+              "perk_text_five": "A complimentary toolkit\n(pusher, nipper, clipper)",
+              "perk_image_six": "shopify:\/\/shop_images\/membership-icon-keyring_3x_3abff45c-87b7-44d0-a4e8-f23145fb50e9.png",
+              "perk_text_six": "A members only keyring for discounts with our local partners",
+              "perk_image_seven": "shopify:\/\/shop_images\/membership-icon-stars_3x_c9ea967b-c00c-4a2f-bc12-67864f5e74ac.png",
+              "perk_text_seven": "Skip our daily waitlist \nwith priority booking",
+              "perk_image_eight": "shopify:\/\/shop_images\/membership-icon-hands_3x_d0fb549f-fde3-42eb-b097-7fb3b1a62854.png",
+              "perk_text_eight": "10% off all\nadd-on services",
+              "button_text": "Get your membership",
+              "button_link": "#sign-up"
+            }
+          },
+          "1595556575325": {
+            "type": "how_it_works",
+            "settings": {
+              "title_image": "shopify:\/\/shop_images\/membership-how-it-works_3x_8140ea84-b25b-45fe-82bf-4589a82cdfac.png",
+              "title_icon_width": 250,
+              "step_one": "<p>Choose the membership level that suits you the best<\/p>",
+              "step_two": "<p><a href=\"https:\/\/www.secure-booker.com\/Paintbucket\/ShopOnline\/Membership.aspx\" title=\"https:\/\/www.secure-booker.com\/Paintbucket\/ShopOnline\/Membership.aspx\"><strong>Sign up<\/strong><\/a> at our shop or online<\/p>",
+              "step_three": "<p>Grab your <strong>Broad Strokes keyring<\/strong> and toolkit when you visit us for your first member appointment<\/p>",
+              "step_four": "<p><strong>Flash your keyring<\/strong> at any of our local partners and receive savings galore<\/p>",
+              "step_five": "<p><strong>Enjoy all of the perks<\/strong> of being a Broad Strokes member!<\/p>",
+              "bg_image": "shopify:\/\/shop_images\/membership-membership-how-it-works_3x_6dec8adf-5688-4b71-ae1b-6cec362cf34b.jpg"
+            }
+          },
+          "1595560769585": {
+            "type": "neighborhood_partners",
+            "settings": {
+              "title": "Broadly Speaking, You Look Like A Woman Who Likes to Save $$",
+              "text": "<p>Flash your <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/membership-icon-keyring_3x_7fe877cd-09fb-4abb-93a8-f4de4f32872a.png?v=1595560042\" alt=\"keyring-icon\" class=\"keyring-icon\"> Broad Strokes keyring at any of our neighborhood partners and save a ton.<\/p>",
+              "partner_image_one": "shopify:\/\/shop_images\/membership-logo-bar_3x_f76d4a6e-9978-4ee4-a11a-11cc0b4614d2.png",
+              "partner_discount_one": "10% off",
+              "partner_desc_one": "<p>Become a regular at a different kind of bar and&nbsp;<strong>save 10%<\/strong>&nbsp;on all classes at Bar Method Williamsburg. Your wallet (and abs) will thank you.<\/p>",
+              "partner_image_two": "shopify:\/\/shop_images\/membership-logo-leif_3x_28078d6c-8713-4006-8142-6f5ce301962f.png",
+              "partner_discount_two": "10% off",
+              "partner_desc_two": "<p>If home is where the heart is, consider Leif essential for your cardiac health.&nbsp;<strong>Save 10%<\/strong>&nbsp;on homegoods like pillows, planters, candles and other stuff that&rsquo;s guaranteed to spark joy.<\/p>",
+              "partner_image_three": "shopify:\/\/shop_images\/membership-logo-slt_3x_2d068ada-4579-4658-9349-0f1eb7d541ed.png",
+              "partner_discount_three": "15% off",
+              "partner_desc_three": "<p>Combining cardio, strength training and Pilates, working out at SLT is tough&ndash;but then again so are you. Get your&nbsp;<strong>first class for free<\/strong>&nbsp;and enjoy&nbsp;<strong>15% off<\/strong>&nbsp;five and ten-pack classes after that.<\/p>",
+              "partner_image_four": "shopify:\/\/shop_images\/membership-logo-homecoming_3x_20b41d7f-ea8c-4dc4-9093-7356e4b29fa3.png",
+              "partner_discount_four": "10% off",
+              "partner_desc_four": "<p>Homecoming is making life in the city more beautiful, one Brooklynite at a time.&nbsp;<strong>Save 10%<\/strong>&nbsp;on their floral services, quirky home goods, do-it-yourself workshops and more.<\/p>",
+              "partner_image_five": "shopify:\/\/shop_images\/membership-logo-brightside_3x_d2284f3a-860e-43d8-8cc9-ca65d7e5b08b.png",
+              "partner_discount_five": "10% off",
+              "partner_desc_five": "<p>Brightside is our favorite Australian export since the Hemsworth brothers. Say &ldquo;good morning&rdquo; and actually mean it when you&nbsp;<strong>save 10%<\/strong>&nbsp;on all Brightside coffee products.<\/p>",
+              "partner_image_six": "shopify:\/\/shop_images\/logo-freehold_2x_568bd976-bb46-41ad-a119-7be19c9efaf3.png",
+              "partner_discount_six": "10% off",
+              "partner_desc_six": "<p>Coffee, cocktails and yes, corn hole. Freehold has the best of Brooklyn in one place.&nbsp;<strong>Save 10%<\/strong>&nbsp;on food, drinks, and private events (+ skip the line anytime).<\/p>",
+              "partner_image_seven": "shopify:\/\/shop_images\/logo-shoba_2x_380d6be9-5408-4213-8e16-aeaea7586948.png",
+              "partner_discount_seven": "15% off",
+              "partner_desc_seven": "<p>Bikini waxes will never be fun, but Shobha gets pretty damn close. Get&nbsp;<strong>15% off<\/strong>&nbsp;threading, waxing and laser hair removal, all administered by gentle technicians in a sparkling clean and comfy space.<\/p>",
+              "partner_image_eight": "shopify:\/\/shop_images\/logo-robpeetoom_2x_3f3ccae3-400f-47c6-b49b-439698543ad0.png",
+              "partner_discount_eight": "10% off",
+              "partner_desc_eight": "<p>Trust your bobs, lobs and layers to the stylists at Rob Peetoom.&nbsp;<strong>Save 10%<\/strong>&nbsp;on cuts, colors and other services inspired by you&mdash;not trends.<\/p>",
+              "partner_image_nine": "shopify:\/\/shop_images\/logo-cleanbeauty-wordmark_2x_9820f033-f967-46c5-8afa-435fd1f3c7de.png",
+              "partner_discount_nine": "10% off",
+              "partner_desc_nine": "<p>Clean Beauty Quyen doesn&rsquo;t just believe in eating her greens&mdash;she&rsquo;ll put them on your face.&nbsp;<strong>Save 10%<\/strong>&nbsp;on her all-natural, plant-based skin services for a Goop-approved glow.<\/p>",
+              "partner_discount_ten": "",
+              "partner_desc_ten": "",
+              "button_text": "Get your membership",
+              "button_link": "https:\/\/www.secure-booker.com\/Paintbucket\/ShopOnline\/Membership.aspx"
+            }
+          },
+          "1595563187850": {
+            "type": "choose_membership",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/membership-options-bg.png",
+              "title_image": "shopify:\/\/shop_images\/membership-choose-your-art-form_3x_3215df21-f989-480d-9a49-6d164f64b720.png",
+              "title_icon_width": 375,
+              "option_title_one": "The Painter<br>$65 \/ Month",
+              "option_includes_one": "<p>2 basic manis<\/p><p>1 basic pedi per month<\/p>",
+              "option_title_two": "The Sculptor<br>$100 \/ Month",
+              "option_includes_two": "<p>2 basic manis + gel<\/p><p>1 basic pedi per month<\/p><p>*free gel removals<\/p>",
+              "button_text": "Get Your Membership",
+              "button_link": "https:\/\/www.secure-booker.com\/Paintbucket\/ShopOnline\/Membership.aspx",
+              "fine_print": "<p>Mandatory Restrictions - Commitment: Members must sign up for a 3 month minimum. Use: Memberships are non-transferable and can only be used by the member. Membership fees cannot be returned or used for other services. Cancellation: Memberships must be cancelled 30 days in advance of the next billing cycle by emailing <a href=\"mailto:hello@paintbucketnails.com\" title=\"mailto:hello@paintbucketnails.com\">hello@paintbucketnails.com<\/a>, memberships cannot be cancelled until after the 3 month minimum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1595010425357",
+          "1595556575325",
+          "1595560769585",
+          "1595563187850"
+        ],
+        "settings": {
+          "intro_bg_image": "shopify:\/\/shop_images\/membership-hero-bg_7a25c69f-6cac-458f-89f7-9af90d5afdc4.png",
+          "intro_image": "shopify:\/\/shop_images\/membership-hero-circle-image_3x_67ef31be-26f8-412c-aa34-a4da6d1c0883.png",
+          "intro_title": "Membership",
+          "intro_text": "<h2 class=\"hwt-aenta-font\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/membership-say-hi-to_3x_bb63bb2c-d181-453b-89af-d5a372caf32d.png?v=1595555798\" alt=\"Say hi to\" id=\"say-hi-text\"><br>Broad Strokes<\/h2><p class=\"subtitle\">A monthly membership that brings your nail game to a whole new level.<\/p>\n<h6>Discounts • VIP access • savings & more<\/h6>",
+          "intro_button_text": "See the perks",
+          "intro_button_link": "#the-perks",
+          "intro_nav": "membership-page",
+          "custom_styles": ".page-introduction #say-hi-text { width: 120px; }\n.page-introduction h2 { \n  font-size: 50px;\n  line-height: 1.25em; margin-bottom: 14px; }\n.page-introduction p.subtitle { font-size: 27px; line-height: 1.5em; }\nh1 {  position: absolute !important;\n  overflow: hidden;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  width: 1px;\n  margin: -1px;\n  padding: 0;\n  border: 0;}"
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "settings": {
+          "title": "Our Collections"
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "1598241193858": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "easy",
+              "image": "shopify:\/\/shop_images\/easy_2x_50f5eb2e-ae8d-4eae-8fc5-1c48bef5ae92.png",
+              "text": "Easy Application"
+            }
+          },
+          "1596606657201": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "exclusive",
+              "image": "shopify:\/\/shop_images\/exclusively-at_3x_bdb3bd41-ad31-4416-9b2f-b1ebadc5ebd8.png",
+              "text": "Exclusively at Paintbucket"
+            }
+          },
+          "1596727419811": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "quick dry",
+              "image": "shopify:\/\/shop_images\/time_2x_470777ab-ed1b-4138-891c-1592700b23ad.png",
+              "text": "No Drying Time"
+            }
+          },
+          "c75b9b11-3b4b-4351-a86a-591006e118a4": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "vegan",
+              "image": "shopify:\/\/shop_images\/LeapingBunny-icon_67dea9d8-4cbb-4bf6-8cca-83b8244b756a.jpg",
+              "text": "Vegan & Cruelty-Free"
+            }
+          },
+          "1596727260369": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "non-toxic",
+              "image": "shopify:\/\/shop_images\/nontoxic_2x_5ba37006-b958-48bc-9856-033aa90aa687.png",
+              "text": "Non-Toxic"
+            }
+          },
+          "1596727470962": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "super soft",
+              "image": "shopify:\/\/shop_images\/super-soft_3x_41d2a5da-0db7-46e4-bfa1-cc355b8ab50a.png",
+              "text": "Super Soft"
+            }
+          },
+          "1596727493238": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "machine wash",
+              "image": "shopify:\/\/shop_images\/machine_2x_d02fdb6a-0d57-4152-acdd-bc13cff634f1.png",
+              "text": "Machine-Wash"
+            }
+          },
+          "1596727511582": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "embroidered",
+              "image": "shopify:\/\/shop_images\/embroidered_2x_9a1c708b-5deb-42fd-9401-6adf965a8105.png",
+              "text": "Embroidered"
+            }
+          },
+          "1597974442804": {
+            "type": "tag_popup",
+            "settings": {
+              "title": "Popup Size Guide",
+              "text": "Size Guide",
+              "page": "size-guide"
+            }
+          },
+          "1597979902849": {
+            "type": "tag_popup",
+            "settings": {
+              "title": "Popup Size Guide Crop",
+              "text": "Size Guide",
+              "page": "size-guide-crop"
+            }
+          },
+          "b9f0225a-dc5b-4788-80b2-a022576ed2d5": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "short long",
+              "image": "shopify:\/\/shop_images\/time_2x_93857bfd-0068-4efa-940f-d35a6fcf2acb.png",
+              "text": "Short or Long Wear"
+            }
+          },
+          "48fed8f4-52d5-40c0-90fb-3fff7141582b": {
+            "type": "tag_detail",
+            "settings": {
+              "title": "reusable",
+              "image": "shopify:\/\/shop_images\/nontoxic_2x_753216f9-f0b9-4b0b-a419-0e7f0f1cc7d9.png",
+              "text": "Reusable"
+            }
+          }
+        },
+        "block_order": [
+          "1598241193858",
+          "1596606657201",
+          "1596727419811",
+          "c75b9b11-3b4b-4351-a86a-591006e118a4",
+          "1596727260369",
+          "1596727470962",
+          "1596727493238",
+          "1596727511582",
+          "1597974442804",
+          "1597979902849",
+          "b9f0225a-dc5b-4788-80b2-a022576ed2d5",
+          "48fed8f4-52d5-40c0-90fb-3fff7141582b"
+        ],
+        "settings": {
+          "show_share_buttons": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You might also like"
+        }
+      },
+      "page-bridal": {
+        "type": "page-bridal",
+        "blocks": {
+          "1599503615824": {
+            "type": "text_three_cols",
+            "settings": {
+              "bg_image": "",
+              "heading": "HOW IT WORKS",
+              "subtitle": "Easier than catching the bouquet. Safer too.",
+              "col_one_icon": "shopify:\/\/shop_images\/bridal-how-icon-1.png",
+              "col_one_heading": "CONNECT",
+              "col_one_subtitle": "Fill out the form below. We’ll give you a call within 24 hours to chat about your designs.",
+              "col_two_icon": "shopify:\/\/shop_images\/bridal-how-icon-2.png",
+              "col_two_heading": "COLLAB",
+              "col_two_subtitle": "We’ll create 3 custom designs for you to choose from. Mix them, match them; keep what you love and change what you don’t.",
+              "col_three_icon": "shopify:\/\/shop_images\/bridal-how-icon-3.png",
+              "col_three_heading": "CHEERS!",
+              "col_three_subtitle": "Book your service and see your final designs come to life.",
+              "link_text": "Get Started",
+              "link_url": "#bridal-form",
+              "custom_styles": ""
+            }
+          },
+          "1599252897653": {
+            "type": "full_width_text",
+            "settings": {
+              "bg_image": "",
+              "heading": "PRICING",
+              "subtitle": "",
+              "body": "<div class=\"max-w-md paragraph-lg\">\n<h6>BASE PRICE (DOES NOT INCLUDE SERVICE): $140<\/h6>\n<p>Includes three custom designs. Every additional design is $25 each.<\/p>\n\n<h6>SERVICE PRICE: ≈$85 PER SERVICE<\/h6>\n<p>The cost of service will vary according to the complexity of the designs, but we’ll always give you a quote prior to your appointment.<\/p>\n<\/div>",
+              "link_text": "Get Started",
+              "link_url": "#bridal-form",
+              "link_type": "button",
+              "custom_styles": "#shopify-section-1599252897653 { background-color: #fff; }\n#shopify-section-1599252897653 h6 {\nfont-size: 16px;\nmargin-bottom: 12px;\n}"
+            }
+          },
+          "1599607278670": {
+            "type": "image_section",
+            "settings": {
+              "bg_image": "",
+              "heading": "THAT RING’S GONNA HAVE SOME COMPETITION",
+              "subtitle": "",
+              "image_one": "shopify:\/\/shop_images\/bridal-image-floral-bridal-nail_2x_5243187c-9f15-486f-82b8-130a33dfea30.jpg",
+              "image_two": "shopify:\/\/shop_images\/bridal-image-romantic.png",
+              "image_three": "shopify:\/\/shop_images\/bridal-image-garden.png",
+              "image_four": "shopify:\/\/shop_images\/bridal-image-boho.png",
+              "link_text": "Get Started",
+              "link_url": "#bridal-form",
+              "custom_styles": ""
+            }
+          },
+          "1599607920767": {
+            "type": "full_width_text",
+            "settings": {
+              "bg_image": "",
+              "heading": "FAQ",
+              "subtitle": "",
+              "body": "<div class=\"max-w-md paragraph-lg\">\n<br>\n<p><strong>What do I get?<\/strong><\/p>\n\n<p>Every purchase includes three custom designs inspired by your wedding colors, location and personal preference. Additional designs are $25 each.<\/p>\n\n<p><strong>How do I know I’ll find a design I love?<\/strong><\/p>\n\n<p>Collaboration is 🔑. We’ll work with you closely to identify your budget, likes & dislikes, plus your personal wedding style. Send us swatches, moodboards, whatever your heart desires!<\/p>\n\n<p><strong>What if I’m not feeling my designs?<\/strong><\/p>\n\n<p>Every purchase includes one round of revisions. After your first round of feedback, additional charges may be incurred.<\/p>\n<\/div>",
+              "link_text": "Get Started",
+              "link_url": "#bridal-form",
+              "link_type": "button",
+              "custom_styles": "#shopify-section-1599607920767 { background-color: #fff; }"
+            }
+          },
+          "1599608656956": {
+            "type": "bridal_form",
+            "settings": {
+              "heading": "GET STARTED",
+              "subtitle": "Fill out this form and we’ll give you a call in the next 24 hours!"
+            }
+          }
+        },
+        "block_order": [
+          "1599503615824",
+          "1599252897653",
+          "1599607278670",
+          "1599607920767",
+          "1599608656956"
+        ],
+        "settings": {
+          "bg_image": "",
+          "image": "shopify:\/\/shop_images\/bridal-hero.jpg",
+          "intro_title": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/bridal-ring-icon.png?v=1601248746\" alt=\"Ring icon\"><br>The Wedding Collective",
+          "intro_text": "<p>You&rsquo;ve got the dream dress--now get the dream mani. Work with our nail artists to create three custom designs for you and your bridal party. Because wedding couture isn&rsquo;t just for dresses anymore.<\/p>",
+          "intro_button_text": "Get Started",
+          "intro_button_link": "#bridal-form"
+        }
+      },
+      "1601917422364": {
+        "type": "instafeed",
+        "settings": {
+          "heading_size": 20,
+          "feed_width": 70,
+          "html_area": "<!-- -->"
+        }
+      },
+      "1605724799d25ebf8d": {
+        "type": "hero-banner-subscription",
+        "disabled": true,
+        "settings": {
+          "bg_style_two": true,
+          "sec_bg": "",
+          "bg_image": "shopify:\/\/shop_images\/img-bg-stroke-3_3x_d8290145-1d31-4834-a38b-468870202dd9.png",
+          "bg_image_mobile": "shopify:\/\/shop_images\/img-bg-stroke-3_3x_d8290145-1d31-4834-a38b-468870202dd9.png",
+          "text_align": "center",
+          "pre_heading": "Design",
+          "heading": "A heart to haart with Batsheva",
+          "subtitle": "Breaking hearts, not nails is our mantra when it comes to our very first press-on collection with Batsheva Haart. We sat with the My Unorthodox Life's \"it-girl\" to get to know a little bit more about her love for nails and what inspires her everyday.",
+          "button_text": "Read More",
+          "button_link": "https:\/\/paintbucketnails.com\/blogs\/blog\/a-heart-to-haart-with-batsheva",
+          "button_width": 225,
+          "sublink_1_text": "Gift a subscription",
+          "sublink_1": "",
+          "sublink_2_text": "Redeem a gift",
+          "sublink_2": "",
+          "image": "shopify:\/\/shop_images\/Image-Blog-Article-03_3x_2151dd21-ade2-432b-bd65-f57d29fc90d2.png",
+          "image_loc": "left",
+          "custom_class": "banner-style-two",
+          "press_logo_title": "As seen on"
+        }
+      },
+      "subscription-banner": {
+        "type": "subscription-banner",
+        "settings": {
+          "custom_styles": "#shopify-section-subscription-banner h1 { background: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/monthly-mani-club-title-stamp.svg?v=1607969489') center center no-repeat; background-size: contain; text-indent: -9999px; width: 400px;   height: 0;  padding-top: 37.5%;  max-width: 100%;}\n@media only screen and (min-width: 769px) {\n#MainContent > #shopify-section-subscription-banner .section-hero-banner { \n  padding-top: 180px;\n  padding-bottom: 80px;\n}\n}\n@media only screen and (max-width: 769px) {\n#MainContent > #shopify-section-subscription-banner .section-hero-banner { background-position: top center; padding-top: 480px; }\n}",
+          "bg_image": "shopify:\/\/shop_images\/hero-update_3x_351fbc28-fa4a-4310-946a-932fc4472788.jpg",
+          "bg_image_mobile": "shopify:\/\/shop_images\/mobile-hero_3x_74f3a9b4-7231-4b47-b5bc-48e4b04365c4.jpg",
+          "text_align": "center",
+          "pre_heading": "",
+          "heading": "Monthly Mani Club",
+          "subtitle": "<p>Think of it as a book club… but for your nails. Subscribe to our <strong>Monthly Mani Club<\/strong> and get 3 nail wrap kits delivered each month.<\/p>",
+          "button_text": "Learn More",
+          "button_link": "#shopify-section-subscription-how-it-works",
+          "button_width": 250,
+          "sublink_1_text": "Gift a Subscription",
+          "sublink_1": "shopify:\/\/products\/rise-ai-giftcard",
+          "sublink_2_text": "Redeem a Gift",
+          "sublink_2": "shopify:\/\/products\/monthly-mani-club-prepaid-subscription",
+          "sublink_note": "Actual nail wrap designs will vary by month based on new releases.",
+          "image_loc": "right"
+        }
+      },
+      "subscription-how-it-works": {
+        "type": "subscription-how-it-works",
+        "settings": {
+          "title": "How it works",
+          "subheading": "Your mailman, just became your nailman (or woman 😉)",
+          "col_one_icon": "shopify:\/\/shop_images\/howitworks-1.png",
+          "col_one_heading": "Subscribe",
+          "col_one_subtitle": "You choose what works best for you. \nSign up for 1, 3, 6 or 12 months. The longer you commit, the more you save.",
+          "col_two_icon": "shopify:\/\/shop_images\/howitworks-2.png",
+          "col_two_heading": "Receive",
+          "col_two_subtitle": "Ah, the joy of a new package! \nIt’s the beginning of the month and you’ve just received 3 of our latest nail wrap kits.",
+          "col_three_icon": "shopify:\/\/shop_images\/howitworks-3.png",
+          "col_three_heading": "Apply & Enjoy",
+          "col_three_subtitle": "Each month, we’ll release 3 video tutorials on our IGTV. Subscribe to find out when they go LIVE.",
+          "button_text": "Join the club",
+          "button_link": "#shopify-section-subscription-options",
+          "custom_styles": ""
+        }
+      },
+      "subscription-video": {
+        "type": "subscription-video",
+        "settings": {
+          "title": "Instant heart eyes",
+          "text": "<p>Each monthly mani package is bundled with love and includes:<\/p>\n<ul>\n<li>\n<strong>3 Nail wrap kits <\/strong><br>\nEach manicure is made up of 20, 100% polish nail wraps<\/li>\n<li><strong>3 Mini nail files<\/strong><\/li>\n<\/ul>",
+          "button_text": "Join the club",
+          "button_link": "#shopify-section-subscription-options",
+          "video_cover": "shopify:\/\/shop_images\/subscription-gif-edited2.gif",
+          "image_loc": "left",
+          "custom_styles": ""
+        }
+      },
+      "subscription-options": {
+        "type": "subscription-options",
+        "blocks": {
+          "03eae9d3-d274-413f-88fc-e3f61da03c94": {
+            "type": "product_option",
+            "settings": {
+              "product": "monthly-mani-club-subscription-monthly",
+              "title": "Keep it casual",
+              "freq": "1-Month",
+              "price": "$34.50",
+              "savings": "You save 23%",
+              "button_text": "Join Now",
+              "note": "Billed every month"
+            }
+          },
+          "9b142d4b-0540-4c5c-8501-186a013e1684": {
+            "type": "product_option",
+            "settings": {
+              "product": "monthly-mani-club-subscription-3-month",
+              "title": "Friends with benefits",
+              "freq": "3-Month",
+              "price": "$99",
+              "savings": "You save 27%",
+              "button_text": "Join Now",
+              "note": "Billed every 3 months"
+            }
+          },
+          "46ca5a69-65fb-4a20-8481-01caee19df6a": {
+            "type": "product_option",
+            "settings": {
+              "product": "example-nail-wrap-bundle-6-month",
+              "title": "Committed",
+              "freq": "6-Month",
+              "price": "$189",
+              "savings": "You save 30%",
+              "button_text": "Join Now",
+              "note": "Billed every 6 months"
+            }
+          },
+          "efe347ab-7d39-46b8-b9d6-c518c9b91e4b": {
+            "type": "product_option",
+            "settings": {
+              "product": "monthly-mani-club-subscription-12-month",
+              "title": "Ride or die",
+              "freq": "12-Month",
+              "price": "$360",
+              "savings": "You save 33%",
+              "button_text": "Join Now",
+              "note": "Billed every 12 months"
+            }
+          },
+          "cf42864c-10cf-45aa-aac6-c4fd469b069c": {
+            "type": "product_feature",
+            "settings": {
+              "product": "rise-ai-giftcard",
+              "image": "shopify:\/\/shop_images\/gift-now-icon_3x_99128462-2c32-4a66-946d-afe291c08334.png",
+              "text": "Want to gift a Monthly Mani Club subscription? Best. gift. ever.",
+              "button_text": "Gift now"
+            }
+          },
+          "ffa9f00d-d5d9-4a86-ab18-fba5a016a588": {
+            "type": "product_feature",
+            "settings": {
+              "product": "monthly-mani-club-prepaid-subscription",
+              "image": "shopify:\/\/shop_images\/redeem-gift-icon_3x_605da2de-91c9-430f-a44c-45989a78b4df.png",
+              "text": "Did you receive a Gift Subscription? Time to treat yourself.",
+              "button_text": "Redeem now"
+            }
+          }
+        },
+        "block_order": [
+          "03eae9d3-d274-413f-88fc-e3f61da03c94",
+          "9b142d4b-0540-4c5c-8501-186a013e1684",
+          "46ca5a69-65fb-4a20-8481-01caee19df6a",
+          "efe347ab-7d39-46b8-b9d6-c518c9b91e4b",
+          "cf42864c-10cf-45aa-aac6-c4fd469b069c",
+          "ffa9f00d-d5d9-4a86-ab18-fba5a016a588"
+        ],
+        "settings": {
+          "title": "Join the Monthly Mani Club",
+          "subtitle": "<p>The more you commit, the more you save. Choose the plan that works best for you. <\/p>",
+          "custom_styles": ""
+        }
+      },
+      "subscription-faq": {
+        "type": "subscription-faq",
+        "blocks": {
+          "353e1642-a6f8-487f-92fd-cacf759f5465": {
+            "type": "faq",
+            "settings": {
+              "title": "What comes in my monthly mani club package?",
+              "answer": "<p>Each month you’ll receive 3 nail wrap kits. Each kit includes 20 100% polish nail wraps and a disposable file.<\/p>"
+            }
+          },
+          "310b0932-a00a-4a1d-8902-0717d531aec4": {
+            "type": "faq",
+            "settings": {
+              "title": "What if I move?",
+              "answer": "<p>Simply go into your <a href=\"\/account\" title=\"\/account\">account page<\/a> and update your shipping address<\/p>"
+            }
+          },
+          "373b0624-65b7-4763-b714-f536ad640b4f": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I choose my designs?",
+              "answer": "<p>Not yet. Right now, you’ll be the first to receive our latest and greatest nail wraps each month. Some months will be solid colors, while others will be fun nail art. All of our wraps are meticulously designed with all of our customers in mind. <\/p>"
+            }
+          },
+          "68da7191-f8eb-4826-a8ff-aed644e19205": {
+            "type": "faq",
+            "settings": {
+              "title": "How is my subscription billed?",
+              "answer": "<p>Your subscription is billed at time of purchase. After your first package arrives, you will be billed on the 1st of each month following that (for 1 month subscriptions on auto-bill). For all 3, 6 and 12 month pre-paid subscriptions, billing will occur at the time of your initial purchase and occur again on the 1st of the month, following the date that your pre-paid subscription is set to expire.<\/p>"
+            }
+          },
+          "76c19183-c5c6-4cc0-8437-9c381e231158": {
+            "type": "faq",
+            "settings": {
+              "title": "How do refunds work?",
+              "answer": "<p>We don’t offer refunds but if for some reason, you aren’t 100% happy with your nail wraps, simply let us know by emailing <a href=\"mailto:orders@paintbucketnails.com\">orders@paintbucketnails.com<\/a>. We’ll do what we can to make sure you’re 100% happy.<\/p>"
+            }
+          },
+          "7ac722e4-430a-489d-a585-2803be3f7a03": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I cancel my subscription?",
+              "answer": "<p>Month-to-Month Subscriptions (without term commitment) can be canceled at any time in your <a href=\"https:\/\/paintbucketnails.com\/account\" title=\"https:\/\/paintbucketnails.com\/account\">Account Settings<\/a> using the  &quot;<a href=\"https:\/\/paintbucketnails.com\/account\" title=\"https:\/\/paintbucketnails.com\/account\">Manage Subscription<\/a>&quot; link in the footer. If you’ve already been billed for this month’s box, your cancellation will take effect in the next billing cycle. <\/p><p>3, 6 or 12-Month Subscription Plans (with term commitment) cannot be canceled mid-term. You are able to opt-out of auto-renewal within your <a href=\"https:\/\/paintbucketnails.com\/account\" title=\"https:\/\/paintbucketnails.com\/account\">Account Settings<\/a> or by reaching out to <a href=\"mailto:order@paintbucketnails.com\" title=\"mailto:order@paintbucketnails.com\">order@paintbucketnails.com<\/a>.<\/p><p>Paintbucket Subscription Plans cannot be paused and monthly packages cannot be skipped at this time.<\/p>"
+            }
+          },
+          "564b548f-29ab-44b7-954d-7eeff154a818": {
+            "type": "faq",
+            "settings": {
+              "title": "When will my monthly mani package arrive each month?",
+              "answer": "<p>All monthly mani packages will be shipped out on the first week of each month. You should expect to receive your package within 3-5 days via USPS.<\/p>"
+            }
+          },
+          "a42eeef2-cb7a-48f7-b062-6e0c6e191744": {
+            "type": "faq",
+            "settings": {
+              "title": "When will the Monthly Mani Club tutorials on IGTV take place?",
+              "answer": "<p>Tune into our instagram <a href=\"https:\/\/www.instagram.com\/paintbucketnails\/\" title=\"https:\/\/www.instagram.com\/paintbucketnails\/\">@paintbucketnails<\/a> for monthly calendars of when IGTV tutorials will be released &amp; for more details regarding special event IG LIVES. <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "353e1642-a6f8-487f-92fd-cacf759f5465",
+          "310b0932-a00a-4a1d-8902-0717d531aec4",
+          "373b0624-65b7-4763-b714-f536ad640b4f",
+          "68da7191-f8eb-4826-a8ff-aed644e19205",
+          "76c19183-c5c6-4cc0-8437-9c381e231158",
+          "7ac722e4-430a-489d-a585-2803be3f7a03",
+          "564b548f-29ab-44b7-954d-7eeff154a818",
+          "a42eeef2-cb7a-48f7-b062-6e0c6e191744"
+        ],
+        "settings": {
+          "title": "Subscription Box FAQs",
+          "subtitle": "",
+          "sub_button_text": "Have more questions? Email us at <a title=\"mailto:hello@paintbucketnails.com\" href=\"mailto:hello@paintbucketnails.com\">hello@paintbucketnails.com<\/a>",
+          "custom_styles": ""
+        }
+      },
+      "how-to-apply-steps": {
+        "type": "how-to-apply-steps",
+        "blocks": {
+          "8e1c53d4-f5a5-48a8-a25b-851e7c2e769a": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/492253243?autoplay=1&loop=1&background=1\" width=\"500\" height=\"500\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe>",
+              "heading": "Clean & Clear",
+              "subtitle": "<p>Wash hands with soap and water to remove dirt and oil.<\/p>",
+              "pro_tips": "<ul>\n<li>Wipe your nails with alcohol or acetone for extra staying power.<\/li>\n<li>More oil means less staying power.<\/li>\n<li>Avoid lotions prior to your pamper.<\/li>\n<\/ul>"
+            }
+          },
+          "fcd8d22e-2ca8-4903-a1b4-fca377812a7f": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/492253219?autoplay=1&loop=1&background=1\" width=\"500\" height=\"500\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe>",
+              "heading": "Place & Press",
+              "subtitle": "<p>Peel and place nail wrap 1mm below the cuticle<\/p>",
+              "pro_tips": "<ul>\n<li>Gently push back cuticles and smooth out your wrap.<\/li>\n<li>Make sure the wrap isn't touching your skin! It’s better to size down when placing you wrap and stretching it to fit vs going too big.<\/li>\n<li>Make sure the edges are really pressed down and have fully adhered to your natural nail.<\/li>\n<\/ul>"
+            }
+          },
+          "f988fa7b-dab0-46ce-8cec-5598d34da23e": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/492253223?autoplay=1&loop=1&background=1\" width=\"500\" height=\"500\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe>",
+              "heading": "Fold & File",
+              "subtitle": "<p>Fold nail wrap over the edge of the nail and file away excess.<\/p>",
+              "pro_tips": "<ul>\n<li>Avoid filing on top of the nail wrap, focus on filing underneath the free edge of the nail.<\/li>\n<li>Filing too straight on vs underneath the nail can cause some of the design to be buffered away.<\/li>\n<\/ul>"
+            }
+          },
+          "52263f0e-1298-4c05-b8b4-f355e863e55c": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/492253312?autoplay=1&loop=1&background=1\" width=\"500\" height=\"500\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe>",
+              "heading": "Top or Not",
+              "subtitle": "<p>For extra staying power, add a top coat (or you can go leave it bare).<\/p>",
+              "pro_tips": "<ul>\n<li>Try to avoid a quick-dry top coat. It can cause the wrap to shrink.<\/li>\n<li>We can apply gel at our shop for even longer wear.<\/li>\n<li>Top coat adds extra protection.<\/li>\n<\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "8e1c53d4-f5a5-48a8-a25b-851e7c2e769a",
+          "fcd8d22e-2ca8-4903-a1b4-fca377812a7f",
+          "f988fa7b-dab0-46ce-8cec-5598d34da23e",
+          "52263f0e-1298-4c05-b8b4-f355e863e55c"
+        ],
+        "settings": {
+          "intro_title": "The Handbook",
+          "intro_text": "<h2>HOW TO APPLY #PBWRAPS LIKE A PRO<\/h2><p>We reimagined DIY nail care so that babes across the nation could have access to our obsessed-about nail art while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps and removing them safely. Now lets get wrapping, you talented artist, you.<\/p>",
+          "intro_nav": "how-to-apply-page",
+          "heading": "How to apply",
+          "video_link": "",
+          "remove_heading": "Removing PB Wraps",
+          "remove_content": "<p>Simply remove PB wraps with acetone or oil.<\/p>",
+          "closing_content": "<p>Have ‘em wrapped around your finger in minutes.<\/p>",
+          "button_text": "Shop Nail Wraps",
+          "button_link": "shopify:\/\/collections\/nail-wraps",
+          "custom_styles": ""
+        }
+      },
+      "how-to-apply-features": {
+        "type": "how-to-apply-features",
+        "blocks": {
+          "2a3fe0bb-2be2-439d-b0ae-c6ce88f0db18": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-time_3x_c5f6d252-b4cf-471b-8d2d-fda5322411ce.png",
+              "title": "7-10 Days of Wear. Lasts longer than a summer fling."
+            }
+          },
+          "adc9f4d6-b12d-497b-8c77-7891a34dccf8": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-vegan_2x_65c0be2c-ffe9-4315-9328-680e80b8074e.png",
+              "title": "Vegan & Cruelty-Free. Kindness is never wasted."
+            }
+          },
+          "153f579f-c639-46f9-839c-20b53513bbb9": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-non-toxic_3x_1075e6e6-2e59-4cd9-b522-7b03977085b0.png",
+              "title": "Non-Toxic. No chemical romance here."
+            }
+          },
+          "e0328507-56ae-4733-bf81-618bbdddd1a4": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/membership-icon-manicure_3x_0a7e33b1-0254-416a-af3a-038b9fe7ea0b.png",
+              "title": "100% Polish without the smudging or dry time"
+            }
+          },
+          "42567b85-5bc1-4488-ab14-2e6ac7ade0af": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-easy_3x_14bd5a02-4d9d-416c-8c92-c0fd54c4ae18.png",
+              "title": "Easy to Remove. Just use some oil or acetone."
+            }
+          }
+        },
+        "block_order": [
+          "2a3fe0bb-2be2-439d-b0ae-c6ce88f0db18",
+          "adc9f4d6-b12d-497b-8c77-7891a34dccf8",
+          "153f579f-c639-46f9-839c-20b53513bbb9",
+          "e0328507-56ae-4733-bf81-618bbdddd1a4",
+          "42567b85-5bc1-4488-ab14-2e6ac7ade0af"
+        ],
+        "settings": {
+          "heading": "Why we love Nail Wraps",
+          "button_text": "Shop Nail Wraps",
+          "button_link": "shopify:\/\/collections\/nail-wraps"
+        }
+      },
+      "how-to-apply-collections": {
+        "type": "how-to-apply-collections",
+        "blocks": {
+          "2ca4a70e-f064-47a3-98ab-9d5f9b54a1ab": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/products\/once-upon-a-pastel-moon-nail-wrap-bundle",
+              "title": "Once Upon A Pastel Moon Collection",
+              "image": "shopify:\/\/shop_images\/collection-once-upon.jpg"
+            }
+          },
+          "0501a3aa-2b91-49eb-954c-22eff47d811f": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/products\/send-nudes-4-set-nail-wrap-bundle",
+              "title": "Send Nudes Collection",
+              "image": "shopify:\/\/shop_images\/pb-productimages-neutrals-ombre_1024x1024_5f3d127f-5d69-4253-83cd-0413a89124bc.jpg"
+            }
+          },
+          "2bef8123-655e-4a5a-9271-a00d1a97934c": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/products\/5-rings-5-set-nail-wrap-bundle",
+              "title": "5 Rings Collection",
+              "image": "shopify:\/\/shop_images\/pink-glitter-hand-edit_1024x1024_cdfb71b3-c3bf-4e16-9abd-fe64d443a351.jpg"
+            }
+          },
+          "0fef1cd1-3cb0-4d93-a121-f54c5b0da26a": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/products\/oh-my-gaudi-nail-wrap-bundle",
+              "title": "Oh My Gaudí Collection",
+              "image": "shopify:\/\/shop_images\/example-collection_3x_9d93a494-1c2b-4795-82f5-5fd1cce6d660.jpg"
+            }
+          },
+          "c352af77-a930-434b-bdb4-d6ccdcfe19c4": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/products\/love-has-many-faces-nail-wrap-bundle",
+              "title": "Love Has Many Faces Collection",
+              "image": "shopify:\/\/shop_images\/faces-bundle_1024x1024_7fd83571-943f-48a2-bb41-c36b659d1e99.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "2ca4a70e-f064-47a3-98ab-9d5f9b54a1ab",
+          "0501a3aa-2b91-49eb-954c-22eff47d811f",
+          "2bef8123-655e-4a5a-9271-a00d1a97934c",
+          "0fef1cd1-3cb0-4d93-a121-f54c5b0da26a",
+          "c352af77-a930-434b-bdb4-d6ccdcfe19c4"
+        ],
+        "settings": {
+          "heading": "Our Collections",
+          "content": "<p>Our high-design collections are created by our talented team of artists from our shop in Brooklyn, NY. We pull inspiration from everything around us and tell magical stories through the art we create. <\/p>",
+          "button_one_text": "See All Looks",
+          "button_one_link": "shopify:\/\/pages\/lookbook",
+          "button_two_text": "Shop Nail Wraps",
+          "button_two_link": "shopify:\/\/collections\/nail-wraps"
+        }
+      },
+      "how-to-apply-faq": {
+        "type": "how-to-apply-faq",
+        "blocks": {
+          "190effdd-91d8-4a5a-9ec4-af86ef0b4ce8": {
+            "type": "faq",
+            "settings": {
+              "title": "How long do PB nail wraps last?",
+              "answer": "<p>Our nail wraps last anywhere from 7-10 days. If applied with gel, our nail wraps can last about two weeks.<\/p>"
+            }
+          },
+          "4a0423e5-e563-4173-8450-67599a356367": {
+            "type": "faq",
+            "settings": {
+              "title": "How do I know what size wrap is best for my nails?",
+              "answer": "<p>You can select your wrap size by placing the full sheet of wraps over your nails (with the curved end up towards your cuticle). The right fit will cover your natural nail but will not touch your skin. We suggest using a wrap slightly smaller than your nail, then gently stretching it so that it lies completely flat on your nail with no air bubbles or lifting.<\/p>"
+            }
+          },
+          "9ffab575-da1a-482f-a7d4-f5be096f3c1b": {
+            "type": "faq",
+            "settings": {
+              "title": "What if my nail is too big or too small for some of the nail wraps?",
+              "answer": "<p>If some nail wraps don&#x27;t fit your nails perfectly, you should size down and then gently stretch the wrap to perfectly fit your nail. We recommend using a wrap that is slightly smaller than your nail to avoid the wrap touching skin or cuticles. Using a wrap that is too large and ultimately touches your skin, will cause lifting at the edges.<\/p>"
+            }
+          },
+          "8a602a80-1068-4920-b9f6-7dd0a3bb695e": {
+            "type": "faq",
+            "settings": {
+              "title": "Are PB nail wraps safe?",
+              "answer": "<p>Yes, our nail wraps are SGS and MSDS certified. If you have any allergic reactions to nail polishes do not use this product. Our nail wraps are safe to use if pregnant and are 7 chemical-free.<\/p>"
+            }
+          },
+          "53ef0532-38bf-4ef0-856a-84f611189e21": {
+            "type": "faq",
+            "settings": {
+              "title": "Are PB nail wraps tested on animals?",
+              "answer": "<p>No animal testing has been performed on our nail wraps. Our nail wraps are also leaping bunny certified.<\/p>"
+            }
+          },
+          "4dfdb2c6-5074-4b04-9d97-2ec44eabacdc": {
+            "type": "faq",
+            "settings": {
+              "title": "Are PB nail wraps waterproof?",
+              "answer": "<p>Yes. Our nail wraps are waterproof if they are applied correctly. You do not have to apply a base coat but applying a top coat will make the wraps last longer and protect from any oils or dirt getting underneath the wraps.<\/p>"
+            }
+          },
+          "70cc3b37-67df-4904-93b3-99eab86a7190": {
+            "type": "faq",
+            "settings": {
+              "title": "How do I remove PB nail wraps?",
+              "answer": "<p>Our nail wraps can be easily removed with nail polish remover or oil.<\/p>"
+            }
+          },
+          "1857230e-ed99-4a24-8525-bb6d60499544": {
+            "type": "faq",
+            "settings": {
+              "title": "Can PB nail wraps be shipped to Canada or outside of the US?",
+              "answer": "<p>We do not currently ship to Canada or internationally.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "190effdd-91d8-4a5a-9ec4-af86ef0b4ce8",
+          "4a0423e5-e563-4173-8450-67599a356367",
+          "9ffab575-da1a-482f-a7d4-f5be096f3c1b",
+          "8a602a80-1068-4920-b9f6-7dd0a3bb695e",
+          "53ef0532-38bf-4ef0-856a-84f611189e21",
+          "4dfdb2c6-5074-4b04-9d97-2ec44eabacdc",
+          "70cc3b37-67df-4904-93b3-99eab86a7190",
+          "1857230e-ed99-4a24-8525-bb6d60499544"
+        ],
+        "settings": {
+          "title": "Nail Wrap FAQ",
+          "sub_faq_text": "<p>Have more questions? Email us at <a href=\"mailto:hello@paintbucketnails.com\">hello@paintbucketnails.com<\/a><\/p>"
+        }
+      },
+      "how-to-apply-product-slider": {
+        "type": "how-to-apply-product-slider",
+        "settings": {
+          "heading": "Get ‘Em Now",
+          "collection": "nail-wrap-kits-singles",
+          "button_text": "Shop Nail Wraps",
+          "button_link": ""
+        }
+      },
+      "1611780532743df0b3": {
+        "type": "hero-slideshow",
+        "disabled": true,
+        "settings": {
+          "custom_styles": "#site-header, #shopify-section-1611780532743df0b3 {\n   background-color: rgba(255, 223, 223, 0.8);\n}\n#shopify-section-1611780532743df0b3 h2 .pre-heading { \n  font-size: 12px; \n}\nimg#retrowave-title { width: 340px; height: auto; display: block; margin: 20px auto 0; }\n#shopify-section-1611780532743df0b3 .flex--flexbox {\n  position: relative;\n}\n#shopify-section-1611780532743df0b3 .flex--flexbox:before {\n  content: '';\n  background: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/illo-smiley_3x_eec56f62-cd72-4d70-a1df-9b038a3b1f89.png?v=1611780614') center center no-repeat;\n  background-size: cover;\n  width: 150px;\n  height: 130px;\n  position: absolute;\n  top: -60px;\n  left: 15px;\n  z-index: 10;\n}\n#shopify-section-1611780532743df0b3 .flex--flexbox:after {\n  content: '';\n  background: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/illo-lips_3x_5ae1a45b-bf58-4658-acbe-2ec7427a50e5.png?v=1611780614') center center no-repeat;\n  background-size: cover;\n  width: 115px;\n  height: 60px;\n  position: absolute;\n  bottom: -40px;\n  right: 70px;\n  z-index: 10;\n}\n@media screen and (max-width: 768px) {\n  #shopify-section-1611780532743df0b3 .flex--flexbox:before {\n    width: 100px;\n    height: 80px;\n    top: -30px;\n  }\n  #shopify-section-1611780532743df0b3 .flex--flexbox:after {\n    width: 75px;\n    height: 45px;\n    position: absolute;\n    bottom: -26px;\n    right: 30px;\n  }\n}",
+          "text_align": "center",
+          "pre_heading": "Introducing",
+          "heading": "<img id=\"retrowave-title\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0344\/0800\/5764\/files\/title-retrowave_3x_cfb5a8cc-bc39-467a-a28a-7c1828c6544c.png?v=1611780596\" alt=\"Retrowave\">",
+          "subtitle": "<p>With electric bubblegum energy, dreamy rosé lightning bolts and rock candy kisses, <br>what's not to L-O-V-E?<\/p>",
+          "button_text": "Shop Nail Wraps",
+          "button_link": "shopify:\/\/collections\/nail-wraps",
+          "image_1": "shopify:\/\/shop_images\/retrowave-slot-1_3x_2d9e5e5d-9c2a-4197-93c5-3aa77a723d69.jpg",
+          "image_2": "shopify:\/\/shop_images\/retrowave-slot-2_3x_551aed4b-4ac3-4c91-b8ec-70e0767c7d52.jpg",
+          "image_3": "shopify:\/\/shop_images\/retrowave-slot-3_3x_d322f8ff-7444-42bc-8b96-640794f3151b.jpg",
+          "image_4": "shopify:\/\/shop_images\/retrowave-3_3x_80fab9ff-0ca1-4123-83b6-fdea8211a67e.jpg",
+          "image_5": "shopify:\/\/shop_images\/retrowave-4_3x_038921a9-96fe-4e8a-b49d-4f67b408b03e.jpg",
+          "image_6": "shopify:\/\/shop_images\/retrowave-5_3x_40d1cb0a-4888-4776-ba1a-232b37686a81.jpg",
+          "image_7": "shopify:\/\/shop_images\/retrowave-6_3x_c86ea288-3402-4550-933b-f34228ac5a2e.jpg",
+          "image_8": "shopify:\/\/shop_images\/retrowave-7_3x_6d859b6f-3e7d-4f3b-aaec-bbe6de9ea468.jpg"
+        }
+      },
+      "product-reviews": {
+        "type": "product-reviews",
+        "settings": {
+          "show_product_reviews": true,
+          "heading": "Lots of love"
+        }
+      },
+      "ajax-cart": {
+        "type": "ajax-cart",
+        "settings": {}
+      },
+      "packages-menu": {
+        "type": "packages-menu",
+        "blocks": {
+          "cbbc128a-a64e-412b-84fc-5e772ea94bc1": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Manicures",
+              "title": "5 Basic Manicure + 1 Free",
+              "item_description": "",
+              "item_price": "$175",
+              "item_savings": "Total Savings: $35"
+            }
+          },
+          "6386b3ad-5ece-4888-bcb4-0f31f8529276": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Manicures",
+              "title": "5 Signature Manicure + 1 Free",
+              "item_description": "",
+              "item_price": "$300",
+              "item_savings": "Total Savings: $60"
+            }
+          },
+          "549c39e1-60cc-49b7-bcf9-e927ed97370a": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Manicures",
+              "title": "5 Basic Gel Manicure + 1 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$325",
+              "item_savings": "Total Savings: $155"
+            }
+          },
+          "71b00aee-3f8f-4843-a978-fa6d98ea0e0a": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Manicures",
+              "title": "5 Signature Gel Manicure + 1 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$450",
+              "item_savings": "Total Savings: $180"
+            }
+          },
+          "d25fdab7-57ab-442e-bf9e-bea27218b598": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Pedicures",
+              "title": "5 Basic Pedicure + 1 Free",
+              "item_description": "",
+              "item_price": "$225",
+              "item_savings": "Total Savings: $45"
+            }
+          },
+          "f62477c0-32a4-40b6-a23f-19fd29030377": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Pedicures",
+              "title": "5 Signature Pedicure + 1 Free",
+              "item_description": "",
+              "item_price": "$375",
+              "item_savings": "Total Savings: $75"
+            }
+          },
+          "ec8aea13-6de9-4456-8d83-b5dcb1419dff": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Pedicures",
+              "title": "5 Basic Gel Pedicure + 1 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$375",
+              "item_savings": "Total Savings: $165"
+            }
+          },
+          "1535e34a-6f49-41ee-abd4-00d7da673c06": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Pedicures",
+              "title": "5 Signature Gel Pedicure + 1 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$525",
+              "item_savings": "Total Savings: $195"
+            }
+          },
+          "4b390822-46f4-4961-9c4b-b8aa418d5eb9": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "left",
+              "menu_section_title": "Apres Gel Extensions",
+              "title": "5 Apres Extensions",
+              "item_description": "<p>Get 5 Free Removals<\/p>",
+              "item_price": "$525",
+              "item_savings": "Total Savings: $125"
+            }
+          },
+          "61643c82-ac84-44b1-bcca-21b631176d66": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Manicures",
+              "title": "8 Basic Manicure + 2 Free",
+              "item_description": "",
+              "item_price": "$280",
+              "item_savings": "Total Savings: $70"
+            }
+          },
+          "6f615943-2a95-4331-8908-810bb18eade0": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Manicures",
+              "title": "8 Signature Manicure + 2 Free",
+              "item_description": "",
+              "item_price": "$480",
+              "item_savings": "Total Savings: $120"
+            }
+          },
+          "e2647ab6-23fe-472b-b35a-708e24199a37": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Manicures",
+              "title": "8 Basic Gel Manicure + 2 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$520",
+              "item_savings": "Total Savings: $280"
+            }
+          },
+          "f8aa1536-44d6-47f9-a504-8c157e2b8efd": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Manicures",
+              "title": "8 Signature Gel Manicure + 2 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$720",
+              "item_savings": "Total Savings: $330"
+            }
+          },
+          "98ad6b07-006f-4e31-9012-f1abd1a4fc1f": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Pedicures",
+              "title": "8 Basic Pedicure + 2 Free",
+              "item_description": "",
+              "item_price": "$360",
+              "item_savings": "Total Savings: $90"
+            }
+          },
+          "7230fd40-9d48-4655-a88f-2940e640b6d3": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Pedicures",
+              "title": "8 Signature Pedicure + 2 Free",
+              "item_description": "",
+              "item_price": "$600",
+              "item_savings": "Total Savings: $150"
+            }
+          },
+          "247beba5-022c-4360-b653-47c190837e76": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Pedicures",
+              "title": "8 Basic Gel Pedicure + 2 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$600",
+              "item_savings": "Total Savings: $300"
+            }
+          },
+          "a2cf64ab-b713-4cf8-8d2c-7d1d762a8427": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Pedicures",
+              "title": "8 Signature Gel Pedicure + 2 Free",
+              "item_description": "<p>Free gel removals included<\/p>",
+              "item_price": "$840",
+              "item_savings": "Total Savings: $360"
+            }
+          },
+          "7330a674-197e-444c-8ee4-9ac4d97c4657": {
+            "type": "menu_item",
+            "settings": {
+              "menu": "right",
+              "menu_section_title": "Apres Gel Extensions",
+              "title": "8 Apres Extensions + 1 Free",
+              "item_description": "<p>Get 9 Free Removals<\/p>",
+              "item_price": "$840",
+              "item_savings": "Total Savings: $330"
+            }
+          }
+        },
+        "block_order": [
+          "cbbc128a-a64e-412b-84fc-5e772ea94bc1",
+          "6386b3ad-5ece-4888-bcb4-0f31f8529276",
+          "549c39e1-60cc-49b7-bcf9-e927ed97370a",
+          "71b00aee-3f8f-4843-a978-fa6d98ea0e0a",
+          "d25fdab7-57ab-442e-bf9e-bea27218b598",
+          "f62477c0-32a4-40b6-a23f-19fd29030377",
+          "ec8aea13-6de9-4456-8d83-b5dcb1419dff",
+          "1535e34a-6f49-41ee-abd4-00d7da673c06",
+          "4b390822-46f4-4961-9c4b-b8aa418d5eb9",
+          "61643c82-ac84-44b1-bcca-21b631176d66",
+          "6f615943-2a95-4331-8908-810bb18eade0",
+          "e2647ab6-23fe-472b-b35a-708e24199a37",
+          "f8aa1536-44d6-47f9-a504-8c157e2b8efd",
+          "98ad6b07-006f-4e31-9012-f1abd1a4fc1f",
+          "7230fd40-9d48-4655-a88f-2940e640b6d3",
+          "247beba5-022c-4360-b653-47c190837e76",
+          "a2cf64ab-b713-4cf8-8d2c-7d1d762a8427",
+          "7330a674-197e-444c-8ee4-9ac4d97c4657"
+        ],
+        "settings": {
+          "intro_title": "",
+          "intro_text": "<p>Get the most bang for your buck with a Paintbucket pre-paid package. Basically, the more you buy - the more you save! Plus, you'll get tons of perks like free gel removals and 10% off nail art and retail products at our shop.  Check out all of the different ways you can save below.<\/p>",
+          "intro_nav": "",
+          "heading": "",
+          "video_link": "",
+          "remove_heading": "",
+          "remove_content": "",
+          "menu_left_title": "Buy 5, Get 1 Free",
+          "menu_right_title": "Buy 8, Get 2 Free",
+          "closing_content": "<p>All packages can be purchased in store. Packages are for one guest only and cannot be shared. All packages expire 6 months after the purchase date. There are no refunds or returns on package purchases.<\/p>",
+          "button_text": "",
+          "button_link": "#",
+          "custom_styles": ""
+        }
+      },
+      "packages-faq": {
+        "type": "packages-faq",
+        "blocks": {
+          "2d727e9a-8c5d-4899-b9d5-a69873ebaf8f": {
+            "type": "faq",
+            "settings": {
+              "title": "Do packages expire?",
+              "answer": "<p>Yes, all packages expired 6 months after the purchase date. <\/p>"
+            }
+          },
+          "481e3a72-79f3-453a-ab56-7b88902dc173": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I share my package with a friend or family member?",
+              "answer": "<p>No, packages can only be used by the individual that purchased the package. If you are purchasing a package for someone, it will be added to their customer profile on the day of purchase.<\/p>"
+            }
+          },
+          "821a1f62-4321-4e1d-8eee-2c0b05ed52cf": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I substitute different services with the same value for the services in my package?",
+              "answer": "<p>No, you can only use the services that are specified in your package. <\/p>"
+            }
+          },
+          "a343ea93-f3d0-4aba-9c88-41e8db9a8838": {
+            "type": "faq",
+            "settings": {
+              "title": "Can I cancel my package?",
+              "answer": "<p>Packages are non-refundable and cannot be used after the expiration date.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "2d727e9a-8c5d-4899-b9d5-a69873ebaf8f",
+          "481e3a72-79f3-453a-ab56-7b88902dc173",
+          "821a1f62-4321-4e1d-8eee-2c0b05ed52cf",
+          "a343ea93-f3d0-4aba-9c88-41e8db9a8838"
+        ],
+        "settings": {
+          "title": "FAQ",
+          "subtitle": "",
+          "sub_button_text": "<p>Have more questions? Email us at <a href=\"#\" title=\"#\">hello@paintbucketnails.com<\/a><\/p>",
+          "custom_styles": ""
+        }
+      },
+      "16530624565c67afa0": {
+        "type": "featured-collection",
+        "disabled": true,
+        "settings": {
+          "title": "your one-stop-shop",
+          "collection": "best-selling-nail-wraps",
+          "collection2": "nail-wraps",
+          "collection3": "all-products",
+          "button_text": "Shop Now",
+          "button_link": "shopify:\/\/collections\/nail-wraps",
+          "products_to_show": 3
+        }
+      },
+      "bbfdfe64-bd2b-4178-bc50-be85c522d0a8": {
+        "type": "fullwidht-marque",
+        "blocks": {
+          "98cc664b-4bce-4964-a2ce-104d640693c7": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          },
+          "39ab7207-8a87-434b-b394-b3359cf34d8f": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          },
+          "9a61c8fd-2047-43c2-80e2-4a4dd6da8d3b": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          },
+          "f8bf329f-5bdf-49eb-9dca-ac11711048f2": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          },
+          "4a24ddca-cf7e-4b70-a16c-9c8b4c366196": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          },
+          "e2a98999-c830-4634-99dc-dffb59a9c278": {
+            "type": "heading",
+            "settings": {
+              "title": "inside the bucket: a blog"
+            }
+          }
+        },
+        "block_order": [
+          "98cc664b-4bce-4964-a2ce-104d640693c7",
+          "39ab7207-8a87-434b-b394-b3359cf34d8f",
+          "9a61c8fd-2047-43c2-80e2-4a4dd6da8d3b",
+          "f8bf329f-5bdf-49eb-9dca-ac11711048f2",
+          "4a24ddca-cf7e-4b70-a16c-9c8b4c366196",
+          "e2a98999-c830-4634-99dc-dffb59a9c278"
+        ],
+        "disabled": true,
+        "settings": {}
+      },
+      "6f6feba7-660d-4572-a931-9d7aec888268": {
+        "type": "hero-banner-subscription",
+        "blocks": {
+          "be105ece-bf1f-4ae1-969c-278a1924b496": {
+            "type": "press_logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/4dc3b8e6-9459-470b-9ba1-9001b50a50ae-3x.png"
+            }
+          },
+          "e34011a6-5978-4eb0-ae22-de15f0bf9bd6": {
+            "type": "press_logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/d9571733-adcc-4bba-80fa-c420d0ab69f0-3x.png"
+            }
+          },
+          "8dcd7b18-005a-4079-9af6-15df7fcd08a0": {
+            "type": "press_logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/aac66785-8fe2-4ed6-bcf8-407884005b3a-3x-optimized.png"
+            }
+          },
+          "d95819b1-48f4-49b2-b38f-e3f807a07a62": {
+            "type": "press_logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/4d631e1d-d8a5-4300-a431-3c78cfe07c07-3x.png"
+            }
+          },
+          "faef4a22-f1f8-4d89-b530-fc593a403c6b": {
+            "type": "press_logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/a224c531-0bf9-41bf-8b40-8d47c9f83c24-3x.png"
+            }
+          }
+        },
+        "block_order": [
+          "be105ece-bf1f-4ae1-969c-278a1924b496",
+          "e34011a6-5978-4eb0-ae22-de15f0bf9bd6",
+          "8dcd7b18-005a-4079-9af6-15df7fcd08a0",
+          "d95819b1-48f4-49b2-b38f-e3f807a07a62",
+          "faef4a22-f1f8-4d89-b530-fc593a403c6b"
+        ],
+        "disabled": true,
+        "settings": {
+          "bg_style_two": false,
+          "sec_bg": "#ffffff",
+          "text_align": "center",
+          "pre_heading": "",
+          "heading": "A modern nail shop",
+          "subtitle": "Since 2017, our team of nail experts have been taking care of the hands + feet of people from all over the nation at our flagship salon in the heart of Williamsburg, Brooklyn.",
+          "button_text": "BOOK A SERVICE NOW",
+          "button_link": "https:\/\/go.booker.com\/location\/Paintbucket\/service-categories\/",
+          "button_width": 250,
+          "sublink_1_text": "",
+          "sublink_1": "",
+          "sublink_2_text": "",
+          "sublink_2": "",
+          "image": "shopify:\/\/shop_images\/Nail_Shop_3x_67dcf7b8-134a-4c11-a490-3796e05ecff3.png",
+          "image_loc": "left",
+          "custom_class": "modern_nail banner-style-one",
+          "press_logo_title": "As seen on"
+        }
+      },
+      "7d9f6dc8-5543-465c-9119-b9a375c5eb41": {
+        "type": "material-girl",
+        "disabled": true,
+        "settings": {}
+      },
+      "17946819-e35c-4154-98d7-5724c1222f1e": {
+        "type": "image-with-text-slider",
+        "blocks": {
+          "25b076c9-5b81-4ee8-9135-4a0a4a5a453b": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/carousel-espresso_0389ab61-2123-427a-96be-7ef14d2179a0.png",
+              "subhead": "Introducing",
+              "title": "material girl",
+              "text": "<p><strong>A Press On Collection by Batsheva Haart<\/strong><\/p><p>With bold autumn hues, statement swirls and the perfect almond shape, we’re saying bye-bye to basic and hello to Queen B.<\/p>",
+              "button_text": "shop press ons",
+              "button_link": "shopify:\/\/collections\/press-ons"
+            }
+          },
+          "c10ede9b-8b36-4953-9d09-fef354585f1d": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/carousel-mauveingout_02ff9664-ab07-44dc-8fad-d83e9ad7f389.png",
+              "subhead": "Introducing",
+              "title": "material girl",
+              "text": "<p><strong>A Press On Collection by Batsheva Haart<\/strong><\/p><p>With bold autumn hues, statement swirls and the perfect almond shape, we’re saying bye-bye to basic and hello to Queen B.<\/p>",
+              "button_text": "shop press ons",
+              "button_link": "shopify:\/\/collections\/press-ons"
+            }
+          },
+          "5374b03c-5769-4bbb-b200-177b12152a5a": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/diamond_cc9d5f21-b0da-4c49-ab13-f73f3e74fcbd.png",
+              "subhead": "Introducing",
+              "title": "material girl",
+              "text": "<p><strong>A Press On Collection by Batsheva  Haart<\/strong><\/p><p>With bold autumn hues, statement swirls and the perfect almond shape, we’re saying bye-bye to basic and hello to Queen B.<\/p>",
+              "button_text": "shop press ons",
+              "button_link": "shopify:\/\/collections\/press-ons"
+            }
+          },
+          "e2466ec5-1415-4d43-9640-c46eca636888": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/haartbreaker.png",
+              "subhead": "Introducing",
+              "title": "material girl",
+              "text": "<p><strong>A Press On Collection by Batsheva Haart<\/strong><\/p><p>With bold autumn hues, statement swirls and the perfect almond shape, we’re saying bye-bye to basic and hello to Queen B.<\/p>",
+              "button_text": "shop press ons",
+              "button_link": "shopify:\/\/collections\/press-ons"
+            }
+          }
+        },
+        "block_order": [
+          "25b076c9-5b81-4ee8-9135-4a0a4a5a453b",
+          "c10ede9b-8b36-4953-9d09-fef354585f1d",
+          "5374b03c-5769-4bbb-b200-177b12152a5a",
+          "e2466ec5-1415-4d43-9640-c46eca636888"
+        ],
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "text": ""
+        }
+      },
+      "78e11c1f-3698-4d56-972a-88c32bf4c270": {
+        "type": "product-tabs",
+        "blocks": {
+          "6c55261e-7a97-4a0e-b662-d8424d6ef938": {
+            "type": "tab",
+            "settings": {
+              "title": "bestsellers",
+              "product_list": [
+                "crescent-blush-nail-wrap-kit",
+                "the-board-nail-wrap-kit",
+                "the-stardust-mani-wrap-kit",
+                "rosie-ross-nail-wrap-kit"
+              ]
+            }
+          },
+          "8e8fefce-9a13-48e8-932b-88e344ec5f6a": {
+            "type": "tab",
+            "settings": {
+              "title": "nail wraps",
+              "product_list": [
+                "the-ludlow-nail-wrap-kit",
+                "the-madison-ave-nail-wrap-kit",
+                "the-cornelia-street-nail-wrap-kit",
+                "the-bandit-nail-wrap-kit"
+              ]
+            }
+          },
+          "03d85435-6c51-4f37-a6d7-7ba7f287756e": {
+            "type": "tab",
+            "settings": {
+              "title": "press ons",
+              "product_list": [
+                "diamond-press-on-kit",
+                "haartbreaker-press-on-kit",
+                "espresso-martini-press-on-kit",
+                "mauve-ing-out-press-on-kit"
+              ]
+            }
+          }
+        },
+        "block_order": [
+          "6c55261e-7a97-4a0e-b662-d8424d6ef938",
+          "8e8fefce-9a13-48e8-932b-88e344ec5f6a",
+          "03d85435-6c51-4f37-a6d7-7ba7f287756e"
+        ],
+        "disabled": true,
+        "settings": {
+          "title": "your<br> one-stop-shop"
+        }
+      },
+      "85d71f05-7c83-4f43-bb53-838cdedf8bc3": {
+        "type": "featured-products",
+        "blocks": {
+          "6dc5c618-5703-4a92-9869-44a4ca5ee45c": {
+            "type": "box",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/img-nail-wraps.jpg",
+              "title": "nail wraps",
+              "svg_title": "<svg width=\"319\" height=\"65\" viewbox=\"0 0 319 65\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M223.12 30.754c.018-.666-.398-1.116-1.492-1.265-1.811 1.402-2.356 3.386-2.694 5.442-.103.634.202 1.185 1.244 1.24 1.521-1.404 2.887-3.045 2.942-5.417zm31.359 2.878c1.54-2.242 1.763-4.509.282-6.854-1.112-.263-1.669-.022-2.193.328a34.562 34.562 0 0 0-6.464 5.524 10.049 10.049 0 0 0-1.31 1.784c-.848 1.503-.174 3.045 1.501 3.41.586.129 1.269.189 1.825.017 2.527-.773 4.809-1.954 6.359-4.21zm31.615-2.427c.462.21.77.601.741 1.21-.359.997-1.292 1.054-2.14 1.052-1.366-.002-2.727-.19-4.092-.213-2.6-.034-3.078.344-4.078 2.844-1.409 3.534-4.188 5.275-7.411 6.076-1.073-.55-1.175-1.149-1.09-1.785.286-2.134.936-4.097 2.704-5.531.478-.387.905-.849 1.298-1.327 1.364-1.651 1.366-3.054.051-4.675-1.094-1.346-2.489-1.593-3.951-.657-1.495.954-2.552 2.324-3.547 3.763-.915 1.324-1.837 2.644-2.825 3.916-3.391 4.365-8.115 5.904-13.411 6.206-1.034.062-1.947-.254-2.83-.77-.747-.433-1.547-.787-2.337-1.135-.212-.094-.485-.044-.816-.064-1.322.457-1.646 1.66-1.848 2.893-.906 5.495-1.793 10.99-2.676 16.49-.117.731-.161 1.475-.267 2.214-.122.882-.43 1.676-1.225 2.189-.519.338-.956.315-2.793-.124-.43-.52-.457-1.128-.398-1.754.685-7.007.787-14.09 3.007-20.893.513-1.573 1.044-3.294.377-4.888-.949-.37-1.377.14-1.843.512-.679.545-1.334 1.114-2.016 1.652-2.345 1.837-4.8 2.592-7.538.778-.294-.192-.708-.21-1.186-.339-.471.272-1.014.56-1.519.895-2.579 1.727-4.46 1.532-6.494-.72-.326-.367-.533-.831-.814-1.243-.209-.3-.446-.588-.469-.615-1.163-.012-1.489.505-1.754 1.075-.94 2.024-1.93 4.012-3.264 5.824-.899 1.22-1.938 2.274-3.216 3.056-2.328 1.423-4.76.714-5.909-1.736-1.017-2.171-1.444-4.463-1.184-6.87.253-2.335.478-4.675.712-7.018.072-.732.255-1.473-.14-2.178-.529-.48-1.138-.478-1.719-.171-1.324.697-2.697 1.416-3.274 2.894-1.08 2.76-2.066 5.563-3.087 8.344-.471 1.275-.839 2.6-1.43 3.814-.744 1.53-2.08 2.431-3.767 2.754-.513.096-.991-.073-1.31-.506-.324-.443-.281-.933-.081-1.411.097-.226.186-.485.363-.64 2.681-2.405 3.681-5.838 5.457-8.794 1.122-1.862 1.412-3.642-.321-5.392-.837-.841-1.129-1.955-.357-3.047.757-1.066 1.779-1.914 3.145-1.486 1.558.487 2.871.153 4.296-.458 4.126-1.773 6.82.288 6.384 4.893-.221 2.34-.439 4.68-.672 7.018-.138 1.364-.213 2.722.212 4.05.149.466.395.91 1.384 1.234 1.517-.517 2.126-1.942 2.779-3.225a465.94 465.94 0 0 0 5.717-11.676c.641-1.356 1.31-2.662 2.324-3.78a7.463 7.463 0 0 1 3.431-2.14c1.715-.512 3.223-.169 4.405 1.185 1.818 2.077 3.349 4.3 3.498 7.208.06 1.233.221 2.462.377 3.69.095.748.357 1.434 1.216 1.95 1.934-.03 3.363-1.154 4.556-2.627 2.432-2.999 4.586-6.163 5.795-9.882.299-.924.4-1.965 1.368-2.558.991-.192 1.384.47 1.496 1.231.177 1.215.226 2.454.288 3.688.041.846-.136 1.733.476 2.346.841.357 1.305-.07 1.763-.496 1.82-1.706 3.839-3.145 6.004-4.376.646-.364 1.301-.753 2-.977 2.652-.85 4.342-.08 5.333 2.491.623 1.615 1.165 3.27 1.197 5.035.014.725-.133 1.512.515 2.089.828.473 1.49.057 1.97-.508.881-1.032 1.651-2.16 2.471-3.242 1.048-1.381 2.007-2.843 3.179-4.11 1.423-1.535 2.598-1.42 4.09.176 1.763 1.896 3.305 3.973 4.788 6.192 3.448-.393 6.779-.297 9.932 1.11zM184.246 14.091c.775 1.197.873 2.57.822 3.913-.29 8.097-.948 16.159-2.865 24.072a30.835 30.835 0 0 1-3.112 7.874c-.791 1.41-1.773 2.676-3.32 3.428-2.825 1.367-4.542.861-5.783-1.935-.642-1.452-1.045-3.016-1.442-4.56-1.068-4.17-1.693-8.417-2.179-12.688-.133-1.158-.07-2.473-1.327-3.139-1.201.302-1.365 1.215-1.579 2.02-.56 2.138-1.094 4.284-1.549 6.446-.789 3.748-2.154 7.303-3.644 10.824-.912 2.16-2.431 3.705-4.843 4.276-1.428.342-2.543-.154-3.054-1.466a10.072 10.072 0 0 1-.597-2.492c-.616-5.244-1.094-10.47-.152-15.756.709-3.979 1.052-8.021 1.538-12.039.179-1.454.391-2.93-.269-4.192-.763-1.176-2.176-.906-3.081-1.713-.108-.278-.334-.61-.353-.947-.046-.931.432-1.679 1.185-2.186a18.15 18.15 0 0 1 2.62-1.462c1.88-.848 3.094-.351 3.84 1.602.53 1.378.896 2.81.786 4.314-.121 1.591-.165 3.184-.336 4.768-.464 4.391-1.057 8.77-1.444 13.167-.24 2.683-.217 5.384-.261 8.078-.014.599.159 1.224.891 1.478.772-.02 1.052-.605 1.232-1.172.637-1.99 1.262-3.98 1.812-5.993 1.692-6.166 3.633-12.247 6.255-18.11.298-.668.627-1.346 1.073-1.928a1.822 1.822 0 0 1 3.107.326c.313.655.504 1.39.609 2.108.199 1.332.343 2.678.427 4.022.378 6.134 1.687 12.145 2.629 18.2.299 1.903.649 3.852 2.289 5.737 2.169-1.393 2.827-3.256 3.394-5.114 1.153-3.766 1.894-7.62 2.415-11.518.744-5.599 1.15-11.22 1.353-16.856.039-.963-.061-2.014 1.117-2.49.945-.145 1.393.48 1.796 1.103z\" fill=\"#231F20\"><\/path>\n    <mask id=\"e3ymrct28a\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"38\" y=\"0\" width=\"92\" height=\"65\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M38 0h91.497v64.988H38V0z\" fill=\"#fff\"><\/path>\n    <\/mask>\n    <g mask=\"url(#e3ymrct28a)\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M80.561 33.513c.392-1.125 1.007-2.25.104-3.705-2.006.52-2.502 2.267-3.16 3.72-.78 1.714-1.84 3.505-.386 5.761 2.038-1.72 2.043-1.718 3.442-5.776zm42.552-25.72c.023-.73-.081-1.485-1.074-2.3-.475.418-.955.666-1.169 1.059-2.303 4.223-2.981 8.81-3.004 13.533-.004.495.47.825 1.107.773 1.028-.402 1.3-1.403 1.59-2.32 1.119-3.518 2.428-6.997 2.55-10.745zm3.758-4.42c.438 2.713.173 5.435-.279 8.111a35.129 35.129 0 0 1-2.861 9.173c-1.839 3.915-3.462 7.928-5.254 11.866-.855 1.884-1.012 3.798-.675 5.792a30.735 30.735 0 0 0 1.846 6.401 8.112 8.112 0 0 0 1.093 1.926c1.826 2.347 3.892 2.46 5.985.347.436-.438.754-.981 1.132-1.472.297-.385.539-.833 1.111-.892.625.23.576.76.447 1.214-.438 1.553-1.044 3.036-2.026 4.343-1.911 2.551-4.355 3.137-7.239 1.73-2.112-1.031-3.433-2.806-4.553-4.768-.544-.952-.733-2.124-1.715-2.742-.962-.32-1.425.376-1.999.812-1.388 1.047-2.688 2.238-4.18 3.111-3.58 2.115-6.646 1.531-9.207-1.74-.99-1.257-1.71-2.722-2.501-4.118-.365-.643-.547-1.394-1.365-1.759-.78-.24-1.363.256-1.969.691-.706.507-1.36 1.123-2.14 1.483-2.13.995-4.29 1.307-6.38-.178-.598-.422-1.149-.965-2.184-.908-1.464.983-2.379 3.094-4.654 3.176-1.725.082-2.75-1.681-4.29-1.707-.999.203-1.416.822-1.695 1.522-.64 1.606-1.275 3.22-1.844 4.852-.902 2.578-2.07 5.029-3.39 7.415-.93 1.686-2.36 2.55-4.326 2.217-1.902-.321-3.166-1.476-3.627-3.314-.756-3.012-1.016-6.087-.848-9.192.371-6.903.76-13.811 1.093-20.717.103-2.08.205-4.2-1.028-6.084-1.711-.634-2.741.283-3.438 1.492-1.542 2.676-3.114 5.36-4.37 8.178a45.049 45.049 0 0 0-3.498 12.071c-.57 4.036-1.282 8.05-1.842 12.084-.27 1.95-.341 3.931-.48 5.904-.094 1.358-.184 2.713-.792 3.968-.48.99-1.367 1.448-2.446 1.3-1.08-.146-1.895-.835-2.057-1.86a6.933 6.933 0 0 1-.032-1.84c.516-4.287.798-8.596 1.466-12.879 1.12-7.193 1.96-14.434 2.926-21.65.424-3.18 1.25-6.298 1.376-9.52.05-1.346.323-2.694.007-4.12-1.155-.611-1.798-.248-2.296.35-.715.853-1.328 1.79-2.038 2.648-.41.497-.97.73-1.715.406-.035-.374-.194-.769-.079-1.058.962-2.49 2.675-4.45 4.8-6.01 1.55-1.133 3.04-.766 4.219.776.95 1.246 1.242 2.68 1.2 4.193-.027.986-.177 1.971-.197 2.957-.021 1.093-.166 2.236.666 3.087.742.365 1.29.109 1.738-.363.849-.904 1.66-1.843 2.492-2.76 1.1-1.208 2.38-2.202 3.878-2.861 1.853-.82 3.412-.247 4.428 1.517.63 1.095.906 2.297 1.086 3.524.729 4.903 1.058 9.817.71 14.772-.306 4.312-.544 8.626-.774 12.94-.113 2.117-.049 2.254.982 4.127.943.217 1.443-.438 1.717-1.095 1.393-3.301 3.156-6.438 4.265-9.865 1.367-4.23 2.67-8.489 4.685-12.49.857-1.704 2.086-3.062 3.508-4.278 1.499-1.282 3.17-1.403 4.858-.445.857.489 1.613 1.155 2.402 1.757 1.07.815 1.438 1.894 1.47 3.235.063 2.59.259 5.176.457 7.761.085 1.095.148 2.247 1.229 2.918.883.326 1.535-.07 1.976-.691a23.456 23.456 0 0 0 1.706-2.85c1.537-2.965 3.022-5.952 4.539-8.931.226-.438.46-.885.76-1.268.565-.71 1.278-1.228 2.25-1.022.996.214 1.37 1.001 1.524 1.9.192 1.106.196 2.233-.14 3.306-.948 3.022-.461 6.134-.606 9.202-.088 1.864.64 3.653 1.772 5.186 1.222 1.66 2.714 1.946 4.597.986.33-.17.717-.306.957-.57 2.847-3.151 5.54-6.402 5.696-10.915.139-4.07.148-8.144.314-12.212.205-4.98 1.512-9.753 3.045-14.468.625-1.921 1.946-3.443 3.085-5.053 1.189-1.677 2.971-1.597 4.749-1.189 1.66.381 2.531 1.538 2.787 3.128z\" fill=\"#231F20\"><\/path>\n    <\/g>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M96.314 13.686c1.314-.073 2.268.817 2.39 2.232.097 1.033-.66 2.018-1.56 2.039-1.406.031-2.704-1.161-2.707-2.49-.008-.917.85-1.726 1.877-1.781zM318.832 20.479c.24.532.218.953-.034 1.358-.127.064-.257.188-.379.178-1.233-.085-2.434.242-3.67.235-1.219-.009-2.431.431-3.533 1.01-1.055.555-1.895 1.37-2.351 2.695.516 2.253-.113 4.584-.155 6.857-.724.588-1.166.303-1.622-.314-.004-.21-.032-.5-.009-.79.102-1.328.305-2.638.04-3.994-.152-.775.029-1.62.057-2.351-.547-1.138-1.337-1.867-2.429-2.357-1.087-.175-2.208-.257-3.39-.087-.988.138-2.011.076-3.009.29a1.33 1.33 0 0 1-1.262-.366c-.027-.16-.096-.373-.085-.584.012-.212.1-.422.149-.612.156-.076.283-.19.411-.192 1.077-.025 2.138.031 3.229-.136 2.048-.313 3.646-1.37 5.09-2.748.355-.34.582-.857.766-1.333.265-.681.436-1.404.671-2.19l-.257-1.556c.796-1.092.509-2.508.826-3.78.785-.773.785-.773 1.607.014-.172 1.4.382 2.85.083 4.293.277.748.574 1.43.784 2.138.428 1.44 1.342 2.44 2.583 3.168.316.185.634.358 1.003.569 1.316.058 2.669.508 4.003 0l.883.585zM29.893 40.224c.153.333.139.596-.022.85-.08.04-.163.117-.24.11-.785-.053-1.55.152-2.336.148-.776-.006-1.547.27-2.248.631-.672.347-1.206.856-1.497 1.684.329 1.408-.072 2.865-.099 4.286-.46.367-.741.19-1.032-.196-.002-.131-.02-.313-.005-.494.065-.83.194-1.649.025-2.496-.096-.485.019-1.013.037-1.47-.349-.71-.851-1.167-1.546-1.473-.692-.11-1.405-.16-2.158-.054-.628.086-1.279.047-1.914.18a.857.857 0 0 1-.803-.228c-.017-.1-.062-.233-.054-.365.007-.132.063-.264.094-.382.1-.048.18-.12.262-.12.685-.016 1.36.02 2.055-.085 1.303-.196 2.32-.857 3.239-1.718.226-.213.37-.536.487-.833.169-.426.278-.877.427-1.369l-.163-.972c.506-.682.324-1.568.525-2.363.5-.483.5-.483 1.023.009-.11.875.243 1.78.053 2.683.176.468.365.894.499 1.337.272.9.854 1.525 1.644 1.98.2.115.403.223.638.355.838.036 1.698.317 2.547 0l.562.365zM17.248 18.204c.261.496.15.788-.143.998-.546.39-1.165.586-1.81.761-1.927.52-3.738 1.304-5.292 2.483-.624 1.059.284 1.97.125 2.971-.157.967-.002 1.978-.238 2.862-.71.517-1.167.25-1.68-.368-.054-1.098-.464-2.27-.46-3.53.004-.55-.308-1.102-.457-1.591-.58-.47-1.093-.888-1.687-1.372-.821-.052-1.741-.25-2.618-.126-.895.124-1.748.51-2.83.04-.273-.862-.241-1.55.485-2.024.113-.046.197-.113.266-.099.315.07.626.163 1.133.298 1.864-.217 4.049-.405 5.114-2.522.913-1.816 2.002-3.723.868-5.742.905-1.275.905-1.275 2.324-.869.358.605.094 1.281.125 1.928.029.577-.06 1.158-.098 1.75.82 1.539 1.334 3.299 3.69 3.84.84.126 2.1-.062 3.183.313z\" fill=\"#231F20\"><\/path>\n<\/svg>",
+              "button_text": "shop now",
+              "button_link": "shopify:\/\/collections\/nail-wraps"
+            }
+          },
+          "f0446712-03f7-442c-9447-dd43d1b5889d": {
+            "type": "box",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pressons-square_2x_adfe26c4-42bb-4fdd-a64f-8982c445eb47.png",
+              "title": "press ons",
+              "svg_title": "<svg width=\"276\" height=\"70\" viewbox=\"0 0 276 70\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n    <mask id=\"6szsd6xvia\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"181\" y=\"25\" width=\"56\" height=\"35\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M181.429 25.936h55.062v33.212h-55.062V25.936z\" fill=\"#fff\"><\/path>\n    <\/mask>\n    <g mask=\"url(#6szsd6xvia)\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M223.85 53.808c-.504.608-1.188.94-1.901 1.219-.66.257-1.319.363-1.979.03-.407-.35-.516-.801-.329-1.228 1.11-2.574 2.517-4.936 5.143-6.358.121-.063.298-.054.451-.075.494.266.603.566.616.844.065 2.105-.682 3.944-2.001 5.568zm11.169-16.735c-.562-.076-1.045.172-1.452.556-.67.62-1.351 1.228-2.032 1.839-.286.245-.606.469-.703.436-.65-.233-.75-.523-.871-.802-.713-1.74-1.462-3.46-2.144-5.214-.965-2.544-2.504-4.797-3.814-7.18a2.696 2.696 0 0 0-.274-.364c-.395-.46-.868-.566-1.583-.139-.989 1.582-2.044 3.334-3.155 5.033-2.24 3.409-4.34 6.903-6.978 10.057-.626.747-1.121 1.603-1.64 2.435-.955 1.551-1.879 3.11-2.812 4.66-.791 1.304-1.88 2.372-2.968 3.43-.604.588-1.319.993-2.132.972-.506-.415-.55-.865-.54-1.313.067-1.646.242-3.282.802-4.864.211-.553.408-1.11.473-1.72.177-1.858.298-3.751.672-5.578.429-2.084.043-4.017-.682-5.94-.78-2.085-3.22-3.336-5.419-2.674-1.111.344-2.253.45-3.463.75-.538.426-1.154.874-1.748 1.355-.616.505-1.132 1.177-2.066 1.294-.296-.726.407-1.206.252-1.805-.143-.524-.405-.962-.921-1.273-.66-.191-1.331-.3-1.935.365-.606 2.094-1.232 4.253-1.848 6.41-.131.504-.252 1.028-.286 1.551-.053 1.056-.318 2.072-.57 3.088-.958 3.708-1.913 7.405-2.837 11.113-.351 1.379-.625 2.78-.902 4.168-.044.214.022.438.056.738.208.16.429.396.693.49 1.273.493 2.11.075 2.452-1.195.043-.14.043-.3.075-.439.441-1.902.946-3.783 2.144-5.417-.01-1.775.594-3.388 1.374-4.948.539-1.08.946-2.202 1.341-3.345.946-2.78 2.243-5.43 4.297-7.631 1.254-1.334 2.638-2.468 4.508-2.81.945 1.207 1.176 1.527 1.021 2.48-.33 2.211.046 4.53-1.077 6.615-.109.19-.099.438-.131.662-.395 2.735-.824 5.472-1.176 8.227-.298 2.308.286 4.32 2.473 5.653.704.236 1.441.472 2.265.46 1.176-.266 2.241-.801 3.317-1.43 2.134-1.262 3.936-2.823 5.619-4.607 1.428-1.507 2.429-3.27 3.637-4.915.715-.974 1.396-1.978 1.957-3.037.572-1.068 1.144-2.114 1.813-3.13.582-.877 1.188-1.773 1.572-2.735.451-1.134 1.122-2.138 1.648-3.218.143-.287.364-.46.728-.363 1.736 3.699 2.99 8.015 2.9 10.1-.196.16-.405.384-.66.544-1.636 1.113-3.263 2.244-4.946 3.312-1.407.898-2.352 2.148-3.034 3.602-1.11 2.393.33 5.16 2.968 5.823 2.561.643 4.891.16 7.025-1.304.868-.596 1.78-1.207 2.352-2.136 1.494-2.437 2.318-5.044 2.088-7.909-.044-.523-.1-1.046.23-1.697 1.036-.995 2.122-2.16 3.761-2.737.087-1.292 1.341-1.945 1.758-2.928-.199-.92-.725-1.313-1.472-1.421z\" fill=\"#231F20\"><\/path>\n    <\/g>\n    <mask id=\"mjo2tq3xyb\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"33\" y=\"9\" width=\"28\" height=\"61\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M33 9.903h27.531v59.553H33V9.903z\" fill=\"#fff\"><\/path>\n    <\/mask>\n    <g mask=\"url(#mjo2tq3xyb)\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M43.32 36.903c-.08.033-.156.033-.235.033-.136 0-.282-.021-.38-.021-.527-.51-.371-1.03-.238-1.53.428-1.731.954-3.442 1.312-5.194.761-3.61 2.34-6.903 4.302-10.047.872-1.413 1.99-2.645 3.458-3.496.304.045.549.054.764.13.435.159.862.348 1.32.54.236.382.55.734.693 1.137 1.144 3.144 1.223 6.277-.358 9.316-.716 1.389-1.623 2.696-2.485 4.025-.247.382-.561.742-.93.998-2.262 1.602-4.58 3.12-7.223 4.11zm6.551.563c.93-.914 1.915-1.762 3.069-2.42.884-.5 1.668-1.17 2.14-2.041.659-1.21 1.578-2.22 2.497-3.238.346-.394.603-.86.907-1.296 1.467-2.05 1.858-4.377 2.026-6.776.113-1.752-.235-3.42-.818-5.047-.403-1.136-1.062-2.155-1.87-3.078-.739-.85-1.668-1.265-2.856-1.317-2.429-.108-4.413.722-6.147 2.303-1.512 1.383-2.644 3.006-3.664 4.696a59.59 59.59 0 0 0-1.008 1.698c-.504.85-.996 1.69-1.512 2.528-.143.244-.346.49-.828.31-.145-1.053-.247-2.2.023-3.262.471-1.828.46-3.695.817-5.522.168-.872.156-1.786.168-2.678.013-.69-.301-1.296-.805-1.804-.46-.448-1.02-.68-1.692-.607-.761.192-1.154.745-1.49 1.35-.492.87-.65 1.827-.761 2.792-.111 1.043-.203 2.083-.393 3.102-.314 1.69-.558 3.388-.672 5.099-.022.372-.032.754-.111 1.115-.605 2.687-1.075 5.396-1.354 8.146-.46 4.365-1.379 8.688-1.458 13.095a18.062 18.062 0 0 1-.257 2.444c-.415 2.441-.437 4.894-.481 7.35-.045 2.612-.28 5.213-.292 7.816-.01 1.921-.247 3.875.415 5.756 1.208 1.242 2.575 1.922 4.568 1.146.327-2.315.047-4.714.574-7.04.536-2.336.434-4.738.894-7.095.472-2.401.605-4.864.953-7.296.346-2.36.549-4.728 1.152-7.127a5.494 5.494 0 0 1 2.016-.797c.672-.126 1.344-.15 2.006-.17 1.243-.031 2.285-.479 3.202-1.231.348-.297.716-.586 1.042-.904z\" fill=\"#231F20\"><\/path>\n    <\/g>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M176.823 26.618c-.079 2.184-.401 4.347-.813 6.499a281.039 281.039 0 0 1-1.104 5.259 8.032 8.032 0 0 1-.388 1.35c-1.002 2.373-1.594 4.88-2.474 7.312-1.602 4.401-3.607 8.616-5.567 12.85-.669 1.438-1.548 2.71-2.831 3.678-.788.624-1.67.959-2.651.959-.199 0-.422-.012-.634-.044-1.56-.202-2.516-1.25-3.206-2.474-.602-1.072-1.137-2.208-1.27-3.489-.246-2.552-.659-5.107-.423-7.69.054-.783.089-1.572 0-2.342-.29-2.665.067-5.306.121-7.946 0-.313.034-.637.113-.937.722-2.865 1.024-5.83 1.982-8.65.745-2.218 1.236-4.514 2.182-6.663.668-1.495 1.315-3 2.005-4.47.233-.492.523-.972 1.248-1.127.221.2.379.278.435.414 1.201 2.795 3.585 4.246 6.214 5.35.466.19.936.344 1.403.445.97.2 1.96.211 2.963-.022.756-.18 1.516-.37 2.26-.035.545.514.457 1.16.435 1.773zm-8.643-11.691c.479-.19.948-.29 1.415-.29.589 0 1.157.154 1.715.511a17.664 17.664 0 0 1 3.575 3c.702.745 1.115 1.681 1.292 2.707.066.39.056.782-.523 1.337-.568.136-1.236.325-1.927.448a6.866 6.866 0 0 1-2.184.076c-1.648-.2-3.073-1.035-4.309-2.395-.87-.959-1.28-2.107-1.293-3.334.479-1.08 1.271-1.66 2.239-2.06zm12.898 8.458c2.639-1.96 5.379-4.023 7.327-6.72.069-.77-.076-1.259-.668-1.561-.691-.212-1.359-.032-1.971.268-1.847 1.905-3.43 4.1-6.169 5.227-.302-.423-.514-.669-.646-.937a14.202 14.202 0 0 0-4.59-5.227c-.58-.401-1.147-.814-1.693-1.247a5.155 5.155 0 0 0-2.528-1.138 6.687 6.687 0 0 0-.946-.079c-.857-.01-1.727-.066-2.562.079-1.303.233-2.629.435-3.676 1.382-2.749 2.498-5.088 5.296-6.592 8.728-.346.78-.781 1.527-1.138 2.306-.589 1.272-1.346 2.508-1.702 3.846-.391 1.505-.902 2.987-1.248 4.502-.445 1.908-1.013 3.791-1.226 5.72-.357 3.097-.89 6.163-1.035 9.293-.135 3.145-.022 6.209.602 9.297.556 2.82 1.558 5.338 3.241 7.678 1.224 1.707 2.774 2.71 4.801 3 .823.11 1.636.11 2.437.022 1.125-.113 2.229-.4 3.319-.77a4.893 4.893 0 0 0 2.283-1.56 17.071 17.071 0 0 1 2.14-2.162c1.737-1.505 2.985-3.388 4.076-5.372.791-1.439 1.548-2.877 2.083-4.448.534-1.615 1.492-3.042 2.037-4.691.524-1.55 1.069-3.089 1.482-4.67.211-.836.513-1.64.791-2.454.278-.813.602-1.627.59-2.495 0-1.116.368-2.151.589-3.211.325-1.449.747-2.909.782-4.357.031-1.483-.123-2.953.044-4.448.078-.7-.067-1.394-.29-2.073-.167-.523-.268-1.06.056-1.728zM128.191 52.073c-.184 1.498-.891 2.559-2.411 2.962-.359.089-.716.185-1.066.284-.216-.164-.391-.294-.542-.415-.206-.842.12-1.531.499-2.197.826-1.454 1.814-2.776 3.118-3.739.587.087.695.437.664.842-.077.753-.175 1.508-.262 2.263zm-21.598.504a2.189 2.189 0 0 1-.63.25c-.142.032-.293-.011-.468-.021-.563-.57-.39-1.247-.249-1.99 1.098-1.476 2.063-3.138 3.791-4.069.295.034.523.198.501.417-.141 2.263-1.033 4.122-2.945 5.413zm-21.5-13.155c-.044-2.132.11-4.1 1.162-5.815.772-1.247 1.51-2.658 3.096-3.02.674.241.87.702.925 1.269a2.939 2.939 0 0 1-.282 1.553c-1.012 2.231-2.282 4.274-4.16 5.883-.1.087-.284.053-.742.13zm50.604 1.061c-.747.362-1.378.972-2.346 1.115-.673-.502-.64-1.148-.726-1.75-.326-2.12-.741-4.208-1.534-6.22-.726-1.86-1.184-3.794-1.304-5.805-.086-1.312-.477-1.565-2.248-1.73-.987.975-2.032 1.98-2.792 3.238-.587.996-1.337 1.869-2.118 2.7-.686.722-1.412 1.412-2.021 2.198-1.368 1.782-3.151 3.104-4.846 4.527-.587.48-1.205.963-2.118.972-.13-.229-.336-.47-.401-.755-.304-1.256-.814-2.47-.891-3.782-.154-2.438-1.282-4.558-2.217-6.736-.403-.95-1.129-1.628-2.119-1.978-.64-.22-1.248-.59-1.891-.535-.704.185-1.119.6-1.399 1.191-.403.808-.805 1.619-1.218 2.417-.294.557-.575 1.114-.87 1.671-2.042 3.85-4.203 7.644-5.963 11.645-.218.483-.534.94-.891 1.324a133.228 133.228 0 0 1-3.216 3.269c-.76.755-1.63 1.377-2.663 1.804-1.596-.514-2.835-1.4-3.518-3.051.913-1.443 1.879-2.832 3.118-3.958 1.792-1.628 3.063-3.63 4.182-5.717 1.325-2.472 1.359-4.997-.434-7.349-1.402-1.826-3.576-2.426-5.704-1.584-.5.197-.968.458-1.445.699a20.286 20.286 0 0 1-2.586 3.521c-1.14 1.235-1.608 2.767-1.977 4.34-.108.438-.065.918-.185 1.367-.587 2.231-.338 4.407.39 6.549.154.439.339.863.154 1.64-.925 1.324-1.783 2.887-2.933 4.286-.393.47-.805.919-1.273 1.333-.726.657-1.335 1.467-1.922 2.265-1.196 1.595-2.608 2.962-4.053 4.24-.64-.207-.75-.677-.781-1.123-.132-1.61-.175-3.216.043-4.824.326-2.306 1.194-4.426 2.119-6.527.934-2.132 1.423-4.373 1.531-6.69.034-.614.022-1.236-.5-1.913-2.107-.82-4.334-1.29-6.659-.09-.793.417-1.576.91-2.38.996-.814-.393-.5-1.213-.977-1.705-1.012-.854-2.248-1.061-3.736-.875-1.381.72-2.946 1.432-2.74 3.487.652 1.312 2.042 1.74 2.857 2.943-.662 1.683-1.52 3.302-2.411 4.886-1.033 1.805-1.99 3.618-2.826 5.521-.378.833-.726 1.74-1.303 2.417-1.4 1.64-2.249 3.652-3.672 5.258-.412.47-.748.984-.825 1.619-.021.22.032.439.053.677.185.155.338.35.523.449.26.142.553.22.771.294 1.9-.752 2.282-1.006 3.238-2.513 1.15-1.804 2.239-3.652 3.346-5.49 1.02-1.705 2.097-3.388 3.01-5.15 1.292-2.512 2.454-5.105 3.672-7.652.163-.34.39-.656.63-1.061 1.237-.635 2.53-1.29 3.823-1.935.11-.055.294.01.488.022.099.176.274.35.295.557.053.613-.11 1.213-.338 1.782-.369.929-.704 1.87-1.119 2.779-1.553 3.398-1.9 7.072-2.356 10.702-.371 2.877 2.227 6.604 5.65 6.746.553-.195 1.183-.48 1.845-.656 1.303-.338 2.293-1.08 3.173-2.11 1.641-1.923 2.945-4.089 4.465-6.112a18.37 18.37 0 0 1 1.217-1.486c.434-.458.892-.897 1.39-1.278.892.294 1.326.962 1.826 1.507 1.532 1.684 3.454 1.913 5.453 1.377 2.487-.666 4.618-1.956 5.975-4.308.414-.72.913-1.42 1.49-2.033a5.46 5.46 0 0 0 1.172-1.934c.686-1.968 1.695-3.772 2.565-5.654 1.184-2.569 2.856-4.898 3.791-7.588.055-.152.12-.316.206-.458.142-.241.348-.436.686-.482 1.977 2.317 3.237 7.894 3.192 12.443-.443.972-1.412 1.346-2.227 1.89-2.727 1.848-4.323 4.485-5.246 7.58-.132.448-.11.916.216 1.475 1.304 1.267 3.02 2.022 4.889 1.541 2.162-.569 4.074-1.727 5.086-3.936.086-.207.194-.427.237-.646.295-1.715 1.174-3.324.935-5.16-.12-.983.369-1.782 1.119-2.404a43.08 43.08 0 0 1 1.989-1.544c2.519-1.869 5.052-3.704 6.898-6.319.436-.613 1.021-1.136 1.553-1.684.208-.207.445-.436.793-.294.12.1.295.174.326.294a83.443 83.443 0 0 1 1.956 9.677c.11.743.218 1.52-.173 2.482-.12.109-.391.384-.695.6-1.925 1.445-3.422 3.26-4.824 5.194a9.483 9.483 0 0 0-1.316 2.67c-.391 1.244-.108 2.12.934 2.776.643.405 1.347.72 1.913 1.027.892.065 1.663.056 2.389-.185 3.478-1.16 6.03-4.537 6.292-8.278.055-.765.107-1.53.129-2.294.055-1.445.673-2.439 2.044-3.02 1.259-.545 2.433-1.256 3.509-1.826.249-.523.403-.873.173-1.377-.748-.885-1.695-.94-2.793-.415zM21.832 11.345c.24.532.218.953-.034 1.358-.127.065-.257.188-.38.178-1.232-.085-2.433.242-3.67.235-1.218-.009-2.43.431-3.532 1.01-1.055.555-1.894 1.37-2.35 2.695.515 2.253-.114 4.584-.156 6.857-.724.588-1.166.303-1.622-.314-.004-.21-.032-.5-.009-.79.102-1.328.305-2.638.04-3.994-.152-.775.029-1.62.057-2.351-.547-1.138-1.337-1.867-2.429-2.356-1.087-.176-2.208-.258-3.39-.088-.988.138-2.01.076-3.01.29a1.33 1.33 0 0 1-1.261-.366c-.027-.16-.096-.373-.085-.584.012-.212.1-.422.149-.612.156-.076.283-.19.41-.192 1.078-.025 2.14.031 3.23-.136 2.048-.313 3.646-1.37 5.09-2.748.355-.34.582-.857.766-1.333.265-.681.436-1.404.671-2.19l-.257-1.556c.796-1.092.509-2.508.826-3.78.785-.773.785-.773 1.607.014-.172 1.4.382 2.85.083 4.293.277.748.574 1.43.784 2.139.428 1.439 1.342 2.44 2.583 3.167.316.185.635.358 1.003.569 1.316.058 2.669.508 4.003 0l.883.585zM257.893 53.09c.153.333.139.596-.022.85-.08.04-.163.117-.241.11-.784-.053-1.548.152-2.335.148-.776-.006-1.547.27-2.248.631-.672.347-1.206.855-1.496 1.684.328 1.408-.073 2.865-.099 4.286-.461.367-.742.19-1.033-.196-.002-.131-.02-.313-.005-.494.065-.83.194-1.649.025-2.496-.096-.485.019-1.013.037-1.47-.349-.71-.851-1.167-1.546-1.473-.692-.11-1.405-.16-2.158-.054-.628.086-1.279.047-1.914.18a.855.855 0 0 1-.803-.228c-.017-.1-.062-.233-.054-.365.007-.133.064-.264.094-.382.1-.048.181-.12.262-.12.685-.016 1.361.02 2.055-.085 1.303-.196 2.32-.857 3.239-1.718.226-.213.371-.536.487-.833.169-.426.278-.877.428-1.369-.047-.272-.1-.59-.164-.972.506-.682.324-1.568.525-2.363.5-.483.5-.483 1.023.009-.109.875.243 1.78.053 2.683.176.468.365.894.499 1.337.272.9.854 1.525 1.644 1.98.201.115.403.223.638.355.838.036 1.698.317 2.547 0l.562.365zM275.248 28.07c.261.496.151.788-.143.998-.545.39-1.165.586-1.81.761-1.927.52-3.738 1.304-5.292 2.483-.624 1.059.284 1.97.125 2.971-.157.967-.002 1.978-.238 2.862-.709.517-1.167.25-1.68-.368-.054-1.098-.464-2.27-.461-3.53.005-.55-.307-1.102-.456-1.591-.58-.47-1.093-.888-1.687-1.372-.821-.052-1.741-.25-2.618-.126-.895.123-1.748.51-2.829.04-.274-.862-.242-1.55.484-2.024.113-.046.197-.113.266-.099.315.07.626.163 1.133.298 1.864-.217 4.049-.405 5.114-2.522.913-1.816 2.002-3.723.868-5.742.905-1.275.905-1.275 2.324-.869.359.605.094 1.281.125 1.928.029.577-.06 1.158-.098 1.75.821 1.539 1.334 3.299 3.69 3.84.84.126 2.101-.062 3.183.312z\" fill=\"#231F20\"><\/path>\n<\/svg>",
+              "button_text": "shop now",
+              "button_link": "shopify:\/\/collections\/press-ons"
+            }
+          }
+        },
+        "block_order": [
+          "6dc5c618-5703-4a92-9869-44a4ca5ee45c",
+          "f0446712-03f7-442c-9447-dd43d1b5889d"
+        ],
+        "settings": {
+          "title": "can’t make it to the salon?",
+          "text": "We reimagined DIY nail care so that babes across the country could have access to our obsessed-about art while at home."
+        }
+      },
+      "0963240e-f086-4d11-b692-f3601df27421": {
+        "type": "featured-slider",
+        "blocks": {
+          "251ff6eb-9d96-4dd6-b5db-e3106f8bf71d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_67ff26e6-9704-4d11-be3b-406559ea522b.png",
+              "title": "Babette"
+            }
+          },
+          "bfe67763-ccc1-4bfc-bc71-13fe95801d73": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Pearly_Please_Arch_2.png",
+              "title": "pearly please"
+            }
+          },
+          "4dc9d546-cba4-44c8-95bf-0007bf95ad7e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Scarlet_Twist_Arch_1.png",
+              "title": "scarlet twist"
+            }
+          },
+          "6578e890-e9a7-459d-ba4b-bfcb2f8877d9": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Pearly_Please_Arch_1.png",
+              "title": "pearly please"
+            }
+          }
+        },
+        "block_order": [
+          "251ff6eb-9d96-4dd6-b5db-e3106f8bf71d",
+          "bfe67763-ccc1-4bfc-bc71-13fe95801d73",
+          "4dc9d546-cba4-44c8-95bf-0007bf95ad7e",
+          "6578e890-e9a7-459d-ba4b-bfcb2f8877d9"
+        ],
+        "settings": {
+          "subheading": "Introducing",
+          "title": "THE VDAY COLLECTION",
+          "subtitle": "",
+          "content": "Adorn your nails with pearls and hand painted bows this Valentine's Day.",
+          "btn_text": "Shop Press Ons",
+          "btn_url": "shopify:\/\/collections\/press-ons",
+          "background_image": "shopify:\/\/shop_images\/img-background-paintstroke-1.png",
+          "background_color": "#ffffff"
+        }
+      },
+      "how-to-apply-features-pressons": {
+        "type": "how-to-apply-features-pressons",
+        "blocks": {
+          "45538dda-1356-4da8-b233-eaad07b0372f": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-time_3x_23a3d0a2-96d5-4308-ad1b-d2de04ef837d.png",
+              "title": "10-14 days of wear."
+            }
+          },
+          "db366597-54f7-42bc-b0c7-c482d84b4d5a": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-vegan_3x_95ba5feb-188b-4a92-b86f-cb21fc5f7cb0.png",
+              "title": "Vegan & Cruelty-Free. Kindness is never wasted."
+            }
+          },
+          "c3df2aa8-87a1-4e9d-9b7c-578dd6bbe636": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-UV_Gel_3x_12043a21-edda-49c0-9f3c-2f3f54f5d57c.png",
+              "title": "Extra layer of UV Gel to Protect Design from fading."
+            }
+          },
+          "fd762e3c-024c-4f16-aab3-699ba2b84627": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-elongates_nails_3x_69f30b55-c67c-4c8c-8659-46833d60d78e.png",
+              "title": "Instantly elongates your nails."
+            }
+          }
+        },
+        "block_order": [
+          "45538dda-1356-4da8-b233-eaad07b0372f",
+          "db366597-54f7-42bc-b0c7-c482d84b4d5a",
+          "c3df2aa8-87a1-4e9d-9b7c-578dd6bbe636",
+          "fd762e3c-024c-4f16-aab3-699ba2b84627"
+        ],
+        "settings": {
+          "heading": "Why we love Press Ons",
+          "button_text": "Shop Press Ons",
+          "button_link": "shopify:\/\/collections\/press-ons"
+        }
+      },
+      "how-to-apply-steps-pressons": {
+        "type": "how-to-apply-steps-pressons",
+        "blocks": {
+          "b3b313c4-ef26-44fc-a5df-ee874a59ca7a": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/767039491?autoplay=1&loop=1&background=1\" width=\"640\" height=\"562\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe>",
+              "heading": "Clean & Clear",
+              "subtitle": "<p>Wash hands with soap and water to remove dirt and oil.<\/p>",
+              "pro_tips": "<ul>\n<li>Wipe your nails with alcohol or acetone for extra staying power.<\/li>\n<li>More oil means less staying power.<\/li>\n<li>Avoid lotions prior to your pamper.<\/li>\n<\/ul>",
+              "heading2": "Clean & Clear",
+              "subtitle2": "<p>Wash hands with soap and water to remove dirt and oil.<\/p>",
+              "pro_tips2": "<ul>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<\/ul>",
+              "video_embed2": ""
+            }
+          },
+          "99404107-4944-466e-964a-546f7aa2fd53": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/767039502?autoplay=1&loop=1&background=1\" width=\"640\" height=\"562\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe>",
+              "heading": "Size & Organize",
+              "subtitle": "<p>Size PB Press Ons by holding each tip over your natural nail and selecting the size that fits best without touching surrounding skin.<\/p>",
+              "pro_tips": "<ul>\n<li>Can’t find the perfect match? Size up and file down the sides of the nail until it lays on top of your nail bed perfectly.<\/li>\n<li>Make sure the press on is not touching the skin or it will lift sooner than expected.<\/li>\n<li>Align your tips in order from left to right so you can easily remember which tip goes on which nail.<\/li>\n<\/ul>",
+              "heading2": "Clean & Clear",
+              "subtitle2": "<p>Wash hands with soap and water to remove dirt and oil.<\/p>",
+              "pro_tips2": "<ul>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<\/ul>",
+              "video_embed2": ""
+            }
+          },
+          "516b7238-45c0-4732-a114-df75f6194607": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/767039545?autoplay=1&loop=1&background=1\" width=\"640\" height=\"562\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe>",
+              "heading": "Using Glue",
+              "subtitle": "<p>Apply glue to your natural nail and the back of your PB Press Ons. Align PB Press Ons just below your cuticle and apply at a downward angle to avoid air bubbles. Press down firmly and hold for about 30 seconds.<\/p>",
+              "pro_tips": "<ul>\n<li>If glue begins to touch the skin, remove asap and start over. <\/li>\n<li>For extra staying power, apply a small amount of glue underneath each press on, once it is adhered to the natural nail.<\/li>\n<\/ul>",
+              "heading2": "Using Stickers",
+              "subtitle2": "<p>Size and place adhesive on natural nail and remove top layer to expose sticky surface. Apply press on at a downward angle and hold for 30 seconds.<\/p>",
+              "pro_tips2": "<ul>\n<li>When adhering press on to sticker, apply pressure for 10-20 seconds per nail.<\/li>\n<li>This method is for a mani that lasts about 1-2 days.<\/li>\n<\/ul>",
+              "video_embed2": "<iframe src=\"https:\/\/player.vimeo.com\/video\/767039512?autoplay=1&loop=1&background=1\" width=\"640\" height=\"573\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe>"
+            }
+          },
+          "06089136-8da2-492e-b678-661df8c15541": {
+            "type": "step",
+            "settings": {
+              "video_embed": "<iframe src=\"https:\/\/player.vimeo.com\/video\/767039567?autoplay=1&loop=1&background=1\" width=\"640\" height=\"562\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe>",
+              "heading": "Smooth & Perfect",
+              "subtitle": "<p>Once all nails are applied, use file to smooth and achieve your desired shape.<\/p>",
+              "pro_tips": "<ul>\n<li>Taking a few extra minutes to smooth and shape your press ons with a file will make a big difference in how natural they look.<\/li>\n<\/ul>",
+              "heading2": "Clean & Clear",
+              "subtitle2": "<p>Wash hands with soap and water to remove dirt and oil.<\/p>",
+              "pro_tips2": "<ul>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<li>Add pro tips here<\/li>\n<\/ul>",
+              "video_embed2": ""
+            }
+          }
+        },
+        "block_order": [
+          "b3b313c4-ef26-44fc-a5df-ee874a59ca7a",
+          "99404107-4944-466e-964a-546f7aa2fd53",
+          "516b7238-45c0-4732-a114-df75f6194607",
+          "06089136-8da2-492e-b678-661df8c15541"
+        ],
+        "settings": {
+          "intro_text": "<h2>HOW TO APPLY #PBPRESSONS LIKE A PRO<\/h2><p>We reimagined DIY nail care so that babes across the country could have access to our obsessed-about art while at home. Now, with PB Press Ons, you can add length to your nail art mani in minutes!<\/p>",
+          "intro_nav": "how-to-apply-page-pressons",
+          "heading": "How to apply",
+          "video_link": "",
+          "remove_heading": "Removing PB Press ons",
+          "remove_content": "<p><strong>If you are re-using press ons:<\/strong> Soak nails in warm water for 10 minutes, glue will loosen. Use cuticle stick to gently peel up PB Press Ons. Don't force it - soak a bit longer if they aren't coming up right away!<br\/><strong>If you are not re-using press ons:<\/strong> Soak nails in acetone for 5-10 minutes. Use cuticle stick to remove PB Press Ons.<\/p>",
+          "closing_content": "<p>Have ‘em wrapped around your finger in minutes.<\/p>",
+          "button_text": "Shop Press Ons",
+          "button_link": "shopify:\/\/collections\/press-ons",
+          "custom_styles": ""
+        }
+      },
+      "how-to-apply-collections-pressons": {
+        "type": "how-to-apply-collections-pressons",
+        "blocks": {
+          "625a4800-fa7c-4fef-ae48-838ba35d918b": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/collections\/press-ons",
+              "title": "Material Girl Collection with Batsheva Haart",
+              "image": "shopify:\/\/shop_images\/batsheva_2x_10216e72-26fe-450d-bd01-f2d46141e23f.jpg"
+            }
+          },
+          "00cb135f-132b-46cf-9987-6676a0e4e8d3": {
+            "type": "collection_slide",
+            "settings": {
+              "link": "shopify:\/\/collections\/press-ons",
+              "title": "All That Glitters Collection with Laura Lee Watts",
+              "image": "shopify:\/\/shop_images\/lauralee_2x_838a5678-bcca-4208-a2ee-30f3135082b5.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "625a4800-fa7c-4fef-ae48-838ba35d918b",
+          "00cb135f-132b-46cf-9987-6676a0e4e8d3"
+        ],
+        "settings": {
+          "heading": "OUR COLLECTIONS",
+          "content": "<p>We've partnered with our favorite influencers to create exclusive press on designs you'll love.<\/p>",
+          "button_one_text": "Shop Press Ons",
+          "button_one_link": "shopify:\/\/collections\/press-ons"
+        }
+      },
+      "how-to-apply-faq-pressons": {
+        "type": "how-to-apply-faq-pressons",
+        "blocks": {
+          "0585712d-a2fe-49a7-8555-aae1c7cd86be": {
+            "type": "faq",
+            "settings": {
+              "title": "How long do PB Press Ons Last?",
+              "answer": "<p>Our press ons last anywhere from 10-14 days depending on how much glue is applied and your level of daily activity involving your hands.<\/p>"
+            }
+          },
+          "381a18c4-c8ae-41f6-b82c-13bc5211a321": {
+            "type": "faq",
+            "settings": {
+              "title": "How do I know what size press on is best for my nails?",
+              "answer": "<p>You can select your press on size by placing the full sheet of press ons over your nails (with the curved end up towards your cuticle). The right fit will cover your natural nail but will not touch your skin. We suggest using a press on slightly smaller than your nail, then gently stretching it so that it lies completely flat on your nail with no air bubbles or lifting.<\/p>"
+            }
+          },
+          "6e906481-919f-411b-93cc-d227c2787280": {
+            "type": "faq",
+            "settings": {
+              "title": "What if my nail is too small for some of the press ons?",
+              "answer": "<p>If some nail press ons don't fit your nails perfectly, you should size down and then gently stretch the press on to perfectly fit your nail. We recommend using a press on that is slightly smaller than your nail to avoid the press on touching skin or cuticles. Using a press on that is too large and ultimately touches your skin, will cause lifting at the edges.<\/p>"
+            }
+          },
+          "e6c399c4-76a7-45d6-95bc-2322a1b32b7f": {
+            "type": "faq",
+            "settings": {
+              "title": "Are PB press ons safe?",
+              "answer": "<p>Yes, our nail press ons are SGS and MSDS certified. If you have any allergic reactions to nail polishes do not use this product. Our press ons are safe to use if pregnant and are 7 chemical-free.<\/p>"
+            }
+          },
+          "993fcfdd-7904-4c72-809c-21172e96fdfd": {
+            "type": "faq",
+            "settings": {
+              "title": "Are PB Press ons tested on animals?",
+              "answer": "<p>No animal testing has been performed on our press ons. Our press ons are also leaping bunny certified.<\/p>"
+            }
+          },
+          "1293ad04-64cb-4c88-a451-552766c2d293": {
+            "type": "faq",
+            "settings": {
+              "title": "How do I remove PB Press Ons?",
+              "answer": "<p>Our press ons can be easily removed with nail polish remover or oil.<\/p>"
+            }
+          },
+          "848e59f7-4ebc-457c-8f18-17f046c64470": {
+            "type": "faq",
+            "settings": {
+              "title": "Can PB press ons be shipped to Canada or outside of the US?",
+              "answer": "<p>We do not currently ship to Canada or internationally.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "0585712d-a2fe-49a7-8555-aae1c7cd86be",
+          "381a18c4-c8ae-41f6-b82c-13bc5211a321",
+          "6e906481-919f-411b-93cc-d227c2787280",
+          "e6c399c4-76a7-45d6-95bc-2322a1b32b7f",
+          "993fcfdd-7904-4c72-809c-21172e96fdfd",
+          "1293ad04-64cb-4c88-a451-552766c2d293",
+          "848e59f7-4ebc-457c-8f18-17f046c64470"
+        ],
+        "settings": {
+          "title": "Press Ons FAQ",
+          "sub_faq_text": "<p>Have more questions? Email us at <a href=\"mailto:hello@paintbucketnails.com\">hello@paintbucketnails.com<\/a><\/p>"
+        }
+      },
+      "how-to-apply-product-slider-pressons": {
+        "type": "how-to-apply-product-slider-pressons",
+        "settings": {
+          "heading": "Get ‘Em Now",
+          "collection": "press-ons",
+          "button_text": "Shop Press Ons",
+          "button_link": "shopify:\/\/collections\/press-ons"
+        }
+      },
+      "how-to-landing-page-intro": {
+        "type": "how-to-landing-page-intro",
+        "blocks": {
+          "e4d83c24-5524-4139-8b0e-177115c62261": {
+            "type": "step",
+            "settings": {
+              "heading": "How to apply",
+              "page-title-image": "shopify:\/\/shop_images\/title-nail-wraps.png",
+              "page-image": "shopify:\/\/shop_images\/illustration-nail-wraps.png",
+              "button_text": "Nail Wrap Guide",
+              "button_link": "shopify:\/\/pages\/how-to-apply-nail-wraps"
+            }
+          },
+          "70c16fa1-658c-4dc7-8c4c-9938977980fe": {
+            "type": "step",
+            "settings": {
+              "heading": "How to apply",
+              "page-title-image": "shopify:\/\/shop_images\/press-ons.png",
+              "page-image": "shopify:\/\/shop_images\/illustration-press-ons.png",
+              "button_text": "Press On Guide",
+              "button_link": "shopify:\/\/pages\/how-to-apply-press-ons"
+            }
+          }
+        },
+        "block_order": [
+          "e4d83c24-5524-4139-8b0e-177115c62261",
+          "70c16fa1-658c-4dc7-8c4c-9938977980fe"
+        ],
+        "settings": {
+          "intro_title": "Do Your Nails Like a Pro",
+          "intro_text": "<p>We reimagined DIY nail care so that babes across the nation could have access to our <a href=\"#\">obsessed-about nail art<\/a> while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps\/press ons and removing them safely. Now lets get going, you talented artist, you.<\/p>"
+        }
+      },
+      "collection-filtered-hero": {
+        "type": "collection-filtered-hero",
+        "settings": {
+          "intro_image": "shopify:\/\/shop_images\/image.png",
+          "intro_title": "The Handbook",
+          "intro_text": "<p>We reimagined DIY nail care so that babes across the nation could have access to our obsessed-about nail art while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps and removing them safely. Now lets get wrapping, you talented artist, you.<\/p>",
+          "intro_button_text": "Get Started",
+          "intro_button_link": "",
+          "custom_styles": ""
+        }
+      },
+      "collection-filtered-products": {
+        "type": "collection-filtered-products",
+        "settings": {
+          "show_collection_controls": false
+        }
+      },
+      "ha_main_banner_v1_FajLNc": {
+        "type": "HA-main-banner-v1",
+        "name": "Main banner v1",
+        "settings": {
+          "HA_main_banner_v1_img_id": "shopify:\/\/shop_images\/DF08CC9E-244C-407E-B7C9-4158BD6219AA.jpg",
+          "HA_main_banner_v1_bg_chk_id": false,
+          "HA_main_banner_v1_color_bg_id": "#feefed",
+          "HA_main_banner_v1_subheading_id": "New!",
+          "HA_main_banner_v1_heading_id": "The Spring Collection",
+          "HA_main_banner_v1_icon_id": "shopify:\/\/shop_images\/Group_5990.png",
+          "HA_main_banner_v1_btn_txt_id": "Shop Now",
+          "HA_main_banner_v1_btn_link_id": "shopify:\/\/collections"
+        }
+      },
+      "um_product_slider_UjVYKm": {
+        "type": "UM-product-slider",
+        "blocks": {
+          "slide_PQfCBa": {
+            "type": "slide",
+            "settings": {
+              "title": "The pool cover-up",
+              "subtitle": "Glitzy, Comfy, 100%",
+              "button_link": ""
+            }
+          },
+          "slide_PyFGTd": {
+            "type": "slide",
+            "settings": {
+              "title": "Cocktail stirrers",
+              "subtitle": "Elegant, Fun, Essential",
+              "button_link": ""
+            }
+          },
+          "slide_6UFLKg": {
+            "type": "slide",
+            "settings": {
+              "title": "Summer essentials",
+              "subtitle": "Chic, Practical, Must-have",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slide_PQfCBa",
+          "slide_PyFGTd",
+          "slide_6UFLKg"
+        ],
+        "name": "Product Slider",
+        "settings": {
+          "heading": "My Must Haves"
+        }
+      }
+    },
+    "content_for_index": [
+      "ha_main_banner_v1_FajLNc",
+      "um_product_slider_UjVYKm",
+      "0963240e-f086-4d11-b692-f3601df27421",
+      "85d71f05-7c83-4f43-bb53-838cdedf8bc3",
+      "17946819-e35c-4154-98d7-5724c1222f1e",
+      "78e11c1f-3698-4d56-972a-88c32bf4c270",
+      "1592190844619",
+      "7d9f6dc8-5543-465c-9119-b9a375c5eb41",
+      "16530624565c67afa0",
+      "1611780532743df0b3",
+      "6f6feba7-660d-4572-a931-9d7aec888268",
+      "bbfdfe64-bd2b-4178-bc50-be85c522d0a8",
+      "1605724799d25ebf8d",
+      "1592268017668",
+      "1592261137389",
+      "1592271661862",
+      "1592272801113",
+      "1601917422364"
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": []
+  }
+}

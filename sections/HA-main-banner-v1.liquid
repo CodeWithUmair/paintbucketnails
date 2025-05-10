@@ -1,0 +1,172 @@
+<div class="HA-main-banner-v1-main-div--{{ section.id }}
+{% if section.settings.HA_main_banner_v1_bg_chk_id %}
+  HA-main-banner-v1-main-div--imgbg
+{% else %}
+  HA-main-banner-v1-main-div--colorbg
+{% endif %}
+">
+  
+  <div class="HA-main-banner-v1-container">
+    <div class="HA-main-banner-v1-wrapper">
+
+      <div class="HA-main-banner-v1-img-div">
+        <img src="{{ section.settings.HA_main_banner_v1_img_id | image_url: width:1000 }}" width="800px" height="800px" />
+      </div>
+
+      <div class="HA-main-banner-v1-content-div">
+        <div class="HA-main-banner-v1-content-wrapper">
+
+          <span>{{ section.settings.HA_main_banner_v1_subheading_id }}</span>
+          <h2>{{ section.settings.HA_main_banner_v1_heading_id }}</h2>
+          <img src="{{ section.settings.HA_main_banner_v1_icon_id | image_url: width:248 }}" width="248px" height="248px" />
+          <a href="{{ section.settings.HA_main_banner_v1_btn_link_id }}">{{ section.settings.HA_main_banner_v1_btn_txt_id }}</a>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+  .HA-main-banner-v1-main-div--{{ section.id }}
+  {}
+
+  {% if section.settings.HA_main_banner_v1_bg_chk_id %}
+    .HA-main-banner-v1-main-div--imgbg
+    {
+      background: url({{ section.settings.HA_main_banner_v1_img_bg_id | image_url: width: 2000 }});
+    }
+  {% else %}
+    .HA-main-banner-v1-main-div--colorbg
+    {
+      background-color: {{ section.settings.HA_main_banner_v1_color_bg_id }};
+    }
+  {% endif %}
+
+  .HA-main-banner-v1-wrapper
+  {
+    display: flex;
+  }
+
+  .HA-main-banner-v1-img-div, .HA-main-banner-v1-content-div
+  {
+    width: 50%;
+  }
+
+  .HA-main-banner-v1-img-div img
+  {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .HA-main-banner-v1-content-wrapper 
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Main banner v1",
+    "class": "HA-main-banner-v1-sec section",
+    "settings": 
+    [
+      {
+        "type": "image_picker",
+        "id": "HA_main_banner_v1_img_id",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Background settings",
+        "info": "Choose image or color for background"
+      },
+      {
+        "type": "checkbox",
+        "id": "HA_main_banner_v1_bg_chk_id",
+        "label": "Background image",
+        "default": true,
+        "info": "If you want to apply image turn on this button otherwise choose color from below"
+      },
+      {
+        "type": "image_picker",
+        "id": "HA_main_banner_v1_img_bg_id",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "HA_main_banner_v1_color_bg_id",
+        "label": "Background color",
+        "default": "#FEEFED"
+      },
+      {
+        "type": "text",
+        "id": "HA_main_banner_v1_subheading_id",
+        "label": "Sub heading",
+        "default": "New!"
+      },
+      {
+        "type": "text",
+        "id": "HA_main_banner_v1_heading_id",
+        "label": "Heading",
+        "default": "The Spring Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "HA_main_banner_v1_icon_id",
+        "label": "Icon"
+      },
+      {
+        "type": "text",
+        "id": "HA_main_banner_v1_btn_txt_id",
+        "label": "Button text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "HA_main_banner_v1_btn_link_id",
+        "label": "Button link"
+      }
+    ],
+    "presets": 
+    [
+      {
+        "name": "Main banner v1"
+      }
+    ]
+  }
+{% endschema %}

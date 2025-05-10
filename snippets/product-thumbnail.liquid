@@ -1,0 +1,124 @@
+<div 
+  id="product-{{ product.handle }}"
+  class="flex-item flex-item--one-third product-thumbnail{% unless product.available %} product-soldout{% endunless %}{% if product.tags contains 'best seller' %} best-seller{% endif %}"
+  itemprop="itemListElement" 
+  itemscope 
+  itemtype="http://schema.org/Product"
+>
+  <meta itemprop="description" content="{{ product.description | strip_html | truncate: 300 | escape }}" />
+  <meta itemprop="sku" content="{{ product.selected_or_first_available_variant.sku }}" />
+  {%- assign image_size = product.featured_image.width | append: 'x' -%}
+  <meta itemprop="image" content="https:{{ product.featured_image.src | img_url: image_size }}" />
+  <meta itemprop="price" content="{{ product.price_min | money_without_currency | remove: "," }}" />
+  <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+  <meta itemprop="seller" content="{{ shop.name | escape }}" />
+  <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+  <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>
+  <meta itemprop="priceValidUntil" content="{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | uri_encode | replace:'+','%20' }}" />
+  <meta itemprop="url" content="{{ shop.url }}{{ product.selected_or_first_available_variant.url }}" />
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+    <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+    <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+  </div>
+
+  <a href="{{ product.url | within: collection  }}" itemprop="url">
+    {% if product.featured_image != blank %}
+      <div class="image-wrap">
+        {% if product.available != true %}
+          <div class="sold-out-overlay h6">
+            <span>
+              <span class="text-wrap">
+                {{ 'products.product.sold_out' | t }}
+              </span>
+            </span>
+          </div>        
+        {% elsif product.tags contains 'bestseller' %}
+          {% include 'icon-bestseller' %}
+        {% endif %}
+
+        <div class="featured-image{% if product.images.size == 1 %} no-secondary-image{% endif %}"
+          data-aos="fade"
+          data-aos-offset="100"
+          data-aos-anchor="#product-{{ product.handle }}"
+        >
+          <img 
+            class="lazyload"
+            data-sizes="auto"
+            data-src="{{ product.featured_image.src | img_url: '200x200' }}" 
+            data-srcset="
+              {{ product.featured_image.src | img_url: '400x400' }} 400w,
+              {{ product.featured_image.src | img_url: '600x600' }} 600w,
+              {{ product.featured_image.src | img_url: '800x800' }} 800w
+            "
+            alt="{{ product.featured_image.alt }}"
+          >
+        </div>
+
+        {% if product.images.size > 1 %}
+          <div class="secondary-image">
+            {% assign product_image_last = product.images | last %}
+            <img 
+              class="lazyload"
+              data-sizes="auto"
+              data-src="{{ product_image_last.src | img_url: '200x200' }}" 
+              data-srcset="
+                {{ product_image_last.src | img_url: '400x400' }} 400w,
+                {{ product_image_last.src | img_url: '600x600' }} 600w,
+                {{ product_image_last.src | img_url: '800x800' }} 800w
+              "
+              alt="{{ product_image_last.alt }}"
+            >
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="text-wrap text-center"
+      data-aos="fade"
+      data-aos-offset="100"
+      data-aos-anchor="#product-{{ product.handle }}"
+    >
+      {% if template == 'collection' %}
+        <h2 class="product-title" itemprop="name">
+      {% else %}
+        <h3 class="product-title" itemprop="name">
+      {% endif %}
+        {{ product.title }}
+      {% if template == 'collection' %}  
+        </h2>
+      {% else %}
+        </h3>
+      {% endif %}
+      
+      <p class="money">
+        {% if product.compare_at_price > product.price %}
+          <span class="sale-price">
+            {% if product.price_varies %}
+              {%- assign sale_price = product.price | money -%}
+              {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+            {% else %}
+              <span class="visually-hidden">{{ 'products.product.on_sale' | t }}</span>
+              {{ product.price | money }}
+            {% endif %}
+          </span>
+        {% else %}
+
+          <span class="price">
+            {% if product.price_varies %}
+              {%- assign price = product.price | money -%}
+              {{ 'products.product.from_text_html' | t: price: price }}
+            {% else %}
+              {{ product.price | money }}
+            {% endif %}
+          </span>
+        {% endif %}
+
+        {% if product.compare_at_price > product.price %}
+          <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+          <s>{{ product.compare_at_price | money }}</s>
+        {% endif %}
+      </p>
+    </div>
+  </a>
+</div>

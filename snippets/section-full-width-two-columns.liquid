@@ -1,0 +1,101 @@
+{% if type == 'block' %}
+  {%- assign id = block.id -%}
+  {%- assign text_color_one = block.settings.text_color_one -%}
+  {%- assign heading_one = block.settings.heading_one -%}
+  {%- assign subtitle_one = block.settings.subtitle_one -%}
+  {%- assign link_text_one = block.settings.link_text_one -%}
+  {%- assign link_url_one = block.settings.link_url_one -%}
+  {%- assign bg_image_one = block.settings.bg_image_one -%}
+  {%- assign text_color_two = block.settings.text_color_two -%}
+  {%- assign heading_two = block.settings.heading_two -%}
+  {%- assign subtitle_two = block.settings.subtitle_two -%}
+  {%- assign link_text_two = block.settings.link_text_two -%}
+  {%- assign link_url_two = block.settings.link_url_two -%}
+  {%- assign bg_image_two = block.settings.bg_image_two -%}
+  {%- assign custom_styles = block.settings.custom_styles -%}
+{% else %}
+  {%- assign id = section.id -%}
+  {%- assign text_color_one = section.settings.text_color_one -%}
+  {%- assign heading_one = section.settings.heading_one -%}
+  {%- assign subtitle_one = section.settings.subtitle_one -%}
+  {%- assign link_text_one = section.settings.link_text_one -%}
+  {%- assign link_url_one = section.settings.link_url_one -%}
+  {%- assign bg_image_one = section.settings.bg_image_one -%}
+  {%- assign text_color_two = section.settings.text_color_two -%}
+  {%- assign heading_two = section.settings.heading_two -%}
+  {%- assign subtitle_two = section.settings.subtitle_two -%}
+  {%- assign link_text_two = section.settings.link_text_two -%}
+  {%- assign link_url_two = section.settings.link_url_two -%}
+  {%- assign bg_image_two = section.settings.bg_image_two -%}
+  {%- assign custom_styles = section.settings.custom_styles -%}
+{% endif %}
+
+<section id="shopify-section-{{ id }}" class="section-full-width-two-cols-text" data-section-id="{{ id }}" data-section-type="full-width-two-cols" {% if type =='block' %}{{ block.shopify_attributes }}{% endif %} data-aos="fade">
+  <div class="flex--flexbox flex--wrap flex--items-stretch">
+    <div class="column-one lazyload flex-item flex-item--one-half">
+      <div class="table-wrap">
+        <div class="text-wrap text-{{ text_color_one }} text-center">
+          {% if heading_one != blank %}
+            <h2 class="heading">
+              {{ heading_one }}
+            </h2>
+          {% endif %}
+
+          {% if subtitle_one != blank %}
+            <h3 class="subtitle">
+              {{ subtitle_one }}
+            </h3>
+          {% endif %}
+
+          {% if link_text_one != blank and link_url_one != blank %}
+            <div class="button-wrap">
+              <a class="standalone-link" href="{{ link_url_one }}" title="" target="_blank">{{ link_text_one }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="column-two lazyload flex-item flex-item--one-half">
+      <div class="table-wrap">
+        <div class="text-wrap text-{{ text_color_two }} text-center">
+          {% if heading_two != blank %}
+            <h2 class="heading">
+              {{ heading_two }}
+            </h2>
+          {% endif %}
+
+          {% if subtitle_two != blank %}
+            <h3 class="subtitle">
+              {{ subtitle_two }}
+            </h3>
+          {% endif %}
+
+          {% if link_text_two != blank and link_url_two != blank %}
+            <div class="button-wrap">
+              <a class="standalone-link" href="{{ link_url_two }}" title="" target="_blank">{{ link_text_two }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #shopify-section-{{ id }} .column-one.lazyloaded {
+      background-image: url({{ bg_image_one | img_url: '1000x' }});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #shopify-section-{{ section.id }} .column-two.lazyloaded {
+      background-image: url({{ bg_image_two | img_url: '1000x' }});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    {% if custom_styles != blank %}
+      {{ custom_styles  }}
+    {% endif %}
+  </style>
+</section>

@@ -1,0 +1,214 @@
+{% assign shipping_threshold = settings.free_shipping_threshold | times: 100 %}
+{% assign shipping_difference = shipping_threshold | minus: cart.total_price %}
+{% assign shipping_difference_money = shipping_difference | money %}
+{% assign vat_rate = settings.ajaxcart_vat_rate %}
+
+{% assign shipping_threshold = settings.ajaxcart_freeshipping_threshold | times: 100 %}
+{% assign shipping_price = ajaxcart_shipping_price | times: 100 %}
+{% assign shipping_price_label = settings.ajaxcart_shipping_label %}
+
+{% assign cart_saving = total_saving | money %}
+{% assign cart_subtotal = cart.total_price | money %}
+{% assign cart_shipping = shipping_price | money %}
+{% assign cart_total = cart_subtotal | plus: cart_shipping %}
+
+<div id="ajax-cart" class="ajax-cart ajax-cart--closed">
+
+	{% comment %}
+	{%- if settings.ajaxcart_checkout_action == "checkout" -%}
+		<input type="hidden" name="return_to" value="/checkout/" />
+	{%- endif -%}
+	{% endcomment %}
+
+	<div class="ajax-cart__header">
+
+		<div class="ajax-cart__navigation">
+
+			<span class="ajax-cart-header-title">{{ 'ajax-cart.title' | t }}</span>
+
+			<button class="ajax-cart-header__close ajax-cart-header-icon ajax-cart-header-icon--active ajax-cart--trigger-close">{% include 'ajax-cart-icon-close' %}</button>
+
+		</div>
+
+		{% if settings.ajaxcart_freeshipping_enable == true %}
+
+			<div class="ajax-cart__banner">
+
+				<div class="ajax-cart-banner">
+
+					<span class="ajax-cart-banner__text">{{ 'ajax-cart.shipping_banner.text_required_html' | t: price: shipping_difference_money }}</span>
+					<span class="ajax-cart-banner__icon">{% include 'ajax-cart-icon-freeshipping' %}</span>
+
+				</div>
+
+			</div>
+
+		{% endif %}
+
+	</div>
+
+	<div class="ajax-cart__body">
+
+		<div class="ajax-cart__contents">
+
+			<div class="ajax-cart__items-container">
+
+				<div class="ajax-cart__items">
+
+					<!-- Ajax Cart items loaded here -->
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="ajax-cart__footer">
+
+		{% if settings.ajaxcart_message != blank %}
+			<div class="ajax-cart__message">
+				{{ settings.ajaxcart_message }}
+			</div>
+		{% endif %}
+
+		{% if settings.ajaxcart_upsell_product != blank %}
+
+			{% assign upsell_product = all_products[settings.ajaxcart_upsell_product] %}
+
+			<div id="ajax-cart-dynamic-upsell" class="ajax-cart__upsell" style="display: none;">
+
+				<button class="ajax-cart-upsell ajax-cart--trigger-add-upsell" tabindex="0" data-ajax-cart-upsell-product-id>
+					<div class="ajax-cart-upsell__image" data-ajax-cart-upsell-image></div>
+					<div class="ajax-cart-upsell__text">
+						<div class="ajax-cart-upsell__title">
+							<span data-ajax-cart-upsell-text class="ajax-cart-upsell__title-text"></span>
+							<span data-ajax-cart-upsell-price class="ajax-cart-upsell__title-price"></span>
+						</div>
+						<div data-ajax-cart-upsell-description class="ajax-cart-upsell__description"></div>
+					</div>
+					<div class="ajax-cart-upsell__plus">
+						{% include 'ajax-cart-icon-plus' %}
+					</div>
+				</button>
+
+			</div>
+
+		{% endif %}
+
+		{% if settings.ajaxcart_notes_enable or settings.ajaxcart_tos_enable %}
+			<div class="ajax-cart__notes">
+
+				{% if settings.ajaxcart_notes_enable %}
+					<label for="ajax-cart-note" class="visually-hidden">{{ 'ajax-cart.cart_notes.title' | t }}</label>
+					<textarea id="ajax-cart-note" name="note" value="{{ cart.note }}" rows="2" placeholder="{{ 'ajax-cart.cart_notes.placeholder' | t }}" class="clearfix">{{ cart.note }}</textarea>
+				{% endif %}
+
+				{% if settings.ajaxcart_tos_enable %}
+					<div class="ajax-cart-tos">
+
+						<label class="ajax-cart-tos__container" for="ajaxcart-acceptterms">
+
+							<input type="checkbox" name="ajaxcart-acceptterms" class="ajax-cart-tos__checkbox" required="required" id="ajaxcart-acceptterms"/>
+
+							<span class="ajax-cart-tos__label">
+								{{ 'ajax-cart.cart_notes.agree_to_terms' | t }}
+
+								{% if settings.ajaxcart_tos_page != blank %}
+								<a href="{{ pages[settings.ajaxcart_tos_page].url }}" target="_blank" class="ajax-cart-tos__checkbox">{{ 'ajax-cart.cart_notes.view_terms' | t }}</a>
+								{% endif %}
+							</span>
+
+						</label>
+
+					</div>
+				{% endif %}
+
+			</div>
+		{% endif %}
+
+		<div class="ajax-cart__checkout {% if settings.ajaxcart_fixed_submit == true %}ajax-cart__checkout--fixed{% endif %}">
+
+			<div class="ajax-cart__totals">
+
+				<div class="ajax-cart__total-statement">
+
+					{% if settings.ajaxcart_display_subtotal == true %}
+						<div class="ajax-cart-statement-line ajax-cart-statement-line--subtotal">
+							<span class="ajax-cart-statement-line__label">{{ 'ajax-cart.statement.label_subtotal' | t }}</span>
+							<span class="ajax-cart-statement-line__value"></span>
+						</div>
+					{% endif %}
+
+					{% if settings.ajaxcart_display_vat == true %}
+					<div class="ajax-cart-statement-line ajax-cart-statement-line--vat">
+						<span class="ajax-cart-statement-line__label">{{ 'ajax-cart.statement.label_vat' | t }}</span>
+						<span class="ajax-cart-statement-line__value">{{ vat_rate | append:"%" }}</span>
+					</div>
+					{% endif %}
+
+					{% if settings.ajaxcart_display_savings == true %}
+						<div class="ajax-cart-statement-line ajax-cart-statement-line--savings">
+							<span class="ajax-cart-statement-line__label">{{ 'ajax-cart.statement.label_savings' | t }}</span>
+							<span class="ajax-cart-statement-line__value"></span>
+						</div>
+					{% endif %}
+
+					{% if settings.ajaxcart_display_shipping == true %}
+						<div class="ajax-cart-statement-line ajax-cart-statement-line--shipping">
+							<span class="ajax-cart-statement-line__label">{{ 'ajax-cart.statement.label_shipping' | t }}</span>
+							<span class="ajax-cart-statement-line__value">
+								{%- if shipping_price_label != blank -%}
+									{{ shipping_price_label }}
+								{%- endif -%}
+							</span>
+						</div>
+					{% endif %}
+
+					{% if settings.ajaxcart_display_total == true %}
+						<div class="ajax-cart-statement-line ajax-cart-statement-line--total">
+							<span class="ajax-cart-statement-line__label">{{ 'ajax-cart.statement.label_total' | t }}</span>
+							<span class="ajax-cart-statement-line__value"></span>
+						</div>
+					{% endif %}
+
+				</div>
+
+			</div>
+
+			<div class="ajax-cart-checkout__submit">
+				{% if settings.ajaxcart_checkout_action == "checkout" %}
+					<button type="button" class="btn btn--primary btn--large ajax-cart--trigger-submit">{{ 'ajax-cart.buttons.checkout' | t }}</button>
+				{% elsif settings.ajaxcart_checkout_action == "cart" %}
+					<a class="btn btn--primary btn--large" href="/cart">{{ 'ajax-cart.buttons.go_to_cart' | t }}</a>
+				{% endif %}
+			</div>
+
+			{%- if settings.ajaxcart_checkout_message != blank -%}
+				<div class="ajax-cart-checkout__message">
+					{{ settings.ajaxcart_checkout_message }}
+				</div>
+			{%- endif -%}
+
+			{% if settings.ajaxcart_additionalpaymentmethods == true %}
+				<div class="ajax-cart-checkout__additional">
+					{{ content_for_additional_checkout_buttons }}
+				</div>
+			{% endif %}
+
+			{% if settings.ajaxcart_paymentmethods == true %}
+				<div class="ajax-cart-checkout__methods">
+					{% for type in shop.enabled_payment_types %}
+						<img src="{{ type | payment_type_img_url }}" alt="{{ type | replace: "_", " " | capitalize }}" />
+					{% endfor %}
+				</div>
+			{% endif %}
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="ajax-cart-overlay ajax-cart-overlay--hidden"></div>

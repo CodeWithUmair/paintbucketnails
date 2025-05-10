@@ -1,0 +1,216 @@
+{%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+
+<footer id="colophon" class="site-footer" data-section-id="{{ section.id }}" data-section-type="footer">
+  <div class="page-width clearfix">
+    <div class="footer-top-widget">
+      <div class="klaviyo-form-RpvnxL"></div>
+    </div>
+  </div>
+
+  <div class="flex--flexbox flex--wrap">
+    <div class="flex-item flex-item--one-third footer-left-widget">
+      <div id="footer-left-widget">
+        <div class="widget">
+          {% if section.settings.footer_left_title != blank %}
+            <h6 class="footer-header">
+              {{ section.settings.footer_left_title }}
+            </h6>
+          {% endif %}
+
+          {%- assign footer_left_linklist = section.settings.footer_left_linklist -%}
+          {% if linklists[footer_left_linklist].links.size > 0 %}
+            <ul>
+              {% for link in linklists[footer_left_linklist].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-item flex-item--one-third footer-middle-widget desktop-only">
+      <div id="footer-middle-widget">
+        <div class="widget">
+          <img data-src="{{ 'paintbucket-icon.png' | asset_img_url: '60x60' }}" width="30" alt="Paintbucket Icon" class="lazyload">
+        </div>
+
+        {% if settings.shop_address != blank %}
+          <div class="widget">
+            {{ settings.shop_address }}
+          </div>
+        {% endif %}
+
+        {% if settings.shop_email != blank %}
+          <div class="widget">
+            <a href="mailto:{{ settings.shop_email }}">{{ settings.shop_email }}</a>
+          </div>
+        {% endif %}
+
+        {% if settings.shop_booking_link != blank %}
+          <div class="widget">
+            <a class="standalone-link" href="{{ settings.shop_booking_link }}" target="_blank" rel="noopener noreferrer">Book Now</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="flex-item flex-item--one-third footer-right-widget">
+      <div id="footer-right-widget">
+        <div class="widget">
+          {% if section.settings.footer_right_title != blank %}
+            <h6 class="footer-header">
+              {{ section.settings.footer_right_title }}
+            </h6>
+          {% endif %}
+
+          {%- assign footer_right_linklist = section.settings.footer_right_linklist -%}
+          {% if linklists[footer_right_linklist].links.size > 0 %}
+            <ul>
+              {% for link in linklists[footer_right_linklist].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+
+              {% if section.settings.show_social_icons %}
+                <li>
+                  <ul class="social-links">
+                    {% for social in social_accounts %}
+                      {%- assign social_handle = social | handleize -%}
+                      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+                      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+                      {% if settings[social_link] != blank %}
+                        <li>
+                          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                            {% include social_icon %}
+                            <span class="icon-fallback-text">{{ social }}</span>
+                          </a>
+                        </li>
+                      {% endif %}
+
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--------------------- DHK ADDED PAYMENT METHODS ICON ----------------------->  
+
+<style>
+.icon {
+  width: 2.5em;
+}  
+  ul.payment-icons {
+  margin: 40px 0 0 0;}
+  
+  .payment-icons {
+  list-style: none;}
+  
+  .payment-icons > li {
+  display: inline-block;}
+  
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+  
+</style>
+
+{%- unless shop.enabled_payment_types == empty -%}
+  <div>
+
+  <span class="visuallyhidden">Supported payment methods</span>
+
+  <ul class="payment-icons">
+      {%- for type in shop.enabled_payment_types -%}
+      <li>
+        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+      </li>
+    {%- endfor -%}
+  </ul>
+  </div>
+{%- endunless -%}
+  
+  
+<!---------------------END DHK ADDED PAYMENT METHODS ICON ----------------------->  
+
+
+  <div class="site-info">
+
+    &copy; {{ 'now' | date: "%Y" }} {{ section.settings.copyright_text }}
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_left_title",
+        "label": "Left Title",
+        "default": "Explore"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_left_linklist",
+        "label": "Left Menu",
+        "default": "footer"
+      },
+      {
+        "type": "paragraph",
+        "content": "To edit the middle footer content, go to the Theme Settings > Shop Info."
+      },
+      {
+        "type": "text",
+        "id": "footer_right_title",
+        "label": "Right Title",
+        "default": "Company"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_right_linklist",
+        "label": "Right Menu",
+        "default": "footer"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social_icons",
+        "label": "Show social icons",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "copyright_text",
+        "label": "Copyright Text",
+        "default": "Paintbucket | Site by <a href=\"http://www.shoppetheory.com/\" target=\"_blank\">Shoppe Theory</a> | <a href=\"/pages/privacy-policy\">Privacy Policy</a>"
+      }
+    ]
+  }
+
+{% endschema %}
+<style type="text/css">
+  {% unless template.suffix contains 'how-to' %} 
+    #shopify-section-footer{
+      margin-top:-40px;
+    }
+  {% endunless %}
+  {% if template.suffix contains 'how-to' %} 
+    .site-footer {
+      padding-top: 4em
+    }
+  {% endif %}
+</style>

@@ -1,0 +1,95 @@
+<section class="image-text-slider lazyload aos-init" data-aos="fade">
+  <div class="container">
+    <div class="header-sec">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+    <div class="image-text-slides">
+       {% for block in section.blocks %}
+         <div class="img-text-slide">
+            <div class="img-text-slide-img">
+              <img src="{{ block.settings.image | img_url:'master' }}" />
+              <span class="pname">{{ block.settings.title }}</span>
+            </div>
+            <div class="img-text-slide-text">
+              <p class="subhead">{{ block.settings.subhead }}</p>
+              <h3>{{ block.settings.title }}</h3>
+              <div class="subheading">{{ block.settings.text }}</div>
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <div class="button-wrap">
+                    <a class="btn btn-outline" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
+                  </div>
+              {% endif %}
+            </div>
+          </div> 
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Image with Text Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type":"textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "name":"Slide",
+        "type": "slide",
+        "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "subhead",
+              "label": "Pre Heading"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading"
+            },
+            {
+              "type":"richtext",
+              "id": "text",
+              "label": "Text"
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button Text",
+              "default": "Be Mine"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button Link"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with Text Slider"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,126 @@
+{%- assign collection = collections[section.settings.collection] -%}
+{%- assign collection2 = collections[section.settings.collection2] -%}
+{%- assign collection3 = collections[section.settings.collection3] -%}
+
+<section class="featured-collection-section" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-aos="fade">
+
+  <div class="page-width">
+
+    {% if section.settings.title != blank %}
+      <h2 class="text-center your-one-stop-shop">{{ section.settings.title | escape }}</h2>
+    {% endif %}
+      <div id="tabs">
+  <ul>
+    <li><a href="#" id="tab1">Best Seller</a></li>
+    <li><a href="#" id="tab2">Nail Wraps</a></li>
+    <li><a href="#" id="tab3">Press-on</a></li>
+  </ul>
+      </div>
+
+    <div id="tabs-1" class="products-wrap flex--flexbox flex--wrap flex--justify-center">
+      {% for product in collection.products limit: section.settings.products_to_show %}
+        {%- include 'product-thumbnail' -%}
+      {% endfor %}
+    </div>
+     <div  id="tabs-2" class="products-wrap flex--flexbox flex--wrap flex--justify-center">
+      {% for product in collection2.products limit: section.settings.products_to_show %}
+        {%- include 'product-thumbnail' -%}
+      {% endfor %}
+    </div>
+       <div  id="tabs-3"  class="products-wrap flex--flexbox flex--wrap flex--justify-center">
+      {% for product in collection3.products limit: section.settings.products_to_show %}
+        {%- include 'product-thumbnail' -%}
+      {% endfor %}
+    </div>
+      
+
+  </div>
+
+</section>
+  
+  <style type="text/css">
+    #tabs-2,#tabs-3{
+      display:none;
+    }
+    #tabs{
+      text-align:center;
+    }
+    #tabs ul{
+      list-style:none;
+    }
+    #tabs ul li{
+      text-transform:uppercase;
+      display: inline-block;
+       width: 180px;
+  height: 23px;
+  flex-grow: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #231f20
+    }
+   .your-one-stop-shop{
+     font-size:40px;
+   }
+    #shopify-section-16530624565c67afa0 section{
+      padding-bottom:0px;
+    }
+    </style>
+{% schema %}
+  {
+    "name": "Featured collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured collection"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "First Collection"
+      },
+      {
+        "id": "collection2",
+        "type": "collection",
+        "label": "Second Collection "
+      },
+        {
+        "id": "collection3",
+        "type": "collection",
+        "label": "Third Collection "
+      },
+      {
+        "id": "button_text",
+        "type": "text",
+        "label": "Button Text"
+      },
+      {
+        "id": "button_link",
+        "type": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "range",
+        "id": "products_to_show",
+        "label": "Products to show",
+        "min": 3,
+        "max": 12,
+        "step": 3,
+        "default": 3
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection",
+        "category": "Collection"
+      }
+    ]
+  }
+
+{% endschema %}

@@ -1,0 +1,91 @@
+<section class="featured-box-section">
+  <div class="container">
+    <div class="text-center">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+    <div class="featured-boxes-wrap">
+      {% for block in section.blocks %}
+        <div class="featured-box">
+          {% if block.settings.svg_title %}
+            {{ block.settings.svg_title }}
+          {% else %}
+            <h4>{{ block.settings.title }}</h4>
+          {% endif %}
+          {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+            <div class="button-wrap">
+              <a class="btn btn-outline" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
+            </div>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <div class="image-box">
+              <img src="{{ block.settings.image | img_url:'master' }}" />
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Fetured Boxes",
+    "settings": [
+      {
+        "id":"title",
+        "label":"Heading",
+        "type": "text"
+      },
+      {
+        "type":"textarea",
+        "id":"text",
+        "label": "text"
+      }
+    ],
+    "blocks": [
+      {
+        "name":"Box",
+        "type":"box",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "id": "title",
+            "label": "Heading",
+            "type":"text"
+          },
+          {
+            "id": "svg_title",
+            "label": "SVG Heading",
+            "type":"html"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Be Mine"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Fetured Boxes"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

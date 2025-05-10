@@ -1,0 +1,17 @@
+{% assign shipping_note = false %}
+
+{% for tag in product.tags %}
+  {% if tag contains 'free shipping' %}
+    {% assign shipping_note = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if shipping_note %}
+  <div class="shipping-note text-center bg-lt-pink">
+    <p>
+      {% include 'icon-paper-plane' %}
+      {{ 'products.product.shipping_tag_note' | t }}
+    </p>
+  </div>
+{% endif %}

@@ -1,0 +1,107 @@
+{% comment %}
+  Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
+{% endcomment %}
+
+{% assign swatch = product-swatch %}
+{% assign file_extension = 'png' %}
+{% if product.handle contains 'rise-ai' %}
+  {% assign swatch_width = 'flex-item--one-quarter' %}
+{% else %}
+  {% assign swatch_width = 'flex-item--one-fifth' %}
+{% endif %}
+
+{% if swatch == blank %}
+<div class="swatch error">
+  <p>You must include the snippet swatch.liquid with the name of a product option.</p> 
+  <p>Use: <code>{% raw %}{% include 'swatch' with product-swatch: 'name of your product option here' %}{% endraw %}</code></p>
+  <p>Example: <code>{% raw %}{% include 'swatch' with product-swatch: 'Color' %}{% endraw %}</code></p>
+</div>
+{% else %}
+
+{% assign found_option = false %}
+{% assign is_color = false %}
+{% assign is_size = false %}
+{% assign option_index = 0 %}
+
+{% for option in product.options %}
+  {% if option == swatch %}
+    {% assign found_option = true %}
+    {% assign option_index = forloop.index0 %}
+    {% assign downcased_option = swatch | downcase %}
+    {% if downcased_option contains 'color' or downcased_option contains 'colour' %}
+      {% assign is_color = true %}
+    {% elsif downcased_option contains 'size' %}
+      {% assign is_size = true %}
+    {% endif %}
+
+    <style>
+      label[for="product-select-option-{{ option_index }}"] { display: none; }
+      #product-select-option-{{ option_index }} { display: none; }
+      #product-select-option-{{ option_index }} + .custom-style-select-box { display: none !important; }
+    </style>
+    {% assign downcased_option = swatch | downcase %}
+    {% if downcased_option contains 'color' or downcased_option contains 'colour' %}
+      {% assign is_color = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% unless found_option %}
+<div class="swatch error">
+  <p>You included the snippet swatch.liquid with the name of a product option — <code>'{{ swatch }}'</code> — that does not belong to your product.</p>
+  <p>Use <code>{% raw %}{% include 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
+  <p>Example: <code>{% raw %}{% include 'swatch' with 'Color' %}{% endraw %}</code></p>
+  <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
+</div>
+{% else %}
+<div class="swatch clearfix" data-option-index="{{ option_index }}">
+  {% if is_color %}
+    <div class="color-option">
+      <div class="clearfix">
+        <div class="header">{{ swatch }}<span class="selected-swatch"></span></div>
+      </div>
+    </div>
+  {% elsif is_size %}
+    <div class="size-option">
+      <div class="clearfix">
+        <div class="header">{{ swatch }}<span class="selected-swatch"></span></div>
+
+        {% include 'product-popup', block: block %}
+      </div>
+      <div class="selected-message"></div>
+      {% if settings.product_form_show_fitfinder_link %}
+        <div class="fit-finder-link-wrap">
+          <a href="{{ settings.product_form_fitfinder_link | escape }}" title="{{ settings.product_form_fitfinder_text | escape }}" class="fit-finder-link">{{ settings.product_form_fitfinder_text }}</a>
+        </div>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="header">{{ swatch }}</div>
+    <div class="selected-message"></div>
+  {% endif %}
+  {% assign values = '' %}
+
+  <div class="swatch-selects flex--flexbox flex--wrap" data-swatch-type="{% if is_color %} color{% elsif is_size %}size{% endif %}">
+    {% for variant in product.variants %}
+      {% assign value = variant.options[option_index] %}
+      {% assign current_option = current_variant.options[option_index] %}
+      {% unless values contains value %}
+        {% assign values = values | join: ',' %}
+        {% assign values = values | append: ',' | append: value %}
+        {% assign values = values | split: ',' %}
+        <div data-value="{{ value | escape }}" class="swatch-element flex-item {{ swatch_width }} {{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}">
+          <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if value == current_option %} checked{% endif %} data-single-option-selector data-index="option{{ option_index | plus: 1 }}" />
+
+          <div class="swatch-inner">
+            <label for="swatch-{{ option_index }}-{{ value | handle }}">
+              {{ value }}
+            </label>
+          </div>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endunless %}
+{% endif %}

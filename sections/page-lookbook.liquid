@@ -1,0 +1,189 @@
+{% include 'page-introduction' %}
+
+<section class="lookbook-menu" data-aos="fade">
+  <div class="bg-white">
+    {% for block in section.blocks %}
+      {% if block.type == 'lookbook_section' %}
+        {% assign modulo = forloop.index | modulo: 2 %}
+
+        {% if modulo == 1 %}
+          {% assign numclass = 'odd' %}
+        {% else %}
+          {% assign numclass = 'even' %}
+        {% endif %}
+
+        <div class="alt-col-row flex--flexbox flex--wrap flex--items-center {{ numclass }}">
+          <div class="flex-item flex-item--one-half image-item">
+            <div class="image-wrap">
+              <img 
+                  data-src="{{ block.settings.image  | img_url: '800x' }}" 
+                  data-srcset="
+                    {{ block.settings.image  | img_url: '800x' }} 1x, 
+                    {{ block.settings.image  | img_url: '800x', scale: 2 }} 2x
+                  " 
+                  alt="Image of {{ block.settings.look_title_text }}"
+                  class="lazyload">
+            </div>
+          </div>
+
+          <div class="flex-item flex-item--one-half text-item text-center">
+            <div class="text-wrap">
+              {% if block.settings.look_title_image != blank %}
+                <h2>
+                  <img 
+                    data-src="{{ block.settings.look_title_image  | img_url: '800x' }}" 
+                    data-srcset="
+                      {{ block.settings.look_title_image  | img_url: '800x' }} 1x, 
+                      {{ block.settings.look_title_image  | img_url: '800x', scale: 2 }} 2x
+                    " 
+                    alt="{{ block.settings.look_title_text }}"
+                    class="lazyload"
+                  >
+                </h2>
+              {% else %}
+                <h2 class="h4">{{ block.settings.look_title_text }}</h2>
+              {% endif %}
+              
+              {% if block.settings.look_text != blank %}
+                {{ block.settings.look_text }}
+              {% endif %}
+
+              {% if block.settings.look_image != blank %}
+                <img 
+                  data-src="{{ block.settings.look_image  | img_url: '800x' }}" 
+                  data-srcset="
+                    {{ block.settings.look_image  | img_url: '800x' }} 1x, 
+                    {{ block.settings.look_image  | img_url: '800x', scale: 2 }} 2x
+                  " 
+                  alt="{{ block.settings.look_title_text }} preview"
+                  class="lazyload"
+                >
+              {% endif %}
+
+              {%- if block.settings.look_link_text != blank and block.settings.look_link_url != blank -%}
+                <div class="button-wrap">
+                  <a class="standalone-link" href="{{ block.settings.look_link_url }}" title="" target="_blank">{{ block.settings.look_link_text }}</a>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {% elsif block.type == 'lookbook_full_width' %}
+        <div class="full-width-row">
+          <div class="text-wrap text-center max-w-md">
+            {{ block.settings.text }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% include 'page-closing' %}
+
+{% schema %}
+  {
+    "name": "Page - Lookbook",
+    "settings": [
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "Lookbook"
+      },
+      {
+      "type": "richtext",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<p>Forget the Met, we like our art right where we can see it. Browse our seasonal looks, customizable with your choice of colors in classic polish or gel.</p>"
+      },
+      {
+        "type": "text",
+        "id": "closing_title",
+        "label": "Closing Title"
+      },
+      {
+        "type": "richtext",
+        "id": "closing_text",
+        "label": "Closing Text",
+        "default": "<p>Ready to treat yourself? Let’s get a date in the books.</p>"
+      },
+      {
+        "type": "text",
+        "id": "closing_button_text",
+        "label": "Closing Button Text",
+        "default": "Book an Appointment"
+      },
+      {
+        "type": "url",
+        "id": "closing_button_link",
+        "label": "Closing Button Url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "lookbook_section",
+        "name": "Lookbook Section",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Featured Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Description"
+          },
+          {
+            "type": "text",
+            "id": "look_title_text",
+            "label": "Look Title",
+            "info": "Always include the look title – it will be used as the image alt text if an image is included below."
+          },
+          {
+            "type": "image_picker",
+            "id": "look_title_image",
+            "label": "Look Title Image",
+            "info": "If no title image, it will default to the look title above."
+          },
+          {
+            "type": "richtext",
+            "id": "look_text",
+            "label": "Look Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "look_image",
+            "label": "Look Image"
+          },
+          {
+            "type": "text",
+            "id": "look_link_text",
+            "label": "Look Link Text",
+            "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "look_link_url",
+            "label": "Look Link Url"
+          }
+        ]
+      },
+      {
+        "type": "lookbook_full_width",
+        "name": "Lookbook Full Width Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

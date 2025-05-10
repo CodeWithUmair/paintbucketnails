@@ -1,0 +1,126 @@
+<section class="page-introduction{% if section.settings.intro_bg_image != blank %} has-background{% endif %}{% if section.settings.intro_nav != blank %} has-navigation{% endif %} lazyload" data-aos="fade">
+  <div class="page-width text-center">
+      <div class="max-w-lg text-wrap">
+        <h1 class='page-heading'>
+          {% if section.settings.intro_title != blank %}
+            {{ section.settings.intro_title }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+        </h1>
+
+        {% if section.settings.intro_text != blank %}
+          {{ section.settings.intro_text }}
+        {% endif %}  
+      </div>
+      <div class='flex--flexbox flex--justify-center flex--wrap page-block-container'>
+          {% for block in section.blocks %}
+            <div class="flex-item flex-item--one-half text-center page-block ">
+              <h3 class='page-block-heading'>
+                {{ block.settings.heading }}
+              </h3>
+              <div class="page-block-title-image">
+                <img src="{{ block.settings.page-title-image | img_url: '291x76'}}">
+              </div>
+              <div class="page-block-image">
+                <img src="{{ block.settings.page-image | img_url: '133x131'}}">
+              </div>
+              <div class="page-block-btn">
+                <a class="btn btn-wide" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          {% endfor %}
+      <div/>
+  </div>
+</section>
+
+  <style>
+    .page-heading {
+      font-size: 2.5em;
+    }
+
+    p > a {
+    text-decoration: underline;
+    }
+    
+    .page-block-container {
+      margin-top:72px;
+    }
+    
+    .page-block {
+      background-color: white;
+      padding: 60px 64px;
+      max-width: 436px;
+    }
+
+    h3.page-block-heading {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+      font-size: 1rem;
+      margin-bottom: 26px;
+    }
+    .page-block-btn a {
+      color: white;
+    }
+
+    .page-block-image {
+      margin-top: 33px;
+      margin-bottom: 47px;
+    }
+  </style>
+
+{% schema %}
+  {
+    "name": "Introduction",
+    "settings": [
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "Do Your Nails Like a Pro"
+      },
+      {
+      "type": "textarea",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<p>We reimagined DIY nail care so that babes across the nation could have access to our obsessed-about nail art while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps/press ons and removing them safely. Now lets get going, you talented artist, you.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "step",
+        "name": "How to Step",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "How to apply"
+          },
+          {
+            "type": "image_picker",
+            "id": "page-title-image",
+            "label": "Page Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "page-image",
+            "label": "Page Image"
+          },
+            {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Guide"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

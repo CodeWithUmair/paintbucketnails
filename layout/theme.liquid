@@ -1,0 +1,278 @@
+<!doctype html>
+<!--[if IE 9]> <html class="ie9 no-js supports-no-cookies" lang="{{ shop.locale }}"> <![endif]-->
+<!-- [if (gt IE 9)|!(IE)]><! -->
+<html data-template="{{template}}" class="no-js supports-no-cookies" lang="{{ shop.locale }}">
+  <!-- <![endif] -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_primary }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% if handle contains 'menu-subpage' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    <link
+      rel="preload"
+      href="https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Romie-Regular.woff2?v=1746756672"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link
+      rel="preload"
+      href="https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Verlag-Light.woff2?v=1746756690"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+
+    <style>
+      @font-face {
+        font-family: 'Romie';
+        src: url('https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Romie-Regular.woff2?v=1746756672') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Verlag';
+        src: url('https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Verlag-Light.woff2?v=1746756690') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      h1, h2, h3, h4, h5, h6,
+      div, ul, ol, li,
+      a, button, input, select,
+      option, label, legend, textarea, small {
+        font-family: 'Romie', sans-serif !important;
+      }
+
+      p, span {
+        font-family: 'Verlag', sans-serif !important;
+      }
+    </style>
+
+    {% if settings.favicon != blank %}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {% endif %}
+
+    {% capture seo_title %}
+    {{ page_title }}
+    {% if current_tags %}
+      {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {% endif %}
+    {% if current_page != 1 %}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {% endif %}
+    {% unless page_title contains shop.name %}
+      &ndash; {{ shop.name }}
+    {% endunless %}
+  {% endcapture %}
+    <title>{{ seo_title }}</title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% include 'social-meta-tags' %}
+
+    {% comment %} Begin Typekit code {% endcomment %}
+    <script src="https://use.typekit.net/yvg1nqv.js" defer></script>
+    <script>
+      try{Typekit.load({ async: true });}catch(e){}
+    </script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/yvg1nqv.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css"
+      integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.js"
+      integrity="sha512-IugMlI4mO8p/jg/cnoe/Duv6i6nkTHmiu8O4/Faqvt413HbCyacKTOBZZCutsGQStTUgd2vPbM3K3oiKSlSD9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    {% comment %} End Typekit code {% endcomment %}
+
+    <script src="{{ 'format-money.js' | asset_url }}" defer="defer"></script>
+    <script async src="https://kit.fontawesome.com/31c5f20eac.js" crossorigin="anonymous"></script>
+
+    {% render 'css-variables' %}
+
+    {{ 'ajax-cart.scss.css' | asset_url | stylesheet_tag }}
+
+    <link preload async href="{{ 'theme.min.css' | asset_url }}" rel="stylesheet" type="text/css" media="all">
+    <link preload async href="{{ 'custom.css' | asset_url }}" rel="stylesheet" type="text/css" media="all">
+    <link preload async href="{{ 'custom-homepage.css' | asset_url }}" rel="stylesheet" type="text/css" media="all">
+    {% if request.page_type == 'page' %}
+      <link preload async href="{{ 'custom-page.css' | asset_url }}" rel="stylesheet" type="text/css" media="all">
+    {% endif %}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+      window.theme = {
+        strings: {
+          addToCart: {{ 'products.product.add_to_cart' | t | json }},
+          soldOut: {{ 'products.product.sold_out' | t | json }},
+          unavailable: {{ 'products.product.unavailable' | t | json }}
+        },
+        moneyFormat: {{ shop.money_format | json }}
+      };
+    </script>
+
+    {% if template.directory == 'customers' %}
+      <!-- [if (gt IE 9)|!(IE)]><! -->
+      <script defer src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+      <!-- <![endif] -->
+      <!--[if lte IE 9]> <script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script> <![endif]-->
+    {% endif %}
+
+    <!-- [if (gt IE 9)|!(IE)]><! -->
+    <script defer src="{{ 'theme.min.js' | asset_url }}"></script>
+    <!-- <![endif] -->
+    <!--[if lt IE 9]> <script src="{{ 'theme.min.js' | asset_url }}"></script> <![endif]-->
+
+    {% include 'globo.filter.script' %}
+    {{ content_for_header }}
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NVXCQTP');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NVXCQTP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <meta name="google-site-verification" content="0gLa21rsdWLt7oYFn9DxY39E4O7zbTK8OrfRggCY_7k">
+    <meta name="facebook-domain-verification" content="4lzzvy0yq6zet6rogg68wx0yeg8n2e">
+
+    <!-- Global site tag (gtag.js) - Google Ads: 406804395 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-406804395"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-406804395');
+    </script>
+
+    <script>
+      (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"52017684"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    </script>
+
+    <script src="https://cdn.younet.network/main.js" defer></script>
+    {% include 'judgeme_core' %}
+    <script type="text/javsacript">
+      $(document).ready(function(){
+          $( "#tab1" )on('click',function(){
+           #("#tabs-1").fadeIn();
+           #("#tabs-2").fadeOut();
+          #("#tabs-3").fadeOut();
+
+        } );
+          $( "#tab2" ).on('click',function(){
+           #("#tabs-2").fadeIn();
+           #("#tabs-1").fadeOut();
+          #("#tabs-3").fadeOut();
+
+        } );
+              $( "#tab3" )on('click',function(){
+           #("#tabs-3").fadeIn();
+           #("#tabs-1").fadeOut();
+          #("#tabs-2").fadeOut();
+
+        } );
+          });
+        $( document ).ready(function() {
+          console.log( "ready!" );
+      });
+    </script>
+  </head>
+
+  <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} template-{{ template | handle }}">
+    {% if settings.ajaxcart_enabled == true %}
+      {% section 'ajax-cart' %}
+    {% endif %}
+
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">
+      {{- 'general.accessibility.skip_to_content' | t -}}
+    </a>
+
+    {% section 'header' %}
+
+    <main role="main" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    <script>
+      window.addEventListener('load', function() {
+          jQuery('a[href="https://go.booker.com/#/location/Paintbucket/service-categories/"]').on('click', function() {
+              ga('send', 'event', 'bookNow', 'click', 'link');
+          });
+      })
+    </script>
+
+    <script>
+      if(document.getElementById('mc-embedded-subscribe')){
+        document.getElementById('mc-embedded-subscribe').addEventListener('click', function() {
+            ga('send', 'event', 'newsletter', 'submit', 'form');
+        });
+      }
+    </script>
+
+    {% if template contains 'product' %}
+      {% render 'judgeme_core' %}
+      {% render 'klaviyo-back-in-stock' %}
+    {% endif %}
+
+    {% include 'subscription-theme-footer' %}
+
+    {% if settings.ajaxcart_enabled == true %}
+      {% unless template contains 'cart' %}
+        <script defer="defer" src="{{ 'ajax-cart.js' | asset_url }}"></script>
+      {% endunless %}
+    {% endif %}
+
+    {% include 'globo.filter.action' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js" defer></script>
+
+    <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+
+    {% if template contains 'product' %}
+      <div data-rebuy-id="43578" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+      {% render 'rebuy-extensions' %}
+    {% endif %}
+
+    {% render 'klaviyo-atc-tracker' %}
+  </body>
+</html>

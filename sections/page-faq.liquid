@@ -1,0 +1,45 @@
+<section class="faq-content" data-aos="fade">
+  <h1 class="text-center">{{ page.title }}</h1>
+
+  <div class="faqs">
+    {% for block in section.blocks %}
+      <div class="faq max-w-md text-center">
+        {% unless forloop.first %}
+          <div class="separator"></div>
+        {% endunless %}
+        
+        <p class="question"><strong>{{ block.settings.title }}</strong></p>
+
+        <div class="answer">
+          {{ block.settings.answer }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Page - FAQ",
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question",
+            "default": "What is the question you're asking?"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Here's your answer!</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

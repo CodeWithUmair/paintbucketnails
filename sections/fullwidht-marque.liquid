@@ -1,0 +1,77 @@
+{% if type == 'block' %}
+  {%- assign id = block.id -%}
+  {%- assign heading = block.settings.heading -%}
+  {%- assign subtitle = block.settings.subtitle -%}
+  {%- assign body = block.settings.body -%}
+  {%- assign link_text = block.settings.link_text -%}
+  {%- assign link_url = block.settings.link_url -%}
+  {%- assign link_type = block.settings.link_type -%}
+  {%- assign bg_image = block.settings.bg_image -%}
+  {%- assign custom_styles = block.settings.custom_styles -%}
+{% else %}
+  {%- assign id = section.id -%}
+  {%- assign heading = section.settings.heading -%}
+  {%- assign subtitle = section.settings.subtitle -%}
+  {%- assign body = section.settings.body -%}
+  {%- assign link_text = section.settings.link_text -%}
+  {%- assign link_url = section.settings.link_url -%}
+  {%- assign link_type = section.settings.link_type -%}
+  {%- assign bg_image = section.settings.bg_image -%}
+  {%- assign custom_styles = section.settings.custom_styles -%}
+{% endif %}
+
+<section id="shopify-section-{{ id }}" class="section-full-width-text lazyload marque-container" data-aos="fade"data-section-id="{{ id }}" data-section-type="full-width-text" {% if type =='block' %}{{ block.shopify_attributes }}{% endif %}>
+  
+  <div class="page-width" style="padding:0px;">
+    <div class="text-wrap">
+        <marquee direction="left">
+          {% for block in section.blocks %}
+            <h5 class="heading marqueheading">
+              {{ block.settings.title }}
+            </h5>
+          {% endfor %}
+        </marquee>
+    </div>
+  </div>
+
+  <style>
+    .marqueheading{
+      text-transform:uppercase;
+      margin:0px;
+      display: inline-block;
+      width: 350px;
+    }
+    .marque-container{
+      padding:20px !important;
+      background-color:#fff;
+    }
+    {% if custom_styles != blank %}
+      {{ custom_styles }}
+    {% endif %}
+  </style>
+</section>
+{% schema %}
+  {
+    "name": "Full Width Marque",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Heading",
+        "type": "heading",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Heading Text",
+            "id": "title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Full Width- Marque",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,102 @@
+{% if product.images.size > 1 %}
+  <div class="slideshow-nav-wrap{% if product.images.size > 5 %} has-arrows{% endif %}">
+    <ul class="slideshow-nav" data-num-slides="{{ product.images.size }}">
+      {% assign items = 0 %}
+      {% for image in product.images %}
+        <li class="slide">                    
+          <div class="slide-thumbnail" data-product-single-thumbnail>
+            <img 
+              data-src="{{ image.src | img_url: '80x80', crop: 'center' }}"
+              data-srcset="
+                {{ image.src | img_url: '80x80', crop: 'center' }} 1x,
+                {{ image.src | img_url: '80x80', crop: 'center', scale: 2 }} 2x"
+              alt="{{ image.alt | escape }}"
+              class="lazyload"
+            >
+          </div>
+        </li>
+        {% assign items = items | plus: 1 %}
+      {% endfor %}
+    </ul>
+    
+    {% if product.images.size > 5 %}
+      <div class="slideshow-nav-controls">
+        <a href="#" class="prev">
+          <img data-src="{{ 'arrow-left.png' | asset_img_url: '60x' }}" alt="Arrow Left" class="lazyload">
+        </a>
+        <a href="#" class="next">
+          <img data-src="{{ 'arrow-right.png' | asset_img_url: '60x' }}" alt="Arrow Right" class="lazyload">
+        </a>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+
+{% if product.images.size > 1 %}
+  <div class="product-slideshow-wrap clearfix">
+    {% if product.tags contains 'bestseller' %}
+      {% include 'icon-bestseller' %}
+    {% endif %}
+    <div class="product-slideshow">
+      {% for image in product.images %}
+        {% if image.alt contains 'youtube' or image.alt contains 'vimeo' %}
+          <div class="slide video-slide {% if image.alt contains 'vimeo' %}vimeo{% else %}youtube{% endif %}">
+            <div class="video-container">
+              {{ image.alt }}
+            </div>
+          </div>
+        {% else %}
+          <div class="slide">
+            <div class="js-zoom" data-zoom="{{ image.src | img_url: '1024x1024', scale: 1.5 }}">
+              <img 
+                srcset="
+                  {{ image.src | img_url: '1200x' }} 1x, 
+                  {{ image.src | img_url: '1200x', scale: 2 }} 2x"
+                alt="{{ image.alt | escape }}"
+                data-lazy="{{ image.src | img_url: '1200x' }}" 
+                {% if items == 0 %}
+                  data-product-featured-image
+                {% endif %}
+              >
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="slideshow-controls">
+      <a href="#" class="prev">
+        <img src="{{ 'arrow-left.png' | asset_img_url: '60x' }}" alt="Arrow Left">
+        <span>Prev</span>
+      </a>
+      <a href="#" class="next">
+        <img src="{{ 'arrow-right.png' | asset_img_url: '60x' }}" alt="Arrow Right">
+        <span>Next</span>
+      </a>
+    </div>
+  </div>
+{% else %}
+  {% if featured_image != blank %}
+    <div class="no-slideshow featured-image">
+      {% if featured_image.alt contains 'youtube' or featured_image.alt contains 'vimeo' %}
+        <div class="slide video-slide {% if featured_image.alt contains 'vimeo' %}vimeo{% else %}youtube{% endif %}">
+          <div class="video-container">
+            {{ featured_image.alt }}
+          </div>
+        </div>
+      {% else %}
+        <div class="js-zoom" data-zoom="{{ featured_image.src | img_url: '1024x1024', scale: 2 }}">
+          <img 
+            srcset="
+              {{ featured_image | img_url: '800x' }} 1x, 
+              {{ featured_image | img_url: '800x', scale: 2 }} 2x
+            "
+            alt="{{ featured_image.alt | escape }}"
+            src="{{ featured_image | img_url: '800x' }}" data-product-featured-image
+          >
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}

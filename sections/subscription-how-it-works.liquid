@@ -1,0 +1,207 @@
+<section id="shopify-section-{{ section.id }}" class="subs-how-it-works bg-white" data-aos="fade">
+  <div class="page-width">
+    <div class="heading-wrap text-center">
+      <h2>{{ section.settings.title }}</h2>
+      <h3>{{ section.settings.subheading }}</h3>
+    </div>
+
+    <div class="flex--flexbox flex--wrap">
+      <div class="flex-item flex-item--one-third">
+        {% if section.settings.col_one_icon != blank %}
+          <div class="image-wrap">
+            <img 
+              data-src="{{ section.settings.col_one_icon | img_url: '100x' }}" 
+              data-srcset="{{ section.settings.col_one_icon | img_url: '150x' }} 1x, 
+                {{ section.settings.col_one_icon | img_url: '300x' }} 2x"
+              alt="{{ section.settings.col_one_icon.src }}" 
+              class="lazyload"
+            >
+          </div>
+        {% endif %}
+
+        <div class="text-wrap text-center">
+          {% if section.settings.col_one_heading != blank %}
+            <h4 class="heading">
+              {{ section.settings.col_one_heading }}
+            </h4>
+          {% endif %}
+
+          {% if section.settings.col_one_subtitle != blank %}
+            <p class="subtitle">
+              {{ section.settings.col_one_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="flex-item flex-item--one-third">
+        {% if section.settings.col_two_icon != blank %}
+          <div class="image-wrap">
+            <img 
+              data-src="{{ section.settings.col_two_icon | img_url: '100x' }}" 
+              data-srcset="{{ section.settings.col_two_icon | img_url: '150x' }} 1x, 
+                {{ section.settings.col_two_icon | img_url: '300x' }} 2x"
+              alt="{{ section.settings.col_two_icon.src }}" 
+              class="lazyload"
+            >
+          </div>
+        {% endif %}
+
+        <div class="text-wrap text-center">
+          {% if section.settings.col_two_heading != blank %}
+            <h4 class="heading">
+              {{ section.settings.col_two_heading }}
+            </h4>
+          {% endif %}
+
+          {% if section.settings.col_two_subtitle != blank %}
+            <p class="subtitle">
+              {{ section.settings.col_two_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="flex-item flex-item--one-third">
+        {% if section.settings.col_three_icon != blank %}
+          <div class="image-wrap">
+            <img 
+              data-src="{{ section.settings.col_three_icon | img_url: '100x' }}" 
+              data-srcset="{{ section.settings.col_three_icon | img_url: '150x' }} 1x, 
+                {{ section.settings.col_three_icon | img_url: '300x' }} 2x"
+              alt="{{ section.settings.col_three_icon.src }}" 
+              class="lazyload"
+            >
+          </div>
+        {% endif %}
+
+        <div class="text-wrap text-center">
+          {% if section.settings.col_three_heading != blank %}
+            <h4 class="heading">
+              {{ section.settings.col_three_heading }}
+            </h4>
+          {% endif %}
+
+          {% if section.settings.col_three_subtitle != blank %}
+            <p class="subtitle">
+              {{ section.settings.col_three_subtitle }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+      <div class="button-wrap text-center">
+        <a class="btn btn-outline" href="{{ section.settings.button_link }}" title="" target="_blank">{{ section.settings.button_text }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if section.settings.custom_styles != blank %}
+    <style>
+      {{ section.settings.custom_styles }}
+    </style>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "How it works",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "How it works"
+      },
+      {
+        "type": "textarea",
+        "id": "subheading",
+        "label": "Sub-heading",
+        "default": "Your mailman, just became your nailman (or woman 😉)"
+      },
+      {
+        "type": "header",
+        "content": "Column 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "col_one_icon",
+        "label": "Column One – Icon"
+      },
+      {
+        "type": "text",
+        "id": "col_one_heading",
+        "label": "Column One – Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "col_one_subtitle",
+        "label": "Column One – Subtitle",
+        "default": "Subtitle text."
+      },
+      {
+        "type": "header",
+        "content": "Column 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "col_two_icon",
+        "label": "Column Two – Icon"
+      },
+      {
+        "type": "text",
+        "id": "col_two_heading",
+        "label": "Column Two – Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "col_two_subtitle",
+        "label": "Column Two – Subtitle",
+        "default": "Subtitle text."
+      },
+      {
+        "type": "header",
+        "content": "Column 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "col_three_icon",
+        "label": "Column Three – Icon"
+      },
+      {
+        "type": "text",
+        "id": "col_three_heading",
+        "label": "Column Three – Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "col_three_subtitle",
+        "label": "Column Three – Subtitle",
+        "default": "Subtitle text."
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ]
+  }
+{% endschema %}

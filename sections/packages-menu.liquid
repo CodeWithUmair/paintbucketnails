@@ -1,0 +1,301 @@
+{% include 'page-introduction' %}
+
+<section id="packages" class="packages-menu-section" data-aos="fade" data-section-id="{{ section.id }}" data-section-type="">
+
+  <div class="page-width">
+
+    <div class="heading text-center">
+
+      <h2>{{ section.settings.heading }}</h2>
+
+      {% if section.settings.video_link != blank %}
+        <a href="{{ section.settings.video_link }}" class="video-link" target="_blank">{% include 'icon-video-play' %} Watch the Video
+      {% endif %}</a>
+
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+
+      {% assign menu_section_titles_string = "" %}
+
+      {%- for block in section.blocks -%}
+
+        {%- if block.settings.menu_section_title != blank -%}
+          {%- unless menu_section_titles_string contains block.settings.menu_section_title -%}
+            {% assign menu_section_titles_string = menu_section_titles_string | append: block.settings.menu_section_title | append: "," %}
+          {%- endunless -%}
+        {%- endif -%}
+
+      {%- endfor -%}
+
+      {% assign menu_section_titles_array = menu_section_titles_string | split: "," %}
+
+    {%- endif -%}
+
+    <div class="packages-menu-container">
+
+      <div class="packages-menu">
+
+        <div class="packages-menu__content">
+
+          <h2 class="packages-menu__title">{{ section.settings.menu_left_title }}</h2>
+
+          {%- for section_title in menu_section_titles_array -%}
+
+            <div class="packages-menu__section">
+
+            <h3 class="packages-menu__section-title">
+              <span>{{ section_title }}</span>
+            </h3>
+
+            {%- for block in section.blocks -%}
+
+              {%- if block.settings.menu == "left" -%}
+
+                {%- if block.settings.menu_section_title contains section_title -%}
+
+                  <div class="packages-menu__item" {{ block.shopify_attributes }}>
+                    <div class="packages-menu__item-info">
+                      <p class="packages-menu__item-info-title">{{ block.settings.title | default: "&nbsp;" }}</p>
+                      <div class="packages-menu__item-info-description">{{ block.settings.item_description | default: "&nbsp;" }}</div>
+                    </div>
+                    <div class="packages-menu__item-prices">
+                      <p class="packages-menu__item-price">{{ block.settings.item_price | default: "&nbsp;" }}</p>
+                      <p class="packages-menu__item-savings">{{ block.settings.item_savings | default: "&nbsp;" }}</p>
+                    </div>
+                  </div>
+
+                {%- endif -%}
+
+              {%- endif -%}
+
+            {%- endfor -%}
+
+            </div>
+
+          {%- endfor -%}
+
+        </div>
+
+      </div>
+
+      <div class="packages-menu">
+
+        <div class="packages-menu__content">
+
+          <h2 class="packages-menu__title">{{ section.settings.menu_right_title }}</h2>
+
+          {%- for section_title in menu_section_titles_array -%}
+
+            <div class="packages-menu__section">
+
+              <h3 class="packages-menu__section-title">
+                <span>{{ section_title }}</span>
+              </h3>
+
+              {%- for block in section.blocks -%}
+
+                {%- if block.settings.menu == "right" -%}
+
+                  {%- if block.settings.menu_section_title contains section_title -%}
+
+                    <div class="packages-menu__item">
+                      <div class="packages-menu__item-info">
+                        <p class="packages-menu__item-info-title">{{ block.settings.title | default: "&nbsp;" }}</p>
+                        <div class="packages-menu__item-info-description">{{ block.settings.item_description | default: "&nbsp;" }}</div>
+                      </div>
+                      <div class="packages-menu__item-prices">
+                        <p class="packages-menu__item-price">{{ block.settings.item_price | default: "&nbsp;" }}</p>
+                        <p class="packages-menu__item-savings">{{ block.settings.item_savings | default: "&nbsp;" }}</p>
+                      </div>
+                    </div>
+
+                  {%- endif -%}
+
+                {%- endif -%}
+
+              {%- endfor -%}
+
+            </div>
+
+          {%- endfor -%}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="closing text-center">
+      {{ section.settings.closing_content }}
+
+      {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+        <div class="button-wrap text-center">
+          <a class="btn btn-large btn-wide" href="{{ section.settings.button_link }}" title="" target="_blank">{{ section.settings.button_text }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Packages - Menu",
+    "settings": [
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "The Handbook"
+      },
+      {
+      "type": "textarea",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<h2>HOW TO APPLY #PBWRAPS LIKE A PRO</h2><p>We reimagined DIY nail care so that babes across the nation could have access to our obsessed-about nail art while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps and removing them safely. Now lets get wrapping, you talented artist, you.</p>"
+      },
+      {
+        "type": "link_list",
+        "id": "intro_nav",
+        "label": "Intro Navigation"
+      },
+      {
+        "type": "header",
+        "content": "Steps Section"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "How to apply"
+      },
+      {
+        "type": "url",
+        "id": "video_link",
+        "label": "Video Link"
+      },
+      {
+        "type": "header",
+        "content": "How to Remove"
+      },
+      {
+        "type": "text",
+        "id": "remove_heading",
+        "label": "Heading",
+        "default": "Removing PB Wraps"
+      },
+      {
+        "type": "richtext",
+        "id": "remove_content",
+        "label": "Content",
+        "default": "<p>Simply remove pb wraps with acetone or oil.</p>"
+      },
+      {
+        "type": "header",
+        "content": "Menus"
+      },
+      {
+        "type": "text",
+        "id": "menu_left_title",
+        "label": "Left Menu Title",
+        "default": "Buy 5, Get 1 Free"
+      },
+      {
+        "type": "text",
+        "id": "menu_right_title",
+        "label": "Left Menu Title",
+        "default": "Buy 8, Get 2 Free"
+      },
+      {
+        "type": "header",
+        "content": "Closing"
+      },
+      {
+        "type": "richtext",
+        "id": "closing_content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Purchase a Package"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "menu_item",
+        "name": "Menu Item",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Menu"
+          },
+          {
+            "type": "paragraph",
+            "content": "These settings group the menu items into a menu container and sections inside that menu."
+          },
+          {
+            "type": "select",
+            "id": "menu",
+            "label": "Menu",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "left"
+          },
+          {
+            "type": "text",
+            "label": "Section Title",
+            "id": "menu_section_title"
+          },
+          {
+            "type": "header",
+            "content": "Item"
+          },
+          {
+            "type": "text",
+            "label": "Item Title",
+            "id": "title",
+            "default": "5 Basic Manicure + 1 Free"
+          },
+          {
+            "type": "richtext",
+            "label": "Item Description",
+            "id": "item_description",
+            "default": "<p>5 Signature Gel Manicure + 1 Free</p>"
+          },
+          {
+            "type": "text",
+            "label": "Item Price",
+            "id": "item_price",
+            "default": "$175"
+          },
+          {
+            "type": "text",
+            "label": "Item Savings",
+            "id": "item_savings",
+            "default": "Total Savings: $35"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

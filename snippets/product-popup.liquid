@@ -1,0 +1,23 @@
+{% if section.blocks != nil %}
+  {% for block in section.blocks %}
+    {% if block.type == 'tag_popup' and product.tags contains block.settings.title %}
+      {% if pages[block.settings.page] != nil %}
+        <div class="popup-wrap size-guide-popup">
+          <a href="#popup" title="#popup" class="popup-link">{{ block.settings.text }}</a>
+
+          <div id="popup" class="popup-bg-block" data-popup="size-guide-popup">
+            <div class="popup-modal bg-lt-pink">
+              <h3 class="h5 text-center">{{ pages[block.settings.page].title }}</h3>
+              <div class="text-center">
+                {{ pages[block.settings.page].content }}
+              </div>
+
+              <button class="close">{% include 'icon-button-close' %} <span class="visually-hidden">Close</span></button>
+            </div>
+          </div>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

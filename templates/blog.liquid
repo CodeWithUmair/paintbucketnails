@@ -1,0 +1,22 @@
+{% section 'blog-introduction' %}
+
+{% paginate blog.articles by 5 %}
+  {% unless current_tags or paginate.current_page > 1 %}
+    {% section 'blog-hero-slider' %}
+  {% endunless %}
+  
+  {% section 'blog-tag-list' %}
+  
+  <section class="article-posts">
+    <div class="page-width max-w-xl">
+      {% for article in blog.articles %}
+        {% include 'article-thumbnail' %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+
+{% endpaginate %}

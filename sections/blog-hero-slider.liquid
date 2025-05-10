@@ -1,0 +1,89 @@
+<section id="blog-hero" data-section-id="{{ section.id }}">
+  {% if section.settings.posts_to_show == 'recent_posts' %}  
+    {% paginate blog.articles by 4 %}
+      <div class="slider image-slider">
+        {% for article in blog.articles %}
+          {{ article | img_url: '1000x1000', crop: 'center' | img_tag: article.title }}
+        {% endfor %}
+      </div>
+
+      <div class="title-slider-wrap">
+        <div class="slider title-slider max-w-sm bg-white">
+          {% for article in blog.articles %}
+            <div class="text-center">
+              {% if article.tags[0] != blank %}
+                <p class="tag h6">{{ article.tags[0] }}</p>
+              {% endif %}
+              
+              <h2 class="h4">
+                <a href="{{ article.url }}">{{ article.title }}</a>
+              </h2>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endpaginate %}
+  {% elsif section.settings.posts_to_show == 'custom_posts' %}
+    <div class="slider image-slider">
+      {% for block in section.blocks %}
+        {{ block.settings.article | img_url: '1000x1000', crop: 'center' | img_tag: block.settings.article.title }}
+      {% endfor %}
+    </div>
+
+    <div class="title-slider-wrap">
+      <div class="slider title-slider max-w-sm bg-white">
+        {% for block in section.blocks %}
+          <div class="text-center">
+            {% if block.settings.article.tags[0] != blank %}
+              <p class="tag h6">{{ block.settings.article.tags[0] }}</p>
+            {% endif %}
+            
+            <h2 class="h4">
+              <a href="{{ block.settings.article.url }}">{{ block.settings.article.title }}</a>
+            </h2>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+
+{% schema %}
+  {
+    "name": "Blog Hero Slider",
+    "max_blocks": 4,
+    "settings": [
+      {
+        "type": "radio",
+        "id": "posts_to_show",
+        "label": "Type of posts to show",
+        "options": [
+          {
+            "value": "recent_posts",
+            "label": "Show most recent posts"
+          },
+          {
+            "value": "custom_posts",
+            "label": "Show custom posts selected below"
+          }
+        ],
+        "default": "recent_posts"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Article",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Article",
+            "info": "This post will only appear when the \"Show custom posts selected below\" setting is active."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,33 @@
+{%- assign review_count = product.metafields.judgeme.badge | split: "data-number-of-reviews='" | last | split: "'" |first | plus: 0 -%}
+
+{% if section.settings.show_product_reviews %}
+  <section class="product-reviews-section bg-white">
+    
+    <div class="page-width">
+{% render 'rebuy-dynamic-bundle' %}
+      <h2 class="text-center">{{ section.settings.heading }}</h2>
+
+      {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Product Reviews",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_product_reviews",
+        "label": "Turn on product reviews",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Lots of love"
+      }
+    ]
+  }
+  {% endschema %}

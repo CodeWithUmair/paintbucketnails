@@ -1,0 +1,84 @@
+{% if section.settings.intro_image != blank %}
+  <div class="lazyload section-bg-white" data-aos="fade">
+    <div class="page-width text-center">
+      <img src="{{ section.settings.intro_image  | img_url: 'master' }}" alt="{{ section.settings.intro_image.alt }}">
+    </div>
+  </div>
+  <style>
+    .section-bg-white {
+      background: #ffffff;
+    }
+
+    #shopify-section-collection-filtered-products > .collection-filtered {
+      padding-top: 50px;
+    }
+  </style>
+{% else %}
+  <section class="page-introduction{% if section.settings.intro_nav != blank %} has-navigation{% endif %} lazyload" data-aos="fade">
+    <div class="page-width text-center">
+      <div class="max-w-lg text-wrap">
+        <h1>
+          {{ collection.title }}
+        </h1>
+
+        {% if collection.description != blank %}
+          {{ collection.description }}
+        {% endif %}
+
+        {% if section.settings.intro_button_text != blank and section.settings.intro_button_link != blank %}
+          <div class="button-wrap">
+            <a class="btn btn-outline" href="{{ section.settings.intro_button_link }}" title="" target="_blank">{{ section.settings.intro_button_text }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if section.settings.custom_styles != blank %}
+  <style>
+    {{ section.settings.custom_styles }}
+  </style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "intro_image",
+        "label": "Intro Image",
+        "info": "Image will override all other contents"
+      },
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "The Handbook"
+      },
+      {
+      "type": "richtext",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<p>We reimagined DIY nail care so that babes across the nation could have access to our obsessed-about nail art while at home. Here are all of the tips and tricks to prepping your nails, applying our wraps and removing them safely. Now lets get wrapping, you talented artist, you.</p>"
+      },
+      {
+        "type": "text",
+        "id": "intro_button_text",
+        "label": "Button Text",
+        "default": "Get Started"
+      },
+      {
+        "type": "url",
+        "id": "intro_button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ]
+  }
+{% endschema %}

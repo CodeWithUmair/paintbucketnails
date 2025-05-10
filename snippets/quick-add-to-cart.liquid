@@ -1,0 +1,10 @@
+<form method="post" action="/cart/add">
+
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+  <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+
+  <button   {% unless product.available %}disabled="disabled"{% endunless %} type="submit"  class="btn btn-large full-width ajax-cart--add-to-cart" data-add-to-cart>
+  <span data-add-to-cart-text>{% unless product.available %} {{ 'products.product.sold_out' | t }}  {% else %} {{ 'products.product.add_to_cart' | t }} {% endunless %}</span>
+  </button>
+</form>

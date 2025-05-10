@@ -1,0 +1,197 @@
+{% assign transparent_banner = false %}
+{%- if template == "index" -%}
+  {% assign transparent_banner = true %}
+{%- endif -%}
+
+<div id="site-header" class="{% if transparent_banner == true %}site-header--transparent{% endif %}" data-section-id="{{ section.id }}" data-section-type="header-section">
+  {% if section.settings.show_announcement and section.settings.announcement_text != blank %}
+    <div class="promo-banner show-promo--{{ section.settings.show_announcement }} bg-black text-white">
+      <div class="page-width text-center">
+        {{ section.settings.announcement_text }}
+      </div>
+    </div>
+  {% endif %}
+
+  <header role="banner" class="site-header bg-pink">
+    <a href="#nav" id="icon-menu">
+      <span class="visually-hidden">Menu</span>
+
+      <div class="menu-link-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </a>
+
+    {% if template.name == 'index' %}
+      <h1 itemscope itemtype="http://schema.org/Organization">
+    {% else %}
+      <div class="h1" itemscope itemtype="http://schema.org/Organization">
+    {% endif %}
+        <a href="/" itemprop="url" class="site-logo site-header__logo-image">
+          <span class="visually-hidden">{{ shop.name }}</span>
+          <span class="site-logo__wrapper" itemprop="logo">
+            {%- render 'site-logo' -%}
+          </span>
+          {% comment %}
+            <img data-src="{{ 'paintbucket-logo.svg' | asset_url }}"
+                 class="lazyload"
+                 alt="{{ shop.name }}"
+                 itemprop="logo">
+          {% endcomment %}
+        </a>
+    {% if template.name == 'index' %}
+      </h1>
+    {% else %}
+      </div>
+    {% endif %}
+
+    <div id="mobile-link" class="nav-break-up--hide">
+      {% if section.settings.show_extra_mobile_link %}
+        {% if section.settings.mobile_link contains 'paintbucketnails.myshopify.com' or section.settings.mobile_link contains 'paintbucketnails.com' %}{% assign internal_link = true %}{% endif %}
+
+        <a href="{{ section.settings.mobile_link }}" {% unless internal_link %}target="_blank"{% endunless %}>
+          {{ section.settings.mobile_link_text }}
+        </a>
+      {% endif %}
+
+
+      <a class="ajax-cart--trigger-open" href="/cart" id="cart-link" title="Bag">
+        <span class="visually-hidden">Bag</span>
+        {% comment %}
+        {%- render 'icon-bag' -%}
+        {% endcomment %}
+        <img src="{{ 'icon-bag.svg' | asset_url }}"
+             alt="Cart link"
+             itemprop="cart icon">
+      </a>
+    </div>
+
+    {% render 'main-navigation' %}
+  </header>
+</div>
+
+{%- if section.settings.search_enable == true -%}
+
+  <div class="search-modal" aria-hidden="true" style="display: none;">
+
+    <div class="search-modal__inner">
+
+      <button class="search-modal__close search--trigger">{% render 'icon-close' %}</button>
+
+      <div class="search-modal__contents">
+
+        {% render 'search-form' %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Announcement Bar"
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_text",
+        "label": "Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show announcement",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Header Navigation"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_extra_mobile_link",
+        "label": "Show right mobile link",
+        "default": true,
+        "info": "Select this option when you want to show an extra mobile link in the header."
+      },
+      {
+        "type": "text",
+        "id": "mobile_link_text",
+        "label": "Mobile Link Text",
+        "default": "Book"
+      },
+      {
+        "type": "url",
+        "id": "mobile_link",
+        "label": "Mobile Link"
+      },
+      {
+        "type": "header",
+        "content": "Search"
+      },
+      {
+        "type": "checkbox",
+        "id": "search_enable",
+        "label": "Enable Search"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "featured_dropdown",
+        "name": "Featured Dropdown Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "top_link_text",
+            "label": "Top Link",
+            "info": "Type the name of the link under which this dropdown will live."
+          },
+          {
+            "type": "link_list",
+            "id": "dropdown_linklist",
+            "label": "Menu"
+          },
+          {
+            "type": "url",
+            "id": "featured_link",
+            "label": "Featured page link"
+          },
+          {
+            "type": "image_picker",
+            "id": "featured_image",
+            "label": "Featured page image"
+          },
+          {
+            "type": "text",
+            "id": "featured_title",
+            "label": "Featured page title"
+          },
+          {
+            "type": "richtext",
+            "id": "featured_text",
+            "label": "Featured page description",
+            "info": "Short description to show below featured page"
+          },
+          {
+            "type": "text",
+            "id": "featured_button_text",
+            "label": "Featured page button text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

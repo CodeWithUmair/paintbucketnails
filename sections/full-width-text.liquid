@@ -1,0 +1,64 @@
+{% include 'section-full-width-text' %}
+
+{% schema %}
+  {
+    "name": "Full Width Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Make your gym jealous"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Get a Paintbucket package to save on every appointment."
+      },
+      {
+        "type": "textarea",
+        "id": "body",
+        "label": "Body Text",
+        "default": "Body text"
+      },
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text",
+        "default": "Learn More"
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link Url"
+      },
+      {
+        "type": "radio",
+        "id": "link_type",
+        "label": "Link Type",
+        "options": [
+          { "value": "link", "label": "Link" },
+          { "value": "button", "label": "Button" }
+        ],
+        "default": "link"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Full Width",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

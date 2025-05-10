@@ -1,0 +1,155 @@
+<div class="featured-slider-wrapper lazyload aos-init" data-aos="fade">
+  <div class="featured-slider">
+    <div class="featured-slider__content">
+      <div class="content__wrapper">
+        {% if section.settings.subheading != blank %}
+          <span class="subhead">{{section.settings.subheading}}</span>
+        {% endif %}
+
+        {% if section.settings.title != blank %}
+          <h3>{{section.settings.title}}</h3>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <p class="subtitle">
+            <strong>{{section.settings.subtitle}}</strong>
+          </p>
+        {% endif %}
+
+        {% if section.settings.content != blank %}
+          <div class="content__info">
+            <p>{{section.settings.content}}</p>
+          </div>
+        {% endif %}
+
+        {% if section.settings.btn_text != blank %}
+          <a href="{{section.settings.btn_url}}" class="btn btn-outline content__cta">{{section.settings.btn_text}}</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="featured-slider__slider" js-featured-slider-wrapper>
+      {% if section.blocks.size > 0 %}
+        <div class="slider__main" js-featured-slider-main>
+          {% for item in section.blocks %}
+            <div class="slider__item">
+              <div class="slider__item-wrapper">
+                {% if item.settings.image != blank %}
+                  <img class="item__image" src="{{item.settings.image | img_url: '400x'}}" alt="{{item.settings.image.alt}}">
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'item__image'  }}
+                {% endif %}
+
+                {% if item.settings.title != blank %}
+                  <span class="item__title">{{item.settings.title}}</span>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="slider__navigation">
+          <div class="navigation navigation__prev" js-featured-slider-prev>
+            <img src="https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Arrow_-_Left.svg?v=1665611668" alt="Prev">
+          </div>
+          <div class="navigation navigation__next" js-featured-slider-next>
+            <img src="https://cdn.shopify.com/s/files/1/0344/0800/5764/files/Arrow_-_Right.svg?v=1665611668" alt="Next">
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  {% if section.settings.background_image != blank %}
+    #shopify-section-{{section.id}} .featured-slider-wrapper {
+      background: url({{section.settings.background_image | img_url: 'master'}}) no-repeat center center {{section.settings.background_color}};
+      background-size: cover;
+    }
+  {% else %}
+    #shopify-section-{{section.id}} .featured-slider-wrapper {
+      background: {{section.settings.background_color}};
+    }
+  {% endif %}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Featured Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Sub-Heading",
+        "default": "Introducing"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "MATERIAL GIRL"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "A Press On Collection by Batsheva Haart"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "With bold autumn hues, statement swirls and the perfect almond shape, we’re saying bye-bye to basic and hello to Queen B."
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "Shop Press Ons"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "MAUVE-ING OUT"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Slider",
+        "category": "Slider"
+      }
+    ]
+  }
+{% endschema %}

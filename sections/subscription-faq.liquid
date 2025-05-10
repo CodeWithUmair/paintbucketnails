@@ -1,0 +1,86 @@
+<section id="shopify-section-{{ section.id }}" class="subs-faq bg-lg-pink" data-aos="fade">
+  <div class="page-width max-w-md">
+    <div class="text-center">
+      <h2>{{ section.settings.title }}</h2>
+
+      {{ section.settings.subtitle }}
+    </div>
+
+    <div class="faq-wrap">
+      {% for block in section.blocks %}
+        <div class="a11y-drawer">
+          <button class="drawer-title">
+            {{ block.settings.title }}
+            {% include 'icon-chevron-down' %}
+          </button>
+
+          <div class="drawer-content">
+            <div class="content-wrap">
+              {{ block.settings.answer }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.sub_button_text != blank %}
+      <h3 class="text-center">{{ section.settings.sub_button_text }}</h3>
+    {% endif %}
+  </div>
+
+  {% if section.settings.custom_styles != blank %}
+    <style>
+      {{ section.settings.custom_styles }}
+    </style>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Subscription FAQs",
+    "max_blocks": 8,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Subscription Box FAQs"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "<p>Something about selecting your subscription</p>"
+      },
+      {
+        "type": "textarea",
+        "id": "sub_button_text",
+        "label": "Sub-button Text",
+        "default": "<p>Have more questions?</p>"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "FAQ",
+        "type": "faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

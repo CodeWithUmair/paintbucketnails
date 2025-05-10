@@ -1,0 +1,32 @@
+<section class="blog-tag-list">
+  <ul>
+    <li class="h6">
+      <a href="{{ blog.url }}">All</a>
+    </li>
+    {% for block in section.blocks %}
+      <li class="h6{% if current_tags.first contains block.settings.title %} current_page{% endif %}">
+        <a href="{{ blog.url }}/tagged/{{ block.settings.title | handleize }}">{{ block.settings.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+  {
+    "name": "Blog Tag List",
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "tag_link",
+        "name": "Tag Link",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Tag Name"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

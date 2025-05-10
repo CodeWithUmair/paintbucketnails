@@ -1,0 +1,96 @@
+<section id="shopify-section-{{ section.id }}" class="subs-video bg-lt-pink" data-aos="fade">
+  <div class="page-width">
+    <div class="flex--flexbox flex--wrap flex--justify-space-evenly image-pos-{{ section.settings.image_loc }}">
+      <div class="flex-item flex-item--one-half image-wrap image-pos-{{ section.settings.image_loc }}">
+        <img 
+          data-src="{{ section.settings.video_cover | img_url: '480x' }}"
+          data-srcset="{{ section.settings.video_cover | img_url: '480x' }} 1x,
+            {{ section.settings.video_cover | img_url: '960x' }} 2x" 
+          alt="{{ section.settings.video_cover.alt }}"
+          class="lazyload"
+        >
+      </div>
+
+      <div class="flex-item flex-item--two-fifths">
+        <div class="text-wrap text-{{ section.settings.text_align }}">
+          <h2>{{ section.settings.title }}</h2>
+
+          {% if section.settings.text != blank %}
+            <div class="content-wrap">
+              {{ section.settings.text }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+            <div class="button-wrap">
+              <a class="btn btn-outline" href="{{ section.settings.button_link }}" title="" target="_blank">{{ section.settings.button_text }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <img 
+      data-src="{{ 'subcription-stamp-illustration.png' | asset_img_url: '550x' }}" 
+      id="stamp-illustration"
+      class="lazyload"
+      alt="Stamp Illustration"
+    >
+  </div>
+
+  {% if section.settings.custom_styles != blank %}
+    <style>
+      {{ section.settings.custom_styles }}
+    </style>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Video Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "A Peek Inside"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Content",
+        "default": "<p>Here’s a peek into teaser boxes / past boxes to give people an idea of what’s inside each of these.</p><p>Every month you get X, Y, Z</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "video_cover",
+        "label": "Video Cover Image"
+      },
+      {
+        "type": "select",
+        "id": "image_loc",
+        "label": "Image Placement",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "right", "label": "Right"}
+        ],
+        "default": "left"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ]
+  }
+{% endschema %}

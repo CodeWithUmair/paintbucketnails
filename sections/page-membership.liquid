@@ -1,0 +1,909 @@
+{% include 'page-introduction' %}
+
+{% for block in section.blocks %}
+  {% if block.type == 'membership_perks' %}
+    <section id="shopify-section-{{ block.id }}" class="perks-section bg-lt-pink" data-aos="fade">
+      <div id="the-perks">
+        <div class="title-wrap max-w-lg text-center">
+          {% if block.settings.title_icon != blank %}
+            <img src="{{ block.settings.title_icon | img_url: '400x', scale: 2 }}" alt="{{ block.settings.title_icon.alt }}" width="{{ block.settings.title_icon_width }}" class="title-image">
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <h3 class="hwt-aenta-font">
+              {{ block.settings.text }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.title != blank %}
+            <h2 class="h5 text-bright-pink">{{ block.settings.title }}</h2>
+          {% endif %}
+        </div>
+
+        <div class="perks-list page-width flex--flexbox flex--wrap flex--justify-space-between">
+          {% if block.settings.perk_text_one != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_one | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_one.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_one }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_two != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_two | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_two.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_two }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_three != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_three | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_three.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_three }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_four != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_four | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_four.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_four }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_five != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_five | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_five.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_five }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_six != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_six | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_six.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_six }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_seven != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_seven | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_seven.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_seven }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.perk_text_eight != blank %}
+            <div class="flex-item flex-item--one-quarter">
+              <div class="image-wrap">
+                <img src="{{ block.settings.perk_image_eight | img_url: '400x', scale: 2 }}" alt="{{ block.settings.perk_image_eight.alt }}">
+              </div>
+
+              <div class="text-wrap text-center">
+                {{ block.settings.perk_text_eight }}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <div class="button-wrap text-center">
+            <a class="btn btn-outline" href="{{ block.settings.button_link }}" title="" target="_blank">{{ block.settings.button_text }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  {% elsif block.type == 'how_it_works' %}
+    <section id="shopify-section-{{ block.id }}" class="how-it-works bg-white" data-aos="fade">
+      <div id="how-it-works" class="flex--flexbox flex--wrap flex--items-stretch">
+        <div class="flex-item flex-item--one-half">
+          <img src="{{ 'membership-sparkle-01.png' | asset_img_url: '105x', scale: 2 }}" alt="Paintbucket sparkle background" class="bg-sparkle">
+
+          <div class="text-wrap">
+            <h2 class="heading">
+              {% if block.settings.title_image != blank %}
+                <img src="{{ block.settings.title_image | img_url: 'master' }}" alt="{{ block.settings.title_image.alt }}"width="{{ block.settings.title_icon_width }}" class="title-image">
+              {% else %}
+                How it works
+              {% endif %}
+            </h2>
+
+            <ol>
+              {% if block.settings.step_one != blank %}
+                <li>{{ block.settings.step_one }}</li>
+              {% endif %}
+
+              {% if block.settings.step_two != blank %}
+                <li>{{ block.settings.step_two }}</li>
+              {% endif %}
+
+              {% if block.settings.step_three != blank %}
+                <li>{{ block.settings.step_three }}</li>
+              {% endif %}
+
+              {% if block.settings.step_four != blank %}
+                <li>{{ block.settings.step_four }}</li>
+              {% endif %}
+
+              {% if block.settings.step_five != blank %}
+                <li>{{ block.settings.step_five }}</li>
+              {% endif %}
+            </ol>
+          </div>
+        </div>
+
+        <div class="column-two flex-item flex-item--one-half lazyload">
+        </div>
+      </div>
+    </section>
+
+    <style>
+      #shopify-section-{{ block.id }} .column-two.lazyloaded {
+        background-image: url({{ block.settings.bg_image | img_url: '2000x' }});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  {% elsif block.type == 'neighborhood_partners' %}
+    <section id="shopify-section-{{ block.id }}" class="partners bg-lt-pink" data-aos="fade">
+      <div id="local-discounts">
+        <div class="max-w-sm text-wrap text-center">
+          <h2 class="hwt-aenta-font">{{ block.settings.title }}</h2>
+
+          {{ block.settings.text }}
+        </div>
+
+        <div class="slider text-center max-w-xl">
+          {% if block.settings.partner_image_one != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_one | img_url: '400x' }}" alt="{{ block.settings.partner_image_one.src }}">
+
+              {% if block.settings.partner_discount_one != blank %}
+                <p class="discount">{{ block.settings.partner_discount_one }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_one != blank %}
+                <p class="description">{{ block.settings.partner_desc_one }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+
+          {% if block.settings.partner_image_one != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_two | img_url: '400x' }}" alt="{{ block.settings.partner_image_two.src }}">
+
+              {% if block.settings.partner_discount_two != blank %}
+                <p class="discount">{{ block.settings.partner_discount_two }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_two != blank %}
+                <p class="description">{{ block.settings.partner_desc_two }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_three != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_three | img_url: '400x' }}" alt="{{ block.settings.partner_image_three.src }}">
+
+              {% if block.settings.partner_discount_three != blank %}
+                <p class="discount">{{ block.settings.partner_discount_three }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_three != blank %}
+                <p class="description">{{ block.settings.partner_desc_three }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_four != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_four | img_url: '400x' }}" alt="{{ block.settings.partner_image_four.src }}">
+
+              {% if block.settings.partner_discount_four != blank %}
+                <p class="discount">{{ block.settings.partner_discount_four }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_four != blank %}
+                <p class="description">{{ block.settings.partner_desc_four }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_five != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_five | img_url: '400x' }}" alt="{{ block.settings.partner_image_five.src }}">
+
+              {% if block.settings.partner_discount_five != blank %}
+                <p class="discount">{{ block.settings.partner_discount_five }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_five != blank %}
+                <p class="description">{{ block.settings.partner_desc_five }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_six != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_six | img_url: '400x' }}" alt="{{ block.settings.partner_image_six.src }}">
+
+              {% if block.settings.partner_discount_six != blank %}
+                <p class="discount">{{ block.settings.partner_discount_six }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_six != blank %}
+                <p class="description">{{ block.settings.partner_desc_six }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_seven != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_seven | img_url: '400x' }}" alt="{{ block.settings.partner_image_one.src }}">
+
+              {% if block.settings.partner_discount_seven != blank %}
+                <p class="discount">{{ block.settings.partner_discount_seven }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_seven != blank %}
+                <p class="description">{{ block.settings.partner_desc_seven }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_eight != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_eight | img_url: '400x' }}" alt="{{ block.settings.partner_image_eight.src }}">
+
+              {% if block.settings.partner_discount_eight != blank %}
+                <p class="discount">{{ block.settings.partner_discount_eight }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_eight != blank %}
+                <p class="description">{{ block.settings.partner_desc_eight }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_nine != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_nine | img_url: '400x' }}" alt="{{ block.settings.partner_image_nine.src }}">
+
+              {% if block.settings.partner_discount_nine != blank %}
+                <p class="discount">{{ block.settings.partner_discount_nine }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_nine != blank %}
+                <p class="description">{{ block.settings.partner_desc_nine }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+          
+          {% if block.settings.partner_image_ten != blank %}
+            <li class="partner-item text-center">
+              <img src="{{ block.settings.partner_image_ten | img_url: '400x' }}" alt="{{ block.settings.partner_image_one.src }}">
+
+              {% if block.settings.partner_discount_ten != blank %}
+                <p class="discount">{{ block.settings.partner_discount_ten }}</p>
+              {% endif %}
+
+              {% if block.settings.partner_desc_ten != blank %}
+                <p class="description">{{ block.settings.partner_desc_ten }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+        </div>
+
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <div class="text-center">
+            <div class="button-wrap">
+              <a class="btn btn-outline" href="{{ block.settings.button_link }}" title="" target="_blank">{{ block.settings.button_text }}</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  {% elsif block.type == 'choose_membership' %}
+    <section id="shopify-section-{{ block.id }}" class="membership" data-aos="fade">
+      <img src="{{ 'membership-sparkle-02.png' | asset_img_url: '105x', scale: 2 }}" alt="Paintbucket sparkle background" class="bg-sparkle">
+
+      <div id="sign-up" class="max-w-xl">
+        <h2 class="heading text-center">
+          {% if block.settings.title_image != blank %}
+            <img src="{{ block.settings.title_image | img_url: 'master' }}" alt="{{ block.settings.title_image.alt }}"width="{{ block.settings.title_icon_width }}" class="title-image">
+          {% else %}
+            How it works
+          {% endif %}
+        </h2>
+
+        <div class="options bg-white">
+          <div class="flex--flexbox flex--wrap">
+            {% if block.settings.option_title_one != blank %}
+              <div class="flex-item flex-item--one-half option-item text-center">
+                <h3 class="hwt-aenta-font">{{ block.settings.option_title_one }}</h3>
+
+                <p class="includes h5 text-bright-pink">includes</p>
+
+                {% if block.settings.option_includes_one != blank %}
+                  <div class="includes-list">
+                    {{ block.settings.option_includes_one }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if block.settings.option_title_two != blank %}
+              <div class="flex-item flex-item--one-half option-item text-center">
+                <h3 class="hwt-aenta-font">{{ block.settings.option_title_two }}</h3>
+
+                <p class="includes h5 text-bright-pink">includes</p>
+
+                {% if block.settings.option_includes_two != blank %}
+                  <div class="includes-list">
+                    {{ block.settings.option_includes_two }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <div class="text-center button-wrap">
+            <a class="btn btn-outline" href="{{ block.settings.button_link }}" title="" target="_blank">{{ block.settings.button_text }}</a>
+          </div>
+        {% endif %}
+
+        {% if block.settings.fine_print != blank %}
+          <div class="fine-print">
+            {{ block.settings.fine_print }}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {% if section.settings.intro_bg_image != blank %}
+      <style>
+        #shopify-section-{{ block.id }} .perks-section.lazyloaded {
+          background-image: url({{ block.settings.intro_bg_image | img_url: '2000x' }});
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      </style>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Page - Membership",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "intro_bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "intro_image",
+        "label": "Intro Image"
+      },
+      {
+        "type": "text",
+        "id": "intro_title",
+        "label": "Intro Title",
+        "default": "Membership"
+      },
+      {
+        "type": "textarea",
+        "id": "intro_text",
+        "label": "Intro Text",
+        "default": "<h2><img src=\"https://cdn.shopify.com/s/files/1/0344/0800/5764/files/membership-say-hi-to_3x_bb63bb2c-d181-453b-89af-d5a372caf32d.png?v=1595555798\" alt=\"Say Hi To\"/><br/>Broad Strokes</h2><p>A monthly membership that brings your nail game to a whole new level.</p>"
+      },
+      {
+        "type": "text",
+        "id": "intro_button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "intro_button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "link_list",
+        "id": "intro_nav",
+        "label": "Intro Navigation"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_styles",
+        "label": "Custom Styles"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "membership_perks",
+        "name": "Membership Perks",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "title_icon",
+            "label": "Title Icon",
+            "info": "Include alt text for this"
+          },
+          {
+            "type": "range",
+            "id": "title_icon_width",
+            "label": "Title Icon Width",
+            "min": 50,
+            "max": 400,
+            "step": 25,
+            "unit": "px",
+            "default": 150 
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "We know what it takes to live in this city.<br/>So we’re giving our best to the women who do."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Membership Perks Include"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_one",
+            "label": "Perk Image - One"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_one",
+            "label": "Perk Text - One"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_two",
+            "label": "Perk Image - Two"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_two",
+            "label": "Perk Text - Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_three",
+            "label": "Perk Image - Three"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_three",
+            "label": "Perk Text - Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_four",
+            "label": "Perk Image - Four"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_four",
+            "label": "Perk Text - Four"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_five",
+            "label": "Perk Image - Five"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_five",
+            "label": "Perk Text - Five"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_six",
+            "label": "Perk Image - Six"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_six",
+            "label": "Perk Text - Six"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_seven",
+            "label": "Perk Image - Seven"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_seven",
+            "label": "Perk Text - Seven"
+          },
+          {
+            "type": "image_picker",
+            "id": "perk_image_eight",
+            "label": "Perk Image - Eight"
+          },
+          {
+            "type": "textarea",
+            "id": "perk_text_eight",
+            "label": "Perk Text - Eight"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Get your membership"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Url"
+          }
+        ]
+      },
+      {
+        "type": "how_it_works",
+        "name": "How It Works",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "title_image",
+            "label": "Title Image"
+          },
+          {
+            "type": "range",
+            "id": "title_icon_width",
+            "label": "Title Icon Width",
+            "min": 50,
+            "max": 400,
+            "step": 25,
+            "unit": "px",
+            "default": 150 
+          },
+          {
+            "type": "richtext",
+            "id": "step_one",
+            "label": "Step One",
+            "default": "<p>Choose the membership level that suits you the best</p>"
+          },
+          {
+            "type": "richtext",
+            "id": "step_two",
+            "label": "Step Two",
+            "default": "<p><strong>Sign up</strong> at our shop or online</p>"
+          },
+          {
+            "type": "richtext",
+            "id": "step_three",
+            "label": "Step Three",
+            "default": "<p>Grab your <strong>Broad Strokes keyring</strong> and toolkit when you visit us for your first member appointment</p>"
+          },
+          {
+            "type": "richtext",
+            "id": "step_four",
+            "label": "Step Four",
+            "default": "<p><strong>Flash your keyring</strong> at any of our local partners and receive savings galore</p>"
+          },
+          {
+            "type": "richtext",
+            "id": "step_five",
+            "label": "Step Five",
+            "default": "<p><strong>Enjoy all of the perks</strong> of being a Broad Strokes member!</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          }
+        ]
+      },
+      {
+        "type": "neighborhood_partners",
+        "name": "Neighborhood Partners",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Broadly Speaking, You Look Like A Woman Who Likes to Save $$"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Flash your <img src=\"https://cdn.shopify.com/s/files/1/0344/0800/5764/files/membership-icon-keyring_3x_7fe877cd-09fb-4abb-93a8-f4de4f32872a.png?v=1595560042\" alt=\"keyring-icon\"Broad Strokes keyring at any of our neighborhood partners and save a ton.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_one",
+            "label": "Partner Image One"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_one",
+            "label": "Partner Discount One",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_one",
+            "label": "Partner Description One",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_two",
+            "label": "Partner Image Two"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_two",
+            "label": "Partner Discount Two",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_two",
+            "label": "Partner Description Two",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_three",
+            "label": "Partner Image Three"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_three",
+            "label": "Partner Discount Three",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_three",
+            "label": "Partner Description Three",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_four",
+            "label": "Partner Image Four"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_four",
+            "label": "Partner Discount Four",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_four",
+            "label": "Partner Description Four",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_five",
+            "label": "Partner Image Five"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_five",
+            "label": "Partner Discount Five",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_five",
+            "label": "Partner Description Five",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_six",
+            "label": "Partner Image Six"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_six",
+            "label": "Partner Discount Six",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_six",
+            "label": "Partner Description Six",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_seven",
+            "label": "Partner Image Seven"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_seven",
+            "label": "Partner Discount Seven",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_seven",
+            "label": "Partner Description Seven",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_eight",
+            "label": "Partner Image Eight"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_eight",
+            "label": "Partner Discount Eight",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_eight",
+            "label": "Partner Description Eight",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_nine",
+            "label": "Partner Image Nine"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_nine",
+            "label": "Partner Discount Nine",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_nine",
+            "label": "Partner Description Nine",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "partner_image_ten",
+            "label": "Partner Image Ten"
+          },
+          {
+            "type": "text",
+            "id": "partner_discount_ten",
+            "label": "Partner Discount Ten",
+            "default": "10% off"
+          },
+          {
+            "type": "richtext",
+            "id": "partner_desc_ten",
+            "label": "Partner Description Ten",
+            "default": "<p>Floral services, quirky home goods, do-it-your-self workshops and more</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      },
+      {
+        "type": "choose_membership",
+        "name": "Choose Membership",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "title_image",
+            "label": "Title Image"
+          },
+          {
+            "type": "range",
+            "id": "title_icon_width",
+            "label": "Title Icon Width",
+            "min": 50,
+            "max": 400,
+            "step": 25,
+            "unit": "px",
+            "default": 150 
+          },
+          {
+            "type": "text",
+            "id": "option_title_one",
+            "label": "Option Title One",
+            "default": "The Painter<br/>$65 / Month"
+          },
+          {
+            "type": "richtext",
+            "id": "option_includes_one",
+            "label": "Option Includes One",
+            "default": "<p>2 basic manis</p><p>1 basic pedi per month</p>"
+          },
+          {
+            "type": "text",
+            "id": "option_title_two",
+            "label": "Option Title Two",
+            "default": "The Sculptor<br/>$100 / Month"
+          },
+          {
+            "type": "richtext",
+            "id": "option_includes_two",
+            "label": "Option Includes Two",
+            "default": "<p>2 basic manis + gel</p><p>1 basic pedi per month</p><p>*free gel removals</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Get Your Membership"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          },
+          {
+            "type": "richtext",
+            "id": "fine_print",
+            "label": "Fine Print",
+            "default": "<p>Mandatory Restrictions - Commitment: Members must sign up for a 3 month minimum. Use: Memberships are non-transferable and can only be used by the member. Membership fees cannot be returned or used for other services. Cancellation: Memberships must be cancelled 30 days in advance of the next billing cycle by emailing hello@paintbucketnails.com, memberships cannot be cancelled until after the 3 month minimum.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

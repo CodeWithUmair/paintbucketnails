@@ -1,0 +1,108 @@
+<section id="bridal-form" class="contact-form-bridal" data-aos="fade">
+  <div class="page-width">
+    <div class="heading-wrap text-center">
+      {% if block.settings.heading != blank %}
+        <h2 class="heading">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.subtitle != blank %}
+        <h3 class="subtitle">
+          {{ block.settings.subtitle }}
+        </h3>
+      {% endif %}
+
+      {% form 'contact', id: 'BridalForm' %}
+
+        {% if form.posted_successfully? %}
+          <p class="form-success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+          <script>
+            (function() {
+              window.onload = function() {
+                setTimeout(function() {
+                  var top = document.getElementById('bridal-form').offsetTop;
+                  window.scrollTo(0,top);
+                }, 1000);
+              };
+            })();
+          </script>
+        {% else  %}
+          {{ form.errors | default_errors }}
+        {% endif %}
+
+        <div class="input-wrap">
+          <label class="visually-hidden" for="BridalFormName">{{ 'contact.form.name' | t }}<span class="required">*</span></label>
+          <input type="text"
+            name="contact[name]"
+            id="BridalFormName"
+            placeholder="{{ 'contact.form.name' | t }}*"
+            value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            required
+            >
+        </div>
+
+        <div class="input-wrap">
+          <label class="visually-hidden" for="BridalFormEmail">{{ 'contact.form.email' | t }}<span class="required">*</span></label>
+          <input type="email"
+            name="contact[email]"
+            id="BridalFormEmail"
+            placeholder="{{ 'contact.form.email' | t }}*"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            required
+            >
+        </div>
+
+        <div class="input-wrap">
+          <label class="visually-hidden" for="BridalFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel"
+            name="contact[phone]"
+            id="BridalFormPhone"
+            placeholder="{{ 'contact.form.phone' | t }}"
+            value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            pattern="[0-9\-]*">
+        </div>
+
+        <div class="input-wrap">
+          <label for="BridalFormBirthday">Birthday<span class="required">*</span></label>
+          <input id="BridalFormBirthday" 
+            type="date" 
+            name="contact[birthday]" 
+            value="" 
+            required
+          />
+        </div>
+
+        <div class="input-wrap">
+          <label for="BridalFormEventDate">Date of Event</label>
+          <input id="BridalFormEventDate" 
+            type="date" 
+            name="contact[event_date]" 
+            value="" 
+          />
+        </div>
+
+        <div class="input-wrap">
+          <label class="visually-hidden" for="BridalFormMessage">{{ 'contact.form.message' | t }}</label>
+          <textarea rows="3"
+            name="contact[body]"
+            id="BridalFormMessage"
+            placeholder="Briefly describe your wedding style: Romantic, traditional, modern, bohemian, City Hall chic, etc">
+            {%- if form.body -%}
+              {{- form.body -}}
+            {%- endif -%}
+          </textarea>
+        </div>
+
+        <div class="button-wrap">
+          <input type="submit" class="btn btn-outline" value="{{ 'contact.form.send' | t }}">
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</section>

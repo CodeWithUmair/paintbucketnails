@@ -1,0 +1,6 @@
+{% section 'search-filtered-hero' %}
+{% section 'search-filtered-products' %}
+
+{%- if search.results.size == 0 -%}
+  {% section 'featured-collection' %}
+{%- endif -%}
