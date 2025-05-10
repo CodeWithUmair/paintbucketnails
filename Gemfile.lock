@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    wdm (0.2.0)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  wdm (>= 0.1.0)
+
+BUNDLED WITH
+   2.5.22
